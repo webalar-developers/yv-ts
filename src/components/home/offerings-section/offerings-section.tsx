@@ -6,12 +6,12 @@ export function OfferingsSection() {
 	const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 
 	return (
-		<section className="w-full bg-[#1E061E] px-6 py-12 md:px-10 md:py-14">
+		<section className="w-full bg-[#f7f2ec] px-6 py-12 md:px-10 md:py-14">
 			<div className="w-full">
 				{/* Section Header */}
 				<div className="mb-10">
 					<div className="mb-3 h-1 w-12 bg-yv-orange" />
-					<h2 className="font-gilda text-[40px] font-normal text-white md:text-4xl">
+					<h2 className="font-gilda text-[40px] font-normal text-[#1f1a17] md:text-4xl">
 						Thoughtful Offerings
 					</h2>
 				</div>
@@ -39,7 +39,7 @@ export function OfferingsSection() {
 							/>
 							<div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-80" />
 
-							<div className="absolute inset-0 flex flex-col justify-end p-6 transition-all duration-500 group-hover:bg-yv-dark-purple/80">
+							<div className="absolute inset-0 flex flex-col justify-end p-6 transition-all duration-500 group-hover:bg-[#1f1a17]/80">
 								<div className="mb-2 transform transition-transform duration-500 group-hover:-translate-y-2">
 									{offering.icon && (
 										<offering.icon className="mb-1.5 size-11 text-white/80" />

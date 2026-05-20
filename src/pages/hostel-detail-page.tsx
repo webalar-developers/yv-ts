@@ -124,11 +124,14 @@ export function HostelDetailPage() {
 								<MonthlyInvestment items={property.investmentBreakdown} />
 							</Suspense>
 							<Suspense fallback={<Skeleton />}>
-								<LocationHighlights highlights={property.locationHighlights} />
+								<LocationHighlights
+									propertyId={property.id}
+									highlights={property.locationHighlights}
+								/>
 							</Suspense>
-							<Suspense fallback={<Skeleton />}>
+							{/* <Suspense fallback={<Skeleton />}>
 								<WhatsAround propertyId={property.id} />
-							</Suspense>
+							</Suspense> */}
 							{/* <Suspense fallback={<Skeleton />}>
 								<AttractionsNearby />
 							</Suspense> */}

@@ -111,11 +111,11 @@ export function WhatsAround({ propertyId }: { propertyId: string }) {
 
 			<div className="mt-7 space-y-10">
 				<div>
-					<p className="mb-4 text-xs font-bold tracking-[0.16em] text-[#766f6a] uppercase">
+					{/* <p className="mb-4 text-xs font-bold tracking-[0.16em] text-[#766f6a] uppercase">
 						Quick Access
-					</p>
+					</p> */}
 					<div className="grid grid-cols-1 gap-4 md:grid-cols-3">
-						{connectivityItems.map(({ item, key }) => {
+						{/* {connectivityItems.map(({ item, key }) => {
 							const Icon = iconFor(item.name);
 							return (
 								<Card
@@ -135,11 +135,11 @@ export function WhatsAround({ propertyId }: { propertyId: string }) {
 									</CardContent>
 								</Card>
 							);
-						})}
+						})} */}
 					</div>
 				</div>
 
-				{schools.length > 0 && (
+				{/* {schools.length > 0 && (
 					<div>
 						<p className="mb-4 text-xs font-bold tracking-[0.16em] text-[#766f6a] uppercase">
 							Educational Institutions Nearby
@@ -155,8 +155,8 @@ export function WhatsAround({ propertyId }: { propertyId: string }) {
 							))}
 						</div>
 					</div>
-				)}
-
+				)} */}
+{/* 
 				{workplaces.length > 0 && (
 					<div>
 						<p className="mb-4 text-xs font-bold tracking-[0.16em] text-[#766f6a] uppercase">
@@ -173,7 +173,7 @@ export function WhatsAround({ propertyId }: { propertyId: string }) {
 							))}
 						</div>
 					</div>
-				)}
+				)} */}
 			</div>
 		</section>
 	);

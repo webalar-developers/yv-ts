@@ -1,0 +1,25 @@
+# Youthville Hostels
+
+> Premium student housing and co-living in Pune. Fully-furnished private and shared rooms, all-inclusive (Wi-Fi, meals, laundry, security, gym), with a vibrant student community across multiple Pune neighbourhoods (Kiwale, Hinjewadi, Wakad).
+
+Youthville operates fully-managed hostels for students and young professionals in Pune, India. Each property is fully-furnished, professionally managed, and includes meals, security, AC rooms, and proximity to colleges and IT parks.
+
+## Pages
+
+- [Home](https://youthville.co.in/): Overview of the brand, amenities, community, and locations.
+- [Hostels](https://youthville.co.in/hostels): Browse all properties with filters (location, room type, amenities).
+- [Hostel Detail](https://youthville.co.in/hostels/): Individual property pages with amenities, attractions, FAQs, location map, investment info.
+- [Life at YV](https://youthville.co.in/life-yv): Resident community, events, festivals, sports, day-in-the-life.
+- [Contact](https://youthville.co.in/contact): Inquiry form, sales contact, partnership and collaboration paths.
+- [FAQ](https://youthville.co.in/faq): Pricing, deposit, lock-in, food, visit policy, parents, refunds.
+
+## Policies
+
+- [Privacy Policy](https://youthville.co.in/privacy-policy)
+- [Terms of Service](https://youthville.co.in/terms)
+- [Disclaimer](https://youthville.co.in/disclaimer)
+
+## Optional
+
+- [WhatsApp inquiry](https://wa.me/<number>): Fastest path to availability and booking. (Placeholder — real number to be filled in.)
+- [Sitemap](https://youthville.co.in/sitemap.xml)

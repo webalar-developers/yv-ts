@@ -1,0 +1,1437 @@
+import {
+	Building2,
+	GraduationCap,
+	Landmark,
+	Smartphone,
+	Wifi,
+	Zap,
+} from "lucide-react";
+import type { PropertyFeature } from "@/components/hostel-detail/amenity-strip/amenity-strip.types";
+import type { FaqItem } from "@/components/hostel-detail/faq-section/faq-section.types";
+import type { LifeAtYouthvilleItem } from "@/components/hostel-detail/life-at-youthville/life-at-youthville.types";
+import type { RelatedProperty } from "@/components/hostel-detail/related-properties/related-properties.types";
+import type { PropertyListing } from "./mock-properties.types";
+
+const commonAmenityStrip = [
+	{ icon: Zap, label: "Power Backup", subtitle: "Live without interruptions" },
+	{
+		icon: "/shared/svg/icon-property-managers.svg",
+		label: "Property Managers",
+		subtitle: "On-site support anytime",
+	},
+	{
+		icon: Smartphone,
+		label: "YV Mobile App",
+		subtitle: "Manage everything easily",
+	},
+	{
+		icon: "/shared/svg/icon-desk.svg",
+		label: "Work/Study Desk",
+		subtitle: "Dedicated focus space",
+	},
+	{ icon: Wifi, label: "High-Speed WiFi", subtitle: "Seamless connectivity" },
+	{
+		icon: "/shared/svg/icon-ac-rooms.svg",
+		label: "Furnished AC Rooms",
+		subtitle: "Move-in ready comfort",
+	},
+	{
+		icon: "/shared/svg/icon-security.svg",
+		label: "24x7 Security",
+		subtitle: "Safe & secure living",
+	},
+	{
+		icon: "/shared/svg/icon-laundry.svg",
+		label: "Laundry",
+		subtitle: "Hassle-free daily care",
+	},
+] satisfies PropertyFeature[];
+
+const commonSidebarFeatures = [
+	{ icon: "/shared/svg/icon-top-location.svg", label: "Top Location" },
+	{ icon: "/shared/svg/icon-furnished.svg", label: "Meals Included" },
+	{ icon: "/shared/svg/icon-meals.svg", label: "Fully Furnished" },
+] satisfies PropertyFeature[];
+
+const commonFaqs = [
+	{
+		question: "What's included in the rent?",
+		answer:
+			"Rent includes daily gourmet meals, high-speed Wi-Fi, laundry service, professional housekeeping, and access to all community amenities.",
+	},
+	{
+		question: "Security Deposit?",
+		answer:
+			"A refundable security deposit is collected at move-in and returned after the standard move-out checks are completed.",
+	},
+	{
+		question: "Can parents stay?",
+		answer:
+			"Parents can visit during allowed hours, and temporary stays can be coordinated with the property manager depending on availability.",
+	},
+	{
+		question: "Meal timings?",
+		answer:
+			"Meal slots are staggered through the day so residents can comfortably fit breakfast, lunch, and dinner around work or college schedules.",
+	},
+] satisfies FaqItem[];
+
+const commonLifeAtYouthville = [
+	{
+		title: "Events & Workshops",
+		subtitle: "Weekly curated meetups",
+		image:
+			"https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=900&q=80",
+	},
+	{
+		title: "Shared Spaces",
+		subtitle: "Designed for collaboration",
+		image:
+			"https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=900&q=80",
+	},
+] satisfies LifeAtYouthvilleItem[];
+
+const commonRelatedProperties = [
+	{
+		id: "yv-sbr-1",
+		name: "YV SBR 1",
+		location: "Senapati Bapat Rd, Pune",
+		image: "/shared/avif/SBR_1_1.avif",
+	},
+	{
+		id: "yv-karve-nagar",
+		name: "YV Karve Nagar",
+		location: "Karvenagar, Pune",
+		image: "/shared/avif/YV%20Karve%20Nagar_converted.avif",
+	},
+	{
+		id: "yv-balewadi-1",
+		name: "YV Balewadi 1",
+		location: "Balewadi, Pune",
+		image: "/shared/avif/AVK_8750_converted.avif",
+	},
+] satisfies RelatedProperty[];
+
+const commonGallery = [
+	"/shared/jpg/1.jpg",
+	"/shared/jpg/2.jpg",
+	"/shared/jpg/3.jpg",
+	"/shared/jpg/4.jpg",
+	"/shared/png/5.png",
+];
+
+const sbr1Gallery = [
+	"/property/sbr-1/1.jpg",
+	"/property/sbr-1/2.jpg",
+	"/property/sbr-1/3.jpg",
+	"/property/sbr-1/4.jpg",
+	"/property/sbr-1/5.jpg",
+	"/property/sbr-1/6.jpg",
+	"/property/sbr-1/7.jpg",
+	"/property/sbr-1/8.jpg",
+	"/property/sbr-1/9.jpg",
+	"/property/sbr-1/10.jpg",
+	"/property/sbr-1/11.jpg",
+	"/property/sbr-1/12.jpg",
+	"/property/sbr-1/13.jpg",
+];
+
+const sbr2Gallery = [
+	"/property/sbr-2/1.jpg",
+	"/property/sbr-2/2.jpg",
+	"/property/sbr-2/3.jpg",
+	"/property/sbr-2/4.jpg",
+	"/property/sbr-2/5.jpg",
+	"/property/sbr-2/6.jpg",
+	"/property/sbr-2/7.jpg",
+	"/property/sbr-2/8.jpg",
+	"/property/sbr-2/9.jpg",
+	"/property/sbr-2/10.jpg",
+	"/property/sbr-2/11.jpg",
+];
+
+const sbr3Gallery = [
+	"/property/sbr-3/1.jpg",
+	"/property/sbr-3/2.jpg",
+	"/property/sbr-3/3.jpg",
+	"/property/sbr-3/4.jpg",
+	"/property/sbr-3/5.jpg",
+	"/property/sbr-3/6.jpg",
+	"/property/sbr-3/7.jpg",
+	"/property/sbr-3/8.jpg",
+	"/property/sbr-3/9.jpg",
+	"/property/sbr-3/10.jpg",
+];
+
+const karveNagarGallery = [
+	"/property/karve-nagar/1.jpg",
+	"/property/karve-nagar/2.jpg",
+	"/property/karve-nagar/3.jpg",
+	"/property/karve-nagar/4.jpg",
+	"/property/karve-nagar/5.jpg",
+	"/property/karve-nagar/6.jpg",
+	"/property/karve-nagar/7.jpg",
+	"/property/karve-nagar/8.jpg",
+	"/property/karve-nagar/9.jpg",
+	"/property/karve-nagar/10.jpg",
+];
+
+const balewadi1Gallery = [
+	"/property/balewadi-1/1.jpg",
+	"/property/balewadi-1/2.jpg",
+	"/property/balewadi-1/3.jpg",
+	"/property/balewadi-1/4.jpg",
+	"/property/balewadi-1/5.jpg",
+	"/property/balewadi-1/6.jpg",
+	"/property/balewadi-1/7.jpg",
+	"/property/balewadi-1/8.jpg",
+	"/property/balewadi-1/9.jpg",
+	"/property/balewadi-1/10.jpg",
+	"/property/balewadi-1/11.jpg",
+	"/property/balewadi-1/12.jpg",
+	"/property/balewadi-1/13.jpg",
+	"/property/balewadi-1/14.jpg",
+	"/property/balewadi-1/15.jpg",
+];
+
+const balewadi2Gallery = [
+	"/property/balewadi-2/1.jpg",
+	"/property/balewadi-2/2.jpg",
+	"/property/balewadi-2/3.jpg",
+	"/property/balewadi-2/4.jpg",
+	"/property/balewadi-2/5.jpg",
+	"/property/balewadi-2/6.jpg",
+	"/property/balewadi-2/7.jpg",
+	"/property/balewadi-2/8.jpg",
+	"/property/balewadi-2/9.jpg",
+	"/property/balewadi-2/10.jpg",
+	"/property/balewadi-2/11.jpg",
+	"/property/balewadi-2/12.jpg",
+	"/property/balewadi-2/13.jpg",
+];
+
+const commonRooms = [
+	{
+		id: "private",
+		title: "Private Room",
+		occupancy: "Single occupancy",
+		image: "/shared/jpg/1.jpg",
+		price: 18500,
+		tag: "LIMITED" as const,
+		description: "Quiet room with study desk, wardrobe, AC, and attached bath.",
+		meta: ["220 SQ. FT.", "ENSUITE BATH"],
+	},
+	{
+		id: "twin",
+		title: "Twin Sharing",
+		occupancy: "Double occupancy",
+		image: "/shared/jpg/2.jpg",
+		price: 14500,
+		description: "Smartly planned shared room with storage and housekeeping.",
+		meta: ["280 SQ. FT.", "SHARED DECK"],
+	},
+	{
+		id: "triple",
+		title: "Triple Sharing",
+		occupancy: "Community sharing",
+		image: "/shared/jpg/3.jpg",
+		price: 11000,
+		description:
+			"A perfect balance of community living and personal space, ideal for students and professionals.",
+		meta: ["350 SQ. FT.", "SHARED DECK"],
+	},
+];
+
+const commonInvestmentBreakdown = [
+	{ label: "Base Rent (Triple Sharing)", amount: 16500 },
+	{ label: "Utilities (Electricity & Water)", amount: 2000 },
+];
+
+const karveNagarReviews = [
+	{
+		author_name: "Aparna Nair",
+		profile_photo_url:
+			"https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=120&h=120&fit=crop&q=80",
+		rating: 5,
+		relative_time_description: "Resident since 2023",
+		text: "Best decision to move here. It feels secure, the food is reliable, and the commute to college is genuinely easy.",
+	},
+	{
+		author_name: "Sakshi Kulkarni",
+		profile_photo_url:
+			"https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=120&h=120&fit=crop&q=80",
+		rating: 5,
+		relative_time_description: "2 months ago",
+		text: "Amazing experience! The management is very professional and the rooms are always clean. Highly recommend for students.",
+	},
+	{
+		author_name: "Neha Deshmukh",
+		profile_photo_url:
+			"https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=120&h=120&fit=crop&q=80",
+		rating: 5,
+		relative_time_description: "a month ago",
+		text: "The food is actually good compared to other hostels. Security is top-notch, which makes my parents feel safe.",
+	},
+	{
+		author_name: "Shweta Patil",
+		profile_photo_url:
+			"https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=120&h=120&fit=crop&q=80",
+		rating: 5,
+		relative_time_description: "3 weeks ago",
+		text: "The staff here is very helpful. They helped me settle in so quickly. The environment is perfect for studies.",
+	},
+	{
+		author_name: "Anjali Rao",
+		profile_photo_url:
+			"https://images.unsplash.com/photo-1554151228-14d9def656e4?w=120&h=120&fit=crop&q=80",
+		rating: 4,
+		relative_time_description: "4 months ago",
+		text: "Very well-maintained and hygienic. The laundry service is a huge plus. Just wish hot water was available for longer.",
+	},
+];
+
+const commonGoogleReviews = [
+	{
+		author_name: "Sakshi Kulkarni",
+		profile_photo_url:
+			"https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=120&h=120&fit=crop&q=80",
+		rating: 5,
+		relative_time_description: "a month ago",
+		text: "Amazing experience at Youthville! The management is very professional and the rooms are always clean. Highly recommend for students.",
+	},
+	{
+		author_name: "Neha Deshmukh",
+		profile_photo_url:
+			"https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=120&h=120&fit=crop&q=80",
+		rating: 5,
+		relative_time_description: "2 weeks ago",
+		text: "The food is actually good compared to other hostels. Security is top-notch, which makes my parents feel safe about my stay here.",
+	},
+	{
+		author_name: "Pooja Varma",
+		profile_photo_url: "",
+		rating: 5,
+		relative_time_description: "3 months ago",
+		text: "I've stayed in many PGs in Pune, but Youthville is by far the best in terms of facilities and community vibe.",
+	},
+	{
+		author_name: "Riya Sen",
+		profile_photo_url: "",
+		rating: 4,
+		relative_time_description: "a week ago",
+		text: "Great location and very responsive staff. The mobile app makes it easy to raise requests and pay rent.",
+	},
+	{
+		author_name: "Ananya Iyer",
+		profile_photo_url: "",
+		rating: 5,
+		relative_time_description: "2 months ago",
+		text: "Love the shared spaces and the events they organize. It's a great way to meet new people when you're new to the city.",
+	},
+];
+
+const commonTestimonial = {
+	name: "Aditi Sharma",
+	since: "Resident since 2023",
+	quote:
+		"The community here is amazing. It's not just a place to stay; it's where I found my closest friends.",
+	avatar:
+		"https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=120&h=120&fit=crop&q=80",
+};
+
+export const mockProperties: PropertyListing[] = [
+	{
+		id: "yv-sbr-1",
+		name: "Youthville SBR-1",
+		rating: 4.8,
+		reviewCountLabel: "1,248+ reviews",
+		location: "Senapati Bapat Rd, Pune",
+		fullAddress:
+			"Senapati Bapat Rd, Shivaji Co operative Housing Society, Bhageerath, Gokhalenagar, Pune, Maharashtra 411016",
+		city: "Pune",
+		area: "Senapati Bapat Road",
+		gender: "Male/Female",
+		occupancy: "2, 3 Sharing",
+		proximity: "Near Colleges",
+		price: 37000,
+		badge: "PREMIUM",
+		badgeVariant: "premium",
+		image: "/property/sbr-1/cover.png",
+		isFavorited: false,
+		featureTags: [],
+		gallery: sbr1Gallery,
+		amenityStrip: commonAmenityStrip,
+		overview:
+			"Located on the iconic Senapati Bapat Road in Gokhalenagar, Youthville SBR-1 offers a premium co-living experience in one of Pune's most well-connected neighborhoods. Ideal for students and young professionals seeking convenience and community.",
+		whyChooseTitle: "Why choose Youthville SBR-1?",
+		whyChooseQuote:
+			"A curated community that feels like home, but functions like a 5-star hotel.",
+		sidebarEyebrow: "YOUTHVILLE HOSTEL",
+		sidebarTitle: "Student Housing",
+		sidebarFeatures: commonSidebarFeatures,
+		testimonial: commonTestimonial,
+		map: {
+			lat: 18.5332,
+			lng: 73.829,
+			label: "Senapati Bapat Rd, Pune",
+		},
+		rooms: [
+			{
+				id: "sbr1-triple",
+				title: "3-Sharing",
+				occupancy: "Triple occupancy",
+				image: "/property/sbr-1/1.jpg",
+				price: 37000,
+				description:
+					"High-speed Wi-fi, Housekeeping 3x/week, Laundry up to 10 kg, 3 meals (Breakfast, High-tea & Dinner), Electricity: 40 units included.",
+				meta: ["AC ROOM", "ATTACHED BATH", "24/7 HOT WATER"],
+				inclusions:
+					"Induction, Microwave, Washing Machine, Refrigerator. Fully-furnished AC rooms with attached bathroom. Chill Zone with Table Tennis, TV lounge, Carrom, Chess.",
+			},
+			{
+				id: "sbr1-twin",
+				title: "2-Sharing",
+				occupancy: "Double occupancy",
+				image: "/property/sbr-1/2.jpg",
+				price: 43000,
+				description:
+					"High-speed Wi-fi, Housekeeping 3x/week, Laundry up to 10 kg, 3 meals (Breakfast, High-tea & Dinner), Electricity: 60 units included.",
+				meta: ["AC ROOM", "ATTACHED BATH", "24/7 HOT WATER"],
+				inclusions:
+					"Induction, Microwave, Washing Machine, Refrigerator. Fully-furnished AC rooms with attached bathroom. Chill Zone with Table Tennis, TV lounge, Carrom, Chess.",
+			},
+			{
+				id: "sbr1-twin-premium",
+				title: "2-Sharing Premium",
+				occupancy: "Double occupancy premium",
+				image: "/property/sbr-1/3.jpg",
+				price: 49000,
+				description:
+					"Premium 2-sharing with all amenities. High-speed Wi-fi, Housekeeping 3x/week, Laundry up to 10 kg, 3 meals (Breakfast, High-tea & Dinner), Electricity: 60 units included.",
+				meta: ["AC ROOM", "ATTACHED BATH", "24/7 HOT WATER", "PREMIUM"],
+				inclusions:
+					"Induction, Microwave, Washing Machine, Refrigerator. Fully-furnished AC rooms with attached bathroom. Chill Zone with Table Tennis, TV lounge, Carrom, Chess.",
+			},
+		],
+		inclusions:
+			"Induction, Microwave, Washing Machine, Refrigerator. Fully-furnished AC rooms with attached bathroom with 24/7 hot water. Chill Zone (Table Tennis, TV lounge, Carrom, Chess, etc).",
+		amenitiesDescription:
+			"High-speed Wi-fi, Housekeeping 3x/week, Laundry up to 10 kg, 3 meals (Breakfast, High-tea & Dinner), Lunch on Sunday & Public Holidays only. No Non-veg food allowed in premises. Electricity: 120 units/room (40 units in 3-sharing, 60 units in 2-sharing).",
+		investmentBreakdown: [
+			{ label: "Base Rent (3-Sharing)", amount: 37000 },
+			{ label: "Electricity (40 units incl.)", amount: 0 },
+		],
+		locationHighlights: [
+			{ icon: GraduationCap, title: "BMCC College", subtitle: "10 mins walk" },
+			{ icon: Building2, title: "Shivajinagar", subtitle: "5 mins drive" },
+			{ icon: Landmark, title: "FC Road", subtitle: "8 mins drive" },
+		],
+		lifeAtYouthville: commonLifeAtYouthville,
+		faqs: commonFaqs,
+		googleReviews: commonGoogleReviews,
+		relatedProperties: commonRelatedProperties,
+	},
+	{
+		id: "yv-sbr-2",
+		name: "Youthville SBR-2",
+		rating: 4.7,
+		reviewCountLabel: "980+ reviews",
+		location: "Model Colony, Pune",
+		fullAddress:
+			"Ashok Society, Plot 24-A & 24-B, off Senapati Bapat Road, near Hotel Management College, Laxmi Society, Model Colony, Shivajinagar, Pune, Maharashtra 411016",
+		city: "Pune",
+		area: "Model Colony",
+		gender: "Only Girls",
+		occupancy: "2, 3 Sharing",
+		proximity: "Near IT Hub",
+		price: 33000,
+		badge: "PREMIUM",
+		badgeVariant: "premium",
+		image: "/property/sbr-2/10.jpg",
+		isFavorited: false,
+		featureTags: [],
+		gallery: sbr2Gallery,
+		amenityStrip: commonAmenityStrip,
+		overview:
+			"Situated off Senapati Bapat Road in the upscale Model Colony area, Youthville SBR-2 provides a polished living experience near Hotel Management College. Perfect for students who want a quiet, well-maintained environment.",
+		whyChooseTitle: "Why choose Youthville SBR-2?",
+		whyChooseQuote:
+			"Premium living in one of Pune's most sought-after student neighborhoods.",
+		sidebarEyebrow: "YOUTHVILLE HOSTEL",
+		sidebarTitle: "Student Housing",
+		sidebarFeatures: commonSidebarFeatures,
+		testimonial: commonTestimonial,
+		map: {
+			lat: 18.5285,
+			lng: 73.8415,
+			label: "Model Colony, Pune",
+		},
+		rooms: [
+			{
+				id: "sbr2-triple",
+				title: "3-Sharing",
+				occupancy: "Triple occupancy",
+				image: "/property/sbr-2/1.jpg",
+				price: 33000,
+				description:
+					"High-speed Wi-fi, Housekeeping 3x/week, Laundry up to 10 kg, 3 meals (Breakfast, High-tea & Dinner), Electricity: 40 units included.",
+				meta: ["AC ROOM", "ATTACHED BATH", "24/7 HOT WATER"],
+				inclusions:
+					"Induction, Microwave, Washing Machine, Refrigerator. Fully-furnished AC rooms with attached bathroom.",
+			},
+			{
+				id: "sbr2-twin",
+				title: "2-Sharing",
+				occupancy: "Double occupancy",
+				image: "/property/sbr-2/2.jpg",
+				price: 37000,
+				description:
+					"High-speed Wi-fi, Housekeeping 3x/week, Laundry up to 10 kg, 3 meals (Breakfast, High-tea & Dinner), Electricity: 60 units included.",
+				meta: ["AC ROOM", "ATTACHED BATH", "24/7 HOT WATER"],
+				inclusions:
+					"Induction, Microwave, Washing Machine, Refrigerator. Fully-furnished AC rooms with attached bathroom.",
+			},
+			{
+				id: "sbr2-twin-premium",
+				title: "2-Sharing Premium",
+				occupancy: "Double occupancy premium",
+				image: "/property/sbr-2/3.jpg",
+				price: 55000,
+				description:
+					"Premium 2-sharing with all amenities. High-speed Wi-fi, Housekeeping 3x/week, Laundry up to 10 kg, 3 meals (Breakfast, High-tea & Dinner), Electricity: 60 units included.",
+				meta: ["AC ROOM", "ATTACHED BATH", "24/7 HOT WATER", "PREMIUM"],
+				inclusions:
+					"Induction, Microwave, Washing Machine, Refrigerator. Fully-furnished AC rooms with attached bathroom.",
+			},
+		],
+		inclusions:
+			"Induction, Microwave, Washing Machine, Refrigerator. Fully-furnished AC rooms with attached bathroom with 24/7 hot water.",
+		amenitiesDescription:
+			"High-speed Wi-fi, Housekeeping 3x/week, Laundry up to 10 kg, 3 meals (Breakfast, High-tea & Dinner), Lunch on Sunday & Public Holidays only. No Non-veg food allowed in premises. Electricity: 120 units/room (40 units in 3-sharing, 60 units in 2-sharing).",
+		investmentBreakdown: [
+			{ label: "Base Rent (3-Sharing)", amount: 33000 },
+			{ label: "Electricity (40 units incl.)", amount: 0 },
+		],
+		locationHighlights: [
+			{
+				icon: GraduationCap,
+				title: "Hotel Management College",
+				subtitle: "2 mins walk",
+			},
+			{ icon: Building2, title: "Shivajinagar", subtitle: "7 mins drive" },
+			{ icon: Landmark, title: "JM Road", subtitle: "10 mins drive" },
+		],
+		lifeAtYouthville: commonLifeAtYouthville,
+		faqs: commonFaqs,
+		googleReviews: commonGoogleReviews,
+		relatedProperties: commonRelatedProperties,
+	},
+	{
+		id: "yv-sbr-3",
+		name: "Youthville SBR-3",
+		rating: 4.6,
+		reviewCountLabel: "870+ reviews",
+		location: "Gokhalenagar, Pune",
+		fullAddress:
+			"Plot no 16, Gokhale Nagar Rd, Shivaji Co operative Housing Society, Bhageerath, Gokhalenagar, Pune, Maharashtra 411016",
+		city: "Pune",
+		area: "Gokhalenagar",
+		gender: "Male/Female",
+		occupancy: "2, 3 Sharing",
+		proximity: "Near Colleges",
+		price: 31000,
+		badge: "OFFERS AVAILABLE",
+		badgeVariant: "offers",
+		image: "/property/sbr-3/cover.png",
+		isFavorited: false,
+		featureTags: [],
+		gallery: sbr3Gallery,
+		amenityStrip: commonAmenityStrip,
+		overview:
+			"Youthville SBR-3 is nestled in the heart of Gokhalenagar along the main road, offering easy access to educational institutions and daily essentials. A reliable choice for students seeking affordability without compromise.",
+		whyChooseTitle: "Why choose Youthville SBR-3?",
+		whyChooseQuote:
+			"Affordable, accessible, and built for the student lifestyle.",
+		sidebarEyebrow: "YOUTHVILLE HOSTEL",
+		sidebarTitle: "Student Housing",
+		sidebarFeatures: commonSidebarFeatures,
+		testimonial: commonTestimonial,
+		map: {
+			lat: 18.536,
+			lng: 73.834,
+			label: "Gokhalenagar, Pune",
+		},
+		rooms: [
+			{
+				id: "sbr3-triple",
+				title: "3-Sharing",
+				occupancy: "Triple occupancy",
+				image: "/property/sbr-3/1.jpg",
+				price: 31000,
+				description:
+					"High-speed Wi-fi, Housekeeping 3x/week, Laundry up to 10 kg, 3 meals (Breakfast, High-tea & Dinner), Electricity: 40 units included.",
+				meta: ["AC ROOM", "ATTACHED BATH", "24/7 HOT WATER"],
+				inclusions:
+					"Induction, Microwave, Washing Machine, Refrigerator. Fully-furnished AC rooms with attached bathroom. Chill Zone with Table Tennis, TV lounge, Carrom, Chess.",
+			},
+			{
+				id: "sbr3-twin",
+				title: "2-Sharing",
+				occupancy: "Double occupancy",
+				image: "/property/sbr-3/2.jpg",
+				price: 43000,
+				description:
+					"High-speed Wi-fi, Housekeeping 3x/week, Laundry up to 10 kg, 3 meals (Breakfast, High-tea & Dinner), Electricity: 60 units included.",
+				meta: ["AC ROOM", "ATTACHED BATH", "24/7 HOT WATER"],
+				inclusions:
+					"Induction, Microwave, Washing Machine, Refrigerator. Fully-furnished AC rooms with attached bathroom. Chill Zone with Table Tennis, TV lounge, Carrom, Chess.",
+			},
+			{
+				id: "sbr3-twin-premium",
+				title: "2-Sharing Premium",
+				occupancy: "Double occupancy premium",
+				image: "/property/sbr-3/3.jpg",
+				price: 63000,
+				description:
+					"Premium 2-sharing with all amenities. High-speed Wi-fi, Housekeeping 3x/week, Laundry up to 10 kg, 3 meals (Breakfast, High-tea & Dinner), Electricity: 60 units included.",
+				meta: ["AC ROOM", "ATTACHED BATH", "24/7 HOT WATER", "PREMIUM"],
+				inclusions:
+					"Induction, Microwave, Washing Machine, Refrigerator. Fully-furnished AC rooms with attached bathroom. Chill Zone with Table Tennis, TV lounge, Carrom, Chess.",
+			},
+		],
+		inclusions:
+			"Induction, Microwave, Washing Machine, Refrigerator. Fully-furnished AC rooms with attached bathroom with 24/7 hot water. Chill Zone (Table Tennis, TV lounge, Carrom, Chess, etc).",
+		amenitiesDescription:
+			"High-speed Wi-fi, Housekeeping 3x/week, Laundry up to 10 kg, 3 meals (Breakfast, High-tea & Dinner), Lunch on Sunday & Public Holidays only. No Non-veg food allowed in premises. Electricity: 120 units/room (40 units in 3-sharing, 60 units in 2-sharing).",
+		investmentBreakdown: [
+			{ label: "Base Rent (3-Sharing)", amount: 31000 },
+			{ label: "Electricity (40 units incl.)", amount: 0 },
+		],
+		locationHighlights: [
+			{
+				icon: GraduationCap,
+				title: "Fergusson College",
+				subtitle: "12 mins drive",
+			},
+			{ icon: Building2, title: "Deccan Gymkhana", subtitle: "10 mins drive" },
+			{ icon: Landmark, title: "Senapati Bapat Rd", subtitle: "3 mins walk" },
+		],
+		lifeAtYouthville: commonLifeAtYouthville,
+		faqs: commonFaqs,
+		googleReviews: commonGoogleReviews,
+		relatedProperties: commonRelatedProperties,
+	},
+	{
+		id: "yv-karve-nagar",
+		name: "Youthville Karve Nagar",
+		rating: 4.6,
+		reviewCountLabel: "1,042+ reviews",
+		location: "Karvenagar, Pune",
+		fullAddress: "Lane No. 1, Karvenagar, Pune, Maharashtra 411052",
+		city: "Pune",
+		area: "Karve Nagar",
+		gender: "Male/Female",
+		occupancy: "3 Sharing",
+		price: 29000,
+		badge: "NEAR METRO",
+		badgeVariant: "metro",
+		image: "/property/karve-nagar/cover.png",
+		isFavorited: true,
+		featureTags: ["Biometric Access"],
+		gallery: karveNagarGallery,
+		amenityStrip: commonAmenityStrip,
+		overview:
+			"Karve Nagar brings together secure living, accessible commuting, and a calm neighborhood atmosphere with all the practical essentials already taken care of.",
+		whyChooseTitle: "Why choose Youthville Karve Nagar?",
+		whyChooseQuote:
+			"Built for comfort and safety, with a thoughtfully managed environment for daily student life.",
+		sidebarEyebrow: "YOUTHVILLE HOSTEL",
+		sidebarTitle: "Student Housing",
+		sidebarFeatures: commonSidebarFeatures,
+		testimonial: {
+			name: "Aparna Nair",
+			since: "Resident since 2023",
+			quote:
+				"It feels secure, the food is reliable, and the commute to college is genuinely easy.",
+			avatar:
+				"https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=120&h=120&fit=crop&q=80",
+		},
+		map: {
+			lat: 18.489759,
+			lng: 73.820297,
+			label: "Karvenagar, Pune",
+		},
+		rooms: [
+			{
+				id: "karve-triple",
+				title: "3-Sharing",
+				occupancy: "Triple occupancy",
+				image: "/property/karve-nagar/1.jpg",
+				price: 29000,
+				description:
+					"High-speed Wi-fi, Housekeeping 3x/week, Laundry up to 10 kg, 3 meals (Breakfast, High-tea & Dinner), Electricity: 40 units included.",
+				meta: ["AC ROOM", "ATTACHED BATH", "24/7 HOT WATER"],
+				inclusions:
+					"Induction, Microwave, Washing Machine, Refrigerator. Fully-furnished AC rooms with attached bathroom.",
+			},
+		],
+		inclusions:
+			"Induction, Microwave, Washing Machine, Refrigerator. Fully-furnished AC rooms with attached bathroom with 24/7 hot water.",
+		amenitiesDescription:
+			"High-speed Wi-fi, Housekeeping 3x/week, Laundry up to 10 kg, 3 meals (Breakfast, High-tea & Dinner), Lunch on Sunday & Public Holidays only. No Non-veg food allowed in premises. Electricity: 120 units/room (40 units in 3-sharing, 60 units in 2-sharing).",
+		investmentBreakdown: [
+			{ label: "Base Rent (3-Sharing)", amount: 29000 },
+			{ label: "Electricity (40 units incl.)", amount: 0 },
+		],
+		locationHighlights: [
+			{ icon: Landmark, title: "Karve Road", subtitle: "4 mins walk" },
+			{ icon: Building2, title: "City Center", subtitle: "12 mins drive" },
+			{ icon: GraduationCap, title: "MIT Kothrud", subtitle: "14 mins drive" },
+		],
+		lifeAtYouthville: commonLifeAtYouthville,
+		faqs: commonFaqs,
+		googleReviews: karveNagarReviews,
+		relatedProperties: commonRelatedProperties,
+	},
+	{
+		id: "yv-balewadi-1",
+		name: "YV Balewadi 1",
+		rating: 4.8,
+		reviewCountLabel: "1,248+ reviews",
+		ratingLabel: "Google Reviews",
+		location: "Balewadi, Pune",
+		fullAddress:
+			"1/9+10+11+15+16+17, Balewadi High St, near Sopan Baug Road, next to Cummins, Balewadi Gaon, Balewadi, Pune, Maharashtra 411045",
+		city: "Pune",
+		area: "Balewadi",
+		gender: "Only Male",
+		feature: "Full Gym",
+		price: 16200,
+		badge: "PREMIUM",
+		badgeVariant: "premium",
+		image: "/property/balewadi-1/cover.png",
+		category: "professional",
+		isFavorited: false,
+		featureTags: [],
+		gallery: balewadi1Gallery,
+		amenityStrip: commonAmenityStrip,
+		overview:
+			"Located on the bustling Balewadi High Street next to Cummins, YV Balewadi 1 offers an unparalleled living experience for students and young professionals. Designed with a modern aesthetic, it provides the perfect balance between academic focus and premium lifestyle.",
+		whyChooseTitle: "Why choose YV Balewadi 1?",
+		whyChooseQuote:
+			"A curated community that feels like home, but functions like a 5-star hotel.",
+		sidebarEyebrow: "YOUTHVILLE HOSTEL",
+		sidebarTitle: "Student Housing & Co-Living",
+		sidebarFeatures: commonSidebarFeatures,
+		testimonial: commonTestimonial,
+		map: {
+			lat: 18.578891,
+			lng: 73.770681,
+			label: "Balewadi, Pune",
+		},
+		rooms: [
+			{
+				id: "balewadi1-private",
+				title: "Private Room",
+				occupancy: "Single occupancy",
+				image: "/shared/jpg/1.jpg",
+				price: 19800,
+				tag: "LIMITED",
+				description:
+					"Private room with premium furnishings, workspace, and AC comfort.",
+				meta: ["220 SQ. FT.", "ENSUITE BATH"],
+			},
+			{
+				id: "balewadi1-twin",
+				title: "Twin Sharing",
+				occupancy: "Double occupancy",
+				image: "/shared/jpg/2.jpg",
+				price: 16200,
+				description:
+					"Bright twin-sharing setup with generous storage and daily upkeep.",
+				meta: ["320 SQ. FT.", "SHARED DECK"],
+			},
+			{
+				id: "balewadi1-triple",
+				title: "Triple Sharing",
+				occupancy: "Community sharing",
+				image: "/shared/jpg/3.jpg",
+				price: 12500,
+				description:
+					"A perfect balance of community living and personal space, ideal for students and professionals.",
+				meta: ["350 SQ. FT.", "SHARED DECK"],
+			},
+		],
+		investmentBreakdown: [
+			{ label: "Base Rent (Triple Sharing)", amount: 16500 },
+			{ label: "Utilities (Electricity & Water)", amount: 2000 },
+		],
+		locationHighlights: [
+			{
+				icon: "/shared/svg/icon-shopping-bag.svg",
+				title: "Balewadi High Street",
+				subtitle: "5 mins walk",
+			},
+			{
+				icon: "/shared/svg/icon-building.svg",
+				title: "Hinjewadi IT Park",
+				subtitle: "15 mins drive",
+			},
+			{ icon: GraduationCap, title: "MIT WPU", subtitle: "20 mins drive" },
+		],
+		lifeAtYouthville: commonLifeAtYouthville,
+		faqs: commonFaqs,
+		googleReviews: commonGoogleReviews,
+		relatedProperties: commonRelatedProperties,
+	},
+	{
+		id: "yv-balewadi-2",
+		name: "YV Balewadi 2",
+		rating: 4.5,
+		reviewCountLabel: "920+ reviews",
+		location: "Balewadi, Pune",
+		fullAddress:
+			"HQG8+J9W, Youthville Balewadi 2, next to Amar Tech Park, Pune, Maharashtra 411045",
+		city: "Pune",
+		area: "Balewadi",
+		gender: "Mixed",
+		meals: "3 Meals Incl.",
+		price: 9500,
+		badge: "OFFERS AVAILABLE",
+		badgeVariant: "offers",
+		image: "/property/balewadi-2/cover.png",
+		category: "professional",
+		isFavorited: false,
+		featureTags: [],
+		gallery: balewadi2Gallery,
+		amenityStrip: commonAmenityStrip,
+		overview:
+			"Located next to Amar Tech Park in Balewadi, YV Balewadi 2 is tuned for affordability without losing the polished Youthville experience. A strong fit for young professionals working in the nearby IT corridor.",
+		whyChooseTitle: "Why choose YV Balewadi 2?",
+		whyChooseQuote:
+			"A practical stay that still feels curated, connected, and community-driven.",
+		sidebarEyebrow: "YOUTHVILLE HOSTEL",
+		sidebarTitle: "Affordable Co-Living",
+		sidebarFeatures: commonSidebarFeatures,
+		testimonial: {
+			name: "Saket Joshi",
+			since: "Resident since 2025",
+			quote:
+				"It's affordable, clean, and the staff takes care of the basics really well.",
+			avatar:
+				"https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=120&h=120&fit=crop&q=80",
+		},
+		map: {
+			lat: 18.5795,
+			lng: 73.772,
+			label: "Balewadi, Pune",
+		},
+		rooms: commonRooms,
+		investmentBreakdown: commonInvestmentBreakdown,
+		locationHighlights: [
+			{ icon: Building2, title: "Amar Tech Park", subtitle: "2 mins walk" },
+			{
+				icon: Landmark,
+				title: "Balewadi High Street",
+				subtitle: "8 mins walk",
+			},
+			{
+				icon: GraduationCap,
+				title: "University Zone",
+				subtitle: "18 mins drive",
+			},
+		],
+		lifeAtYouthville: commonLifeAtYouthville,
+		faqs: commonFaqs,
+		googleReviews: commonGoogleReviews,
+		relatedProperties: commonRelatedProperties,
+	},
+	{
+		id: "yv-mahalunge-1",
+		name: "YV Mahalunge 1",
+		rating: 4.4,
+		reviewCountLabel: "650+ reviews",
+		location: "Mahalunge, Pune",
+		fullAddress: "Mahalunge, Pune, Maharashtra",
+		city: "Pune",
+		area: "Mahalunge",
+		gender: "Co-living",
+		occupancy: "2, 3 Sharing",
+		proximity: "Near IT Park",
+		price: 9000,
+		badge: "NEW OPENING",
+		badgeVariant: "new-opening",
+		image: "/shared/jpg/bale.jpg",
+		category: "professional",
+		isFavorited: false,
+		featureTags: [],
+		gallery: commonGallery,
+		amenityStrip: commonAmenityStrip,
+		overview:
+			"YV Mahalunge 1 is a brand-new Youthville property designed for IT professionals working in the Hinjewadi-Mahalunge belt. Enjoy modern amenities with easy access to major tech parks.",
+		whyChooseTitle: "Why choose YV Mahalunge 1?",
+		whyChooseQuote:
+			"Fresh, modern, and perfectly positioned for the IT corridor lifestyle.",
+		sidebarEyebrow: "YOUTHVILLE HOSTEL",
+		sidebarTitle: "Student Housing & Co-Living",
+		sidebarFeatures: commonSidebarFeatures,
+		testimonial: commonTestimonial,
+		map: {
+			lat: 18.595,
+			lng: 73.735,
+			label: "Mahalunge, Pune",
+		},
+		rooms: commonRooms,
+		investmentBreakdown: commonInvestmentBreakdown,
+		locationHighlights: [
+			{
+				icon: Building2,
+				title: "Hinjewadi IT Park",
+				subtitle: "10 mins drive",
+			},
+			{ icon: Landmark, title: "Balewadi", subtitle: "12 mins drive" },
+			{
+				icon: GraduationCap,
+				title: "Symbiosis University",
+				subtitle: "20 mins drive",
+			},
+		],
+		lifeAtYouthville: commonLifeAtYouthville,
+		faqs: commonFaqs,
+		googleReviews: commonGoogleReviews,
+		relatedProperties: commonRelatedProperties,
+	},
+	{
+		id: "yv-mundhwa-2",
+		name: "YV Mundhwa 2",
+		rating: 4.5,
+		reviewCountLabel: "780+ reviews",
+		location: "Mundhwa, Pune",
+		fullAddress:
+			"Gandhi Chowk, Youthville Mundhwa, Bhawani Estate, near Mundwa veg.Market, Mundhwa, Pune, Maharashtra 411036",
+		city: "Pune",
+		area: "Mundhwa",
+		gender: "Co-living",
+		occupancy: "1, 2, 3 Sharing",
+		proximity: "Near Kharadi IT",
+		price: 10000,
+		badge: "OFFERS AVAILABLE",
+		badgeVariant: "offers",
+		image: "/shared/jpg/kn.jpg",
+		isFavorited: false,
+		featureTags: [],
+		gallery: commonGallery,
+		amenityStrip: commonAmenityStrip,
+		overview:
+			"Located near Gandhi Chowk in Mundhwa, this Youthville property is well-connected to the Kharadi IT hub and offers a comfortable community living experience with all essentials included.",
+		whyChooseTitle: "Why choose YV Mundhwa 2?",
+		whyChooseQuote:
+			"Well-connected, well-managed, and designed for the working professional.",
+		sidebarEyebrow: "YOUTHVILLE HOSTEL",
+		sidebarTitle: "Student Housing & Co-Living",
+		sidebarFeatures: commonSidebarFeatures,
+		testimonial: commonTestimonial,
+		map: {
+			lat: 18.537,
+			lng: 73.917,
+			label: "Mundhwa, Pune",
+		},
+		rooms: commonRooms,
+		investmentBreakdown: commonInvestmentBreakdown,
+		locationHighlights: [
+			{ icon: Building2, title: "Kharadi IT Park", subtitle: "8 mins drive" },
+			{ icon: Landmark, title: "Koregaon Park", subtitle: "10 mins drive" },
+			{ icon: GraduationCap, title: "EON IT Park", subtitle: "12 mins drive" },
+		],
+		lifeAtYouthville: commonLifeAtYouthville,
+		faqs: commonFaqs,
+		googleReviews: commonGoogleReviews,
+		relatedProperties: commonRelatedProperties,
+	},
+	{
+		id: "yv-yerwada",
+		name: "YV Yerwada",
+		rating: 4.6,
+		reviewCountLabel: "890+ reviews",
+		location: "Yerawada, Pune",
+		fullAddress:
+			"Survey No, Youthvile, 154/2, Maji Sainik Nagar, Mohanwadi, Yerawada, Pune, Maharashtra 411006",
+		city: "Pune",
+		area: "Yerwada",
+		gender: "Co-living",
+		occupancy: "1, 2, 3 Sharing",
+		proximity: "Near Aga Khan",
+		price: 11500,
+		badge: "PREMIUM",
+		badgeVariant: "premium",
+		image: "/shared/jpg/bale.jpg",
+		isFavorited: false,
+		featureTags: [],
+		gallery: commonGallery,
+		amenityStrip: commonAmenityStrip,
+		overview:
+			"YV Yerwada sits in the well-connected Yerawada area near Aga Khan Palace, offering premium co-living for students and professionals with easy access to Nagar Road's IT corridor and Koregaon Park.",
+		whyChooseTitle: "Why choose YV Yerwada?",
+		whyChooseQuote:
+			"Central location, premium amenities, and a vibrant community.",
+		sidebarEyebrow: "YOUTHVILLE HOSTEL",
+		sidebarTitle: "Student Housing & Co-Living",
+		sidebarFeatures: commonSidebarFeatures,
+		testimonial: commonTestimonial,
+		map: {
+			lat: 18.558,
+			lng: 73.887,
+			label: "Yerawada, Pune",
+		},
+		rooms: commonRooms,
+		investmentBreakdown: commonInvestmentBreakdown,
+		locationHighlights: [
+			{ icon: Landmark, title: "Aga Khan Palace", subtitle: "5 mins drive" },
+			{ icon: Building2, title: "Nagar Road IT", subtitle: "10 mins drive" },
+			{ icon: GraduationCap, title: "Koregaon Park", subtitle: "8 mins drive" },
+		],
+		lifeAtYouthville: commonLifeAtYouthville,
+		faqs: commonFaqs,
+		googleReviews: commonGoogleReviews,
+		relatedProperties: commonRelatedProperties,
+	},
+	{
+		id: "yv-moshi",
+		name: "YV Moshi",
+		rating: 4.3,
+		reviewCountLabel: "520+ reviews",
+		location: "Moshi, Pune",
+		fullAddress: "Moshi, Pune, Maharashtra",
+		city: "Pune",
+		area: "Moshi",
+		gender: "Co-living",
+		occupancy: "2, 3 Sharing",
+		proximity: "Near PCMC",
+		price: 8500,
+		badge: "NEW OPENING",
+		badgeVariant: "new-opening",
+		image: "/shared/jpg/baluno.jpg",
+		isFavorited: false,
+		featureTags: [],
+		gallery: commonGallery,
+		amenityStrip: commonAmenityStrip,
+		overview:
+			"YV Moshi is a new addition to the Youthville network, located in the rapidly developing Moshi area near PCMC. Ideal for students and professionals looking for budget-friendly co-living in North Pune.",
+		whyChooseTitle: "Why choose YV Moshi?",
+		whyChooseQuote:
+			"Affordable co-living in North Pune's fastest growing neighborhood.",
+		sidebarEyebrow: "YOUTHVILLE HOSTEL",
+		sidebarTitle: "Affordable Co-Living",
+		sidebarFeatures: commonSidebarFeatures,
+		testimonial: commonTestimonial,
+		map: {
+			lat: 18.675,
+			lng: 73.853,
+			label: "Moshi, Pune",
+		},
+		rooms: commonRooms,
+		investmentBreakdown: commonInvestmentBreakdown,
+		locationHighlights: [
+			{ icon: Building2, title: "PCMC Area", subtitle: "10 mins drive" },
+			{ icon: Landmark, title: "Bhosari MIDC", subtitle: "12 mins drive" },
+			{
+				icon: GraduationCap,
+				title: "Pimpri College Zone",
+				subtitle: "15 mins drive",
+			},
+		],
+		lifeAtYouthville: commonLifeAtYouthville,
+		faqs: commonFaqs,
+		googleReviews: commonGoogleReviews,
+		relatedProperties: commonRelatedProperties,
+	},
+	{
+		id: "we-one-121-wakad",
+		name: "We One 121 Wakad",
+		rating: 4.4,
+		reviewCountLabel: "680+ reviews",
+		location: "Wakad, Pune",
+		fullAddress: "Wakad, Pune, Maharashtra",
+		city: "Pune",
+		area: "Wakad",
+		gender: "Co-living",
+		occupancy: "1, 2, 3 Sharing",
+		proximity: "Near Hinjewadi",
+		price: 10000,
+		badge: "NEW OPENING",
+		badgeVariant: "new-opening",
+		image: "/shared/jpg/kn.jpg",
+		isFavorited: false,
+		featureTags: [],
+		gallery: commonGallery,
+		amenityStrip: commonAmenityStrip,
+		overview:
+			"We One 121 Wakad is strategically located in Wakad, one of Pune's most vibrant neighborhoods near Hinjewadi IT Park. Perfect for tech professionals who want a short commute and modern amenities.",
+		whyChooseTitle: "Why choose We One 121 Wakad?",
+		whyChooseQuote:
+			"Strategic location with modern amenities for the IT professional.",
+		sidebarEyebrow: "YOUTHVILLE HOSTEL",
+		sidebarTitle: "Student Housing & Co-Living",
+		sidebarFeatures: commonSidebarFeatures,
+		testimonial: commonTestimonial,
+		map: {
+			lat: 18.599,
+			lng: 73.761,
+			label: "Wakad, Pune",
+		},
+		rooms: commonRooms,
+		investmentBreakdown: commonInvestmentBreakdown,
+		locationHighlights: [
+			{
+				icon: Building2,
+				title: "Hinjewadi IT Park",
+				subtitle: "10 mins drive",
+			},
+			{ icon: Landmark, title: "Wakad Bridge", subtitle: "3 mins walk" },
+			{ icon: GraduationCap, title: "Symbiosis", subtitle: "20 mins drive" },
+		],
+		lifeAtYouthville: commonLifeAtYouthville,
+		faqs: commonFaqs,
+		googleReviews: commonGoogleReviews,
+		relatedProperties: commonRelatedProperties,
+	},
+	{
+		id: "yv-balewadi-3",
+		name: "YV Balewadi 3",
+		rating: 4.5,
+		reviewCountLabel: "740+ reviews",
+		location: "Balewadi, Pune",
+		fullAddress: "Balewadi, Pune, Maharashtra 411045",
+		city: "Pune",
+		area: "Balewadi",
+		gender: "Co-living",
+		occupancy: "2, 3 Sharing",
+		meals: "3 Meals Incl.",
+		price: 9500,
+		badge: "NEW OPENING",
+		badgeVariant: "new-opening",
+		image: "/shared/jpg/bale.jpg",
+		isFavorited: false,
+		featureTags: [],
+		gallery: commonGallery,
+		amenityStrip: commonAmenityStrip,
+		overview:
+			"The newest Youthville property in the Balewadi cluster, YV Balewadi 3 offers fresh interiors and a community-first approach for students and professionals in Pune's western corridor.",
+		whyChooseTitle: "Why choose YV Balewadi 3?",
+		whyChooseQuote:
+			"Brand new interiors in Pune's most vibrant student and professional hub.",
+		sidebarEyebrow: "YOUTHVILLE HOSTEL",
+		sidebarTitle: "Student Housing & Co-Living",
+		sidebarFeatures: commonSidebarFeatures,
+		testimonial: commonTestimonial,
+		map: {
+			lat: 18.578,
+			lng: 73.769,
+			label: "Balewadi, Pune",
+		},
+		rooms: commonRooms,
+		investmentBreakdown: commonInvestmentBreakdown,
+		locationHighlights: [
+			{
+				icon: "/shared/svg/icon-shopping-bag.svg",
+				title: "Balewadi High Street",
+				subtitle: "7 mins walk",
+			},
+			{
+				icon: "/shared/svg/icon-building.svg",
+				title: "Hinjewadi IT Park",
+				subtitle: "15 mins drive",
+			},
+			{ icon: GraduationCap, title: "MIT WPU", subtitle: "20 mins drive" },
+		],
+		lifeAtYouthville: commonLifeAtYouthville,
+		faqs: commonFaqs,
+		googleReviews: commonGoogleReviews,
+		relatedProperties: commonRelatedProperties,
+	},
+	{
+		id: "yv-hinjewadi-2",
+		name: "YV Hinjewadi 2",
+		rating: 4.5,
+		reviewCountLabel: "810+ reviews",
+		location: "Hinjewadi, Pune",
+		fullAddress: "Hinjewadi, Pune, Maharashtra",
+		city: "Pune",
+		area: "Hinjewadi",
+		gender: "Co-living",
+		occupancy: "1, 2, 3 Sharing",
+		proximity: "Near IT Park",
+		price: 10500,
+		badge: "NEAR METRO",
+		badgeVariant: "metro",
+		image: "/shared/jpg/baluno.jpg",
+		isFavorited: false,
+		featureTags: [],
+		gallery: commonGallery,
+		amenityStrip: commonAmenityStrip,
+		overview:
+			"YV Hinjewadi 2 is located in the heart of Pune's IT hub, providing a seamless live-work experience for tech professionals. Walk to work and come home to a managed, community-first environment.",
+		whyChooseTitle: "Why choose YV Hinjewadi 2?",
+		whyChooseQuote:
+			"Live where you work — premium co-living in Pune's IT capital.",
+		sidebarEyebrow: "YOUTHVILLE HOSTEL",
+		sidebarTitle: "Student Housing & Co-Living",
+		sidebarFeatures: commonSidebarFeatures,
+		testimonial: commonTestimonial,
+		map: {
+			lat: 18.5912,
+			lng: 73.738,
+			label: "Hinjewadi, Pune",
+		},
+		rooms: commonRooms,
+		investmentBreakdown: commonInvestmentBreakdown,
+		locationHighlights: [
+			{ icon: Building2, title: "Hinjewadi Phase 1", subtitle: "5 mins drive" },
+			{ icon: Landmark, title: "Wakad", subtitle: "8 mins drive" },
+			{ icon: GraduationCap, title: "Balewadi", subtitle: "12 mins drive" },
+		],
+		lifeAtYouthville: commonLifeAtYouthville,
+		faqs: commonFaqs,
+		googleReviews: commonGoogleReviews,
+		relatedProperties: commonRelatedProperties,
+	},
+	{
+		id: "yv-sancheti",
+		name: "YV Sancheti",
+		rating: 4.7,
+		reviewCountLabel: "960+ reviews",
+		location: "Shivajinagar, Pune",
+		fullAddress:
+			"GVJ3+875 Morya Mitra Mandal, Wellesley Rd, Baluchi Vasti, Shivajinagar, Pune, Maharashtra 411005",
+		city: "Pune",
+		area: "Shivajinagar",
+		gender: "Co-living",
+		occupancy: "1, 2, 3 Sharing",
+		proximity: "Near Sancheti Hospital",
+		price: 12000,
+		badge: "PREMIUM",
+		badgeVariant: "premium",
+		image: "/property/sancheti/cover.png",
+		isFavorited: false,
+		featureTags: [],
+		gallery: commonGallery,
+		amenityStrip: commonAmenityStrip,
+		overview:
+			"YV Sancheti is located in the iconic Shivajinagar area on Wellesley Road, offering prime access to Pune's educational and cultural heart. Perfect for students at nearby colleges and medical institutions.",
+		whyChooseTitle: "Why choose YV Sancheti?",
+		whyChooseQuote:
+			"In the heart of Pune's education district — walk to college, walk to culture.",
+		sidebarEyebrow: "YOUTHVILLE HOSTEL",
+		sidebarTitle: "Student Housing & Co-Living",
+		sidebarFeatures: commonSidebarFeatures,
+		testimonial: commonTestimonial,
+		map: {
+			lat: 18.5312,
+			lng: 73.854,
+			label: "Shivajinagar, Pune",
+		},
+		rooms: commonRooms,
+		investmentBreakdown: commonInvestmentBreakdown,
+		locationHighlights: [
+			{ icon: Landmark, title: "Sancheti Hospital", subtitle: "2 mins walk" },
+			{
+				icon: GraduationCap,
+				title: "Fergusson College",
+				subtitle: "8 mins drive",
+			},
+			{
+				icon: Building2,
+				title: "Shivajinagar Station",
+				subtitle: "5 mins drive",
+			},
+		],
+		lifeAtYouthville: commonLifeAtYouthville,
+		faqs: commonFaqs,
+		googleReviews: commonGoogleReviews,
+		relatedProperties: commonRelatedProperties,
+	},
+	{
+		id: "yv-kiwale",
+		name: "YV Kiwale",
+		rating: 4.8,
+		reviewCountLabel: "1,248+ reviews",
+		location: "Kiwale, Pune",
+		fullAddress:
+			"MP6C+WW2, Kiwale, Ravet, Pimpri-Chinchwad, Maharashtra 412101",
+		city: "Pune",
+		area: "Kiwale",
+		gender: "Co-living",
+		occupancy: "1, 2 Sharing",
+		proximity: "Near IT Park",
+		price: 14500,
+		badge: "PREMIUM",
+		badgeVariant: "premium",
+		image: "/property/kiwale/cover.png",
+		isFavorited: false,
+		featureTags: [],
+		gallery: commonGallery,
+		amenityStrip: commonAmenityStrip,
+		overview:
+			"Located in Kiwale near Ravet in Pimpri-Chinchwad, this Youthville address is designed for young professionals who want smooth commutes, calm interiors, and a premium serviced-hostel experience that feels curated rather than crowded.",
+		whyChooseTitle: "Why choose YV Kiwale?",
+		whyChooseQuote:
+			"A curated community that feels like home, but functions like a 5-star hotel.",
+		sidebarEyebrow: "YOUTHVILLE HOSTEL",
+		sidebarTitle: "Student Housing & Co-Living",
+		sidebarFeatures: commonSidebarFeatures,
+		testimonial: commonTestimonial,
+		map: {
+			lat: 18.659077,
+			lng: 73.7213003,
+			label: "Kiwale, Pune",
+		},
+		rooms: [
+			{
+				id: "kiwale-private",
+				title: "Private Room",
+				occupancy: "Single occupancy",
+				image: "/shared/jpg/1.jpg",
+				price: 18500,
+				tag: "LIMITED",
+				description:
+					"Quiet room with study desk, wardrobe, AC, and attached bath.",
+				meta: ["220 SQ. FT.", "ENSUITE BATH"],
+			},
+			{
+				id: "kiwale-twin",
+				title: "Twin Sharing",
+				occupancy: "Double occupancy",
+				image: "/shared/jpg/2.jpg",
+				price: 14500,
+				description:
+					"Smartly planned shared room with storage and housekeeping.",
+				meta: ["280 SQ. FT.", "SHARED DECK"],
+			},
+			{
+				id: "kiwale-triple",
+				title: "Triple Sharing",
+				occupancy: "Community sharing",
+				image: "/shared/jpg/3.jpg",
+				price: 18500,
+				description:
+					"A perfect balance of community living and personal space, ideal for students and professionals.",
+				meta: ["350 SQ. FT.", "SHARED DECK"],
+			},
+		],
+		investmentBreakdown: [
+			{ label: "Base Rent (Triple Sharing)", amount: 16500 },
+			{ label: "Utilities (Electricity & Water)", amount: 2000 },
+		],
+		locationHighlights: [
+			{
+				icon: "/shared/svg/icon-shopping-bag.svg",
+				title: "Balewadi High Street",
+				subtitle: "5 mins walk",
+			},
+			{
+				icon: "/shared/svg/icon-building.svg",
+				title: "Hinjewadi IT Park",
+				subtitle: "15 mins drive",
+			},
+			{ icon: GraduationCap, title: "MIT WPU", subtitle: "20 mins drive" },
+		],
+		lifeAtYouthville: commonLifeAtYouthville,
+		faqs: commonFaqs,
+		googleReviews: commonGoogleReviews,
+		relatedProperties: commonRelatedProperties,
+	},
+	{
+		id: "yv-powai-1",
+		name: "YV Powai 1",
+		rating: 4.9,
+		reviewCountLabel: "850+ reviews",
+		location: "Powai, Mumbai",
+		fullAddress: "Central Ave, Powai, Mumbai, Maharashtra 400076",
+		city: "Mumbai",
+		area: "Powai",
+		gender: "Co-living",
+		occupancy: "1, 2 Sharing",
+		proximity: "Near IIT Bombay",
+		price: 22000,
+		badge: "PREMIUM",
+		badgeVariant: "premium",
+		image: "/shared/jpg/bale.jpg",
+		isFavorited: false,
+		featureTags: [],
+		gallery: commonGallery,
+		amenityStrip: commonAmenityStrip,
+		overview:
+			"YV Powai 1 offers a premium co-living experience in the heart of Mumbai's tech hub. Located near IIT Bombay, it's perfect for students and young professionals seeking luxury and convenience.",
+		whyChooseTitle: "Why choose YV Powai 1?",
+		whyChooseQuote: "Luxury living in Mumbai's most vibrant professional hub.",
+		sidebarEyebrow: "YOUTHVILLE HOSTEL",
+		sidebarTitle: "Student Housing & Co-Living",
+		sidebarFeatures: commonSidebarFeatures,
+		testimonial: commonTestimonial,
+		map: {
+			lat: 19.1176,
+			lng: 72.906,
+			label: "Powai, Mumbai",
+		},
+		rooms: commonRooms,
+		investmentBreakdown: commonInvestmentBreakdown,
+		locationHighlights: [
+			{ icon: GraduationCap, title: "IIT Bombay", subtitle: "5 mins walk" },
+			{
+				icon: Building2,
+				title: "Hiranandani Business Park",
+				subtitle: "10 mins drive",
+			},
+		],
+		lifeAtYouthville: commonLifeAtYouthville,
+		faqs: commonFaqs,
+		relatedProperties: commonRelatedProperties,
+	},
+	{
+		id: "yv-andheri-west",
+		name: "YV Andheri West",
+		rating: 4.7,
+		reviewCountLabel: "1,100+ reviews",
+		location: "Andheri West, Mumbai",
+		fullAddress: "Link Road, Andheri West, Mumbai, Maharashtra 400053",
+		city: "Mumbai",
+		area: "Andheri",
+		gender: "Co-living",
+		occupancy: "1, 2, 3 Sharing",
+		proximity: "Near Metro Station",
+		price: 18000,
+		badge: "NEAR METRO",
+		badgeVariant: "metro",
+		image: "/shared/jpg/kn.jpg",
+		isFavorited: false,
+		featureTags: [],
+		gallery: commonGallery,
+		amenityStrip: commonAmenityStrip,
+		overview:
+			"YV Andheri West provides excellent connectivity and modern amenities in one of Mumbai's most sought-after residential areas. Ideal for those working in the media and entertainment industry.",
+		whyChooseTitle: "Why choose YV Andheri West?",
+		whyChooseQuote: "Connectivity meets comfort in the heart of Mumbai.",
+		sidebarEyebrow: "YOUTHVILLE HOSTEL",
+		sidebarTitle: "Student Housing & Co-Living",
+		sidebarFeatures: commonSidebarFeatures,
+		testimonial: commonTestimonial,
+		map: {
+			lat: 19.1136,
+			lng: 72.8697,
+			label: "Andheri West, Mumbai",
+		},
+		rooms: commonRooms,
+		investmentBreakdown: commonInvestmentBreakdown,
+		locationHighlights: [
+			{ icon: Building2, title: "Andheri Metro", subtitle: "2 mins walk" },
+			{ icon: Landmark, title: "Infinity Mall", subtitle: "10 mins walk" },
+		],
+		lifeAtYouthville: commonLifeAtYouthville,
+		faqs: commonFaqs,
+		relatedProperties: commonRelatedProperties,
+	},
+];
+
+export function getPropertyById(id: string) {
+	return mockProperties.find((property) => property.id === id);
+}

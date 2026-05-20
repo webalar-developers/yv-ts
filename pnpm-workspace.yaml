@@ -1,0 +1,16 @@
+packages:
+  - '.'
+
+# ---- Supply chain hardening (pnpm v11) ----
+minimumReleaseAge: 10080
+minimumReleaseAgeStrict: true
+minimumReleaseAgeIgnoreMissingTime: false
+blockExoticSubdeps: true
+trustPolicy: no-downgrade
+trustPolicyIgnoreAfter: 525600
+strictDepBuilds: true
+preferFrozenLockfile: true
+updateNotifier: false
+allowBuilds:
+  msw: true
+  sharp: true

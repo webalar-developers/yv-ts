@@ -1,0 +1,389 @@
+{
+  "areas": {
+    "balewadi": {
+      "displayName": "Balewadi",
+      "connectivity": [
+        {
+          "name": "Balewadi High Street",
+          "distance": "2 min"
+        },
+        {
+          "name": "Amar tech Park",
+          "distance": "2 min"
+        },
+        {
+          "name": "Hinjewadi It Park",
+          "distance": "10 min"
+        },
+        {
+          "name": "Metro Station",
+          "distance": "2 min"
+        },
+        {
+          "name": "Aundh",
+          "distance": "10 min"
+        },
+        {
+          "name": "Nicmar university",
+          "distance": "2 min"
+        },
+        {
+          "name": "NIA",
+          "distance": "5 min"
+        }
+      ],
+      "colleges": [
+        "Genba Sopanrao Moze College Of Engineering – Engineering",
+        "Dnyansagar Institute of Management and Research – Management",
+        "Dnyansagar Arts & Commerce College",
+        "Aditya Horizon School & Jr. college – Jr college (arts/science/commerce)",
+        "Seamedu - School of Media | Technology | Management – Creative / tech college",
+        "Aimtec Point MS‑CIT Center in Baner Pune – Skill / certification courses",
+        "Vision School of Management And Design – Management / creative",
+        "MIS International School – CBSE School, Balewadi",
+        "Bharati Vidyapeeth Rabindranath Tagore School of Excellence – International school",
+        "Jumpstart International Preschool and Learning Center, Baner – Preschool",
+        "Universal Wisdom School | International School in Pune (Balewadi)",
+        "Global Indian International School – International curriculum",
+        "Disha Computer Institute Balewadi – Skill courses",
+        "BRDS Baner, Pune – Design / NATA / CEED coaching – Creative preparation"
+      ],
+      "companies": [
+        "WorldEmp India Private Limited",
+        "Siemens Digital Industries Software India Pvt Ltd",
+        "Josh Software Private Limited",
+        "Alphasense Technology India Pvt. Ltd.",
+        "Mediaocean",
+        "GeekyWorks IT Solutions Pvt. Ltd.",
+        "Proctur",
+        "Accelon Technologies Pvt Ltd",
+        "Recaho Digital Pvt. Ltd.",
+        "Assimilate Technologies Pvt Ltd",
+        "AFour Technologies",
+        "Qualys",
+        "Broadcom (VMware)",
+        "Nutanix Technologies India Pvt Ltd",
+        "Sarvaha Systems Private Limited",
+        "Prorigo Software Pvt. Ltd.",
+        "EC Infosolutions Pvt. Ltd.",
+        "Mahendra Technosoft Pvt. Ltd.",
+        "Allied Softech Pvt. Ltd.",
+        "Thinkitive Technologies Pvt. Ltd.",
+        "5D Solutions India Pvt. Ltd.",
+        "Centiro Solutions Pvt Ltd",
+        "Siemens Technology And Services Pvt. Ltd.",
+        "Sarvatra Technologies Pvt. Ltd.",
+        "Prescient Technologies",
+        "Codevian Technologies Pvt. Ltd.",
+        "Harbinger Group",
+        "Bitwise Solutions Pvt. Ltd.",
+        "Groots Software Technologies Pvt Ltd",
+        "Verinite Technologies Pvt Ltd",
+        "WorldEmp India Private Limited"
+      ]
+    },
+    "sbr": {
+      "displayName": "SB Road",
+      "connectivity": [
+        {
+          "name": "Symbiosis College",
+          "distance": "2 min"
+        },
+        {
+          "name": "Law College",
+          "distance": "5 min"
+        },
+        {
+          "name": "JW Marriot",
+          "distance": "1 min"
+        },
+        {
+          "name": "FC Road",
+          "distance": "5 min"
+        },
+        {
+          "name": "COEP College",
+          "distance": "10 min"
+        },
+        {
+          "name": "Shivaji Nagar metro Station",
+          "distance": "10 min"
+        }
+      ],
+      "colleges": [
+        "Symbiosis College Of Arts & Commerce – Pune college offering arts & commerce programs",
+        "Brihan Maharashtra College of Commerce (BMCC) – Top commerce college in Pune",
+        "Symbiosis School of Economics",
+        "Modern College of Arts, Science & Commerce",
+        "Modern College of Arts, Science and Commerce (alternate)",
+        "P.E.S. Modern College of Engineering",
+        "Government Polytechnic, Pune",
+        "DES Pune University",
+        "Savitribai Phule Pune University",
+        "Vidya Bhavan School and Jr College – K–12 school + junior college",
+        "M.P. International School & Junior College",
+        "Fergusson College – Well-known historic institution (academic + higher ed)",
+        "Vikhe Patil Memorial School, Pune",
+        "Maharashtra State Institute of Hotel Management and Catering Technology – Specialized institute",
+        "Indian School Of Political Economy – Research/academic"
+      ],
+      "companies": [
+        "BFPL (Business Services)",
+        "Bajaj Finserv",
+        "Persistent Systems",
+        "PNR Commerce Services Pvt. Ltd.",
+        "Iconic Fashion Retailing Pvt. Ltd.",
+        "Cognizant",
+        "Zomato",
+        "Swiggy Corporate Office",
+        "ICC Trade Tower",
+        "Icertis",
+        "BFPL (Business Services)",
+        "LTIMindtree (L&T Infotech)",
+        "L&T Infotech (IT)",
+        "Brawizz Tech Pvt. Ltd."
+      ]
+    },
+    "karve-nagar": {
+      "displayName": "Karve Nagar",
+      "connectivity": [
+        {
+          "name": "MIT",
+          "distance": "10 min"
+        },
+        {
+          "name": "Cummins College",
+          "distance": "2 min"
+        },
+        {
+          "name": "vanaz Metro Station",
+          "distance": "15 min"
+        },
+        {
+          "name": "Karve Putla",
+          "distance": "10 min"
+        },
+        {
+          "name": "City Pride",
+          "distance": "5 min"
+        },
+        {
+          "name": "Nal stop Station",
+          "distance": "10 min"
+        },
+        {
+          "name": "commerzone",
+          "distance": "1 min"
+        }
+      ],
+      "colleges": [
+        "Abasaheb Garware College",
+        "MIT College of Engineering / MIT World Peace University",
+        "MIT School of Management",
+        "Institute of Management Development & Research (IMDR)",
+        "Poona College of Pharmacy",
+        "Sinhgad Spring Dale School",
+        "Abhinav Vidyalaya (Karve Road)",
+        "MES Bal Shikshan Mandir",
+        "Dr. Kalmadi Shamarao High School",
+        "Erandwane Madhyamik Vidyalaya",
+        "Sinhgad College of Education",
+        "Maharashtra Vidya Mandir",
+        "Karve Institute of Social Service"
+      ],
+      "companies": [
+        "XtroviX Technologies Pvt. Ltd.",
+        "Cybermate Software Technologies Private Limited",
+        "Brain Vision Technology",
+        "Omvsab IT Solution, Karve Nagar",
+        "Lexicon Networks India Pvt Ltd",
+        "Network Components Private Limited",
+        "Khairnar Technologies Pvt Ltd",
+        "Web Crypt Technology",
+        "Code Icons Technology",
+        "Happieloop Technologies Pvt. Ltd.",
+        "Acism Software Private Limited",
+        "Elite Softwares",
+        "Vencent Systems Private Limited",
+        "Harbinger Group",
+        "zCon Solutions Pvt Ltd",
+        "Pathfortune Pvt. Ltd.",
+        "Tekdi Technologies Pvt. Ltd",
+        "Hindavi Technologies",
+        "Aaryavarta Technologies",
+        "Peocit Software Solutions Private Limited",
+        "QualEx Systems Pvt Ltd",
+        "Zestorm Technologies Pvt. Ltd."
+      ]
+    },
+    "yerwada": {
+      "displayName": "Yerwada",
+      "connectivity": [
+        {
+          "name": "Bussines bay",
+          "distance": "5 min"
+        },
+        {
+          "name": "airport",
+          "distance": "10 min"
+        },
+        {
+          "name": "Ritz carlton",
+          "distance": "5 min"
+        },
+        {
+          "name": "poona Golf Club",
+          "distance": "5 min"
+        },
+        {
+          "name": "phoenix mall",
+          "distance": "5 min"
+        },
+        {
+          "name": "Skyone corporate park",
+          "distance": "10 min"
+        },
+        {
+          "name": "ballr kalyani nager",
+          "distance": "15 min"
+        },
+        {
+          "name": "JM/FC road",
+          "distance": "5 min"
+        }
+      ]
+    },
+    "sancheti": {
+      "displayName": "Sancheti (Shivaji Nagar)",
+      "connectivity": [
+        {
+          "name": "Shivaji Nagar metro Station",
+          "distance": "5 min"
+        },
+        {
+          "name": "sanchiti Hospital",
+          "distance": "1 min"
+        },
+        {
+          "name": "Wakadewadu bus stop",
+          "distance": "2 min"
+        },
+        {
+          "name": "sangamwadi Bus stop",
+          "distance": "1o min"
+        },
+        {
+          "name": "LTI mindtree",
+          "distance": "2 min"
+        },
+        {
+          "name": "COEP College",
+          "distance": "2 min"
+        },
+        {
+          "name": "SSPU",
+          "distance": "2 min"
+        }
+      ]
+    },
+    "kiwale": {
+      "displayName": "Kiwale",
+      "connectivity": [
+        {
+          "name": "Mukai Chowk",
+          "distance": "2 min"
+        },
+        {
+          "name": "DY Patil",
+          "distance": "15 min"
+        },
+        {
+          "name": "Pune-Mumbai Express",
+          "distance": "1 min"
+        },
+        {
+          "name": "indira college",
+          "distance": "15 min"
+        },
+        {
+          "name": "JSPM College",
+          "distance": "15 min"
+        }
+      ],
+      "schoolsColleges": [
+        "Symbiosis School, Kiwale"
+      ],
+      "companies": [
+        "Automation and Control",
+        "Vas Industrial Solutions LLP",
+        "Flowseal Engineers LLP",
+        "Zoeacs Life Science LLP",
+        "Frugenious India Foods Pvt Ltd",
+        "S B Enterprises",
+        "KOLTE-PATIL PLANET KIWALE PROJECT PVT LTD",
+        "Kiwale Farms Pvt Ltd"
+      ],
+      "coworkingSpaces": [
+        "GoodWorks Cowork (services multi-area including Moshi / Wakad / Pashan — can serve this zone)"
+      ]
+    }
+  },
+  "pricing": [
+    {
+      "propertyName": "SBR-1",
+      "amenities": "1. High speed Wi-fi\n2. Housekeeping Service- 3 times a week\n3. Laundry Service upto 10 kg\n4. 3 times meal- Breakfast, High-tea & Dinner. Lunch only on Sunday and Public Holiday. (No Non-veg food is allowed in premises\n5. Eletricity- Per room- 120 units- 40 units in 3 sharing - 60 units in 2 sharing",
+      "inclusions": "1. Induction, Microwave, washing machine, refrigerator \n2. Fully-furnished AC rooms with attached bathroom with 24/7 hot water\n3. Chill Zone( Table Tennies, TV lounge, Carrom, Chess, etc)",
+      "threeSharing": 37000,
+      "twoSharing": 43000,
+      "twoSharingPremium": 49000
+    },
+    {
+      "propertyName": "SBR-2",
+      "amenities": "1. High speed Wi-fi\n2. Housekeeping Service- 3 times a week\n3. Laundry Service upto 10 kg\n4. 3 times meal- Breakfast, High-tea & Dinner. Lunch only on Sunday and Public Holiday. (No Non-veg food is allowed in premises\n5. Eletricity- Per room- 120 units- 40 units in 3 sharing - 60 units in 2 sharing",
+      "inclusions": "1. Induction, Microwave, washing machine, refrigerator \n2. Fully-furnished AC rooms with attached bathroom with 24/7 hot water",
+      "threeSharing": 33000,
+      "twoSharing": 37000,
+      "twoSharingPremium": 55000
+    },
+    {
+      "propertyName": "SBR-3",
+      "amenities": "1. High speed Wi-fi\n2. Housekeeping Service- 3 times a week\n3. Laundry Service upto 10 kg\n4. 3 times meal- Breakfast, High-tea & Dinner. Lunch only on Sunday and Public Holiday. (No Non-veg food is allowed in premises\n5. Eletricity- Per room- 120 units- 40 units in 3 sharing - 60 units in 2 sharing",
+      "inclusions": "1. Induction, Microwave, washing machine, refrigerator \n2. Fully-furnished AC rooms with attached bathroom with 24/7 hot water\n3. Chill Zone( Table Tennies, TV lounge, Carrom, Chess, etc)",
+      "threeSharing": 31000,
+      "twoSharing": 43000,
+      "twoSharingPremium": 63000
+    },
+    {
+      "propertyName": "KN",
+      "amenities": "1. High speed Wi-fi\n2. Housekeeping Service- 3 times a week\n3. Laundry Service upto 10 kg\n4. 3 times meal- Breakfast, High-tea & Dinner. Lunch only on Sunday and Public Holiday. (No Non-veg food is allowed in premises\n5. Eletricity- Per room- 120 units- 40 units in 3 sharing - 60 units in 2 sharing",
+      "inclusions": "1. Induction, Microwave, washing machine, refrigerator \n2. Fully-furnished AC rooms with attached bathroom with 24/7 hot water",
+      "threeSharing": 29000,
+      "twoSharing": null,
+      "twoSharingPremium": null
+    },
+    {
+      "propertyName": "Kiwale",
+      "amenities": "1. High speed Wi-fi\n2. Housekeeping Service- 3 times a week\n3. Laundry Service upto 10 kg\n4. 3 times meal- Breakfast, High-tea & Dinner. Lunch only on Sunday and Public Holiday. (No Non-veg food is allowed in premises\n5. Eletricity- Per room- 120 units- 40 units in 3 sharing - 60 units in 2 sharing",
+      "inclusions": "1. Induction, Microwave, washing machine, refrigerator \n2. Fully-furnished AC rooms with attached bathroom with 24/7 hot water\n3. Chill Zone( Table Tennies, TV lounge, Carrom, Chess, etc)\n4. GYM Service",
+      "threeSharing": 25000,
+      "twoSharing": null,
+      "twoSharingPremium": null
+    },
+    {
+      "propertyName": "Balewadi 1",
+      "amenities": "1. High speed Wi-fi\n2. Housekeeping Service- 3 times a week\n3. Laundry Service upto 10 kg\n4. 2 times meal- Breakfast, & Dinner. Lunch only on Sunday and Public Holiday. (No Non-veg food is allowed in premises",
+      "inclusions": "1. Induction, Microwave, washing machine, refrigerator \n2. Fully-furnished AC rooms with attached bathroom with 24/7 hot water\n3. Chill Zone( Table Tennies, Carrom, Pool Table, etc)",
+      "threeSharing": null,
+      "twoSharing": null,
+      "twoSharingPremium": null
+    },
+    {
+      "propertyName": "Balewadi 2",
+      "amenities": "1. High speed Wi-fi\n2. Housekeeping Service- 3 times a week\n3. Laundry Service upto 10 kg\n4. 2 times meal- Breakfast, & Dinner. Lunch only on Sunday and Public Holiday. (No Non-veg food is allowed in premises",
+      "inclusions": "1. Induction, Microwave, washing machine, refrigerator \n2. Fully-furnished AC rooms with attached bathroom with 24/7 hot water\n3. Chill Zone( Table Tennies, Fuss Ball, etc)",
+      "threeSharing": null,
+      "twoSharing": null,
+      "twoSharingPremium": null
+    }
+  ]
+}

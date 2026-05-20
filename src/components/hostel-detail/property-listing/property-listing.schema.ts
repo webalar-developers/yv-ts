@@ -65,4 +65,5 @@ export const propertyListingSchema = z.object({
 		)
 		.optional(),
 	relatedProperties: z.array(relatedPropertySchema),
+	newInclusion: z.array(z.string()).optional(),
 });

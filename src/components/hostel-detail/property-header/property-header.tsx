@@ -19,10 +19,28 @@ export function PropertyHeader({ property }: { property: PropertyListing }) {
 					<h1 className="font-gilda text-[54px] leading-none text-[#1f1a17]">
 						{property.name}
 					</h1>
-					<div className="mt-4 flex items-center gap-2 text-[18px] text-[#6f6a66]">
-						<MapPin className="size-4 text-yv-orange" />
-						{property.fullAddress}
-					</div>
+					{property.newInclusion?.length ? (
+						<div className="mt-4">
+							<div className="flex items-center gap-2 text-[12px] tracking-[0.14em] text-[#6f6a66] uppercase">
+								<span>Quick Info</span>
+							</div>
+							<div className="mt-3 flex flex-wrap gap-2">
+								{property.newInclusion.map((inclusion, index) => (
+									<span
+										key={`${inclusion}-${index}`}
+										className="rounded-full bg-[#fbefe6] px-3 py-1.5 text-[13px] font-medium text-[#6f6a66] ring-1 ring-[#f1dfd2]"
+									>
+										{inclusion}
+									</span>
+								))}
+							</div>
+						</div>
+					) : (
+						<div className="mt-4 flex items-center gap-2 text-[18px] text-[#6f6a66]">
+							<MapPin className="size-4 text-yv-orange" />
+							{property.location}
+						</div>
+					)}
 				</div>
 
 				<div className="flex flex-col gap-4 sm:flex-row sm:items-center">

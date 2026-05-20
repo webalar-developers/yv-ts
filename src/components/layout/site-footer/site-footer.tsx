@@ -26,7 +26,7 @@ export function SiteFooter() {
 		<footer className="bg-[#0f0f0f] text-white">
 			<div className="px-6">
 				<section className="grid gap-12 py-16 md:grid-cols-2 xl:grid-cols-4">
-					<FooterColumn title="Locations">
+					<FooterColumn title="Upcoming Locations">
 						{locations.map((item) => (
 							<p key={item}>{item}</p>
 						))}
@@ -50,11 +50,15 @@ export function SiteFooter() {
 						<div className="space-y-4">
 							<div className="flex items-center gap-3">
 								<Phone className="size-4 text-yv-orange" />
-								<span>Pune: +91 7385777377</span>
+								<a href="tel:+917385777377" className="hover:text-white/85">
+									Pune: +91 7385777377
+								</a>
 							</div>
 							<div className="flex items-center gap-3">
 								<Phone className="size-4 text-yv-orange" />
-								<span>Mumbai: +91 7387430080</span>
+								<a href="tel:+917387430080" className="hover:text-white/85">
+									Mumbai: +91 7387430080
+								</a>
 							</div>
 							<div className="flex items-center gap-3">
 								<Mail className="size-4 text-yv-orange" />

@@ -430,6 +430,11 @@ export const mockProperties: PropertyListing[] = [
 		faqs: commonFaqs,
 		googleReviews: commonGoogleReviews,
 		relatedProperties: commonRelatedProperties,
+		newInclusion:[
+			"Induction, Microwave, washing machine, refrigerator ",
+			"Fully-furnished AC rooms with attached bathroom with 24/7 hot water",
+			"Chill Zone( Table Tennies, TV lounge, Carrom, Chess, etc)"
+		]
 	},
 	{
 		id: "yv-sbr-2",
@@ -525,6 +530,10 @@ export const mockProperties: PropertyListing[] = [
 		faqs: commonFaqs,
 		googleReviews: commonGoogleReviews,
 		relatedProperties: commonRelatedProperties,
+		newInclusion:[
+			"Induction, Microwave, washing machine, refrigerator ",
+			"Fully-furnished AC rooms with attached bathroom with 24/7 hot water"
+		]
 	},
 	{
 		id: "yv-sbr-3",
@@ -620,6 +629,11 @@ export const mockProperties: PropertyListing[] = [
 		faqs: commonFaqs,
 		googleReviews: commonGoogleReviews,
 		relatedProperties: commonRelatedProperties,
+		newInclusion:[
+			"Induction, Microwave, washing machine, refrigerator ",
+			"Fully-furnished AC rooms with attached bathroom with 24/7 hot water",
+			'Chill Zone( Table Tennies, TV lounge, Carrom, Chess, etc)'
+		]
 	},
 	{
 		id: "yv-karve-nagar",
@@ -692,6 +706,10 @@ export const mockProperties: PropertyListing[] = [
 		faqs: commonFaqs,
 		googleReviews: karveNagarReviews,
 		relatedProperties: commonRelatedProperties,
+		newInclusion:[
+			"Induction, Microwave, washing machine, refrigerator ",
+			"Fully-furnished AC rooms with attached bathroom with 24/7 hot water"
+		]
 	},
 	{
 		id: "yv-balewadi-1",
@@ -783,6 +801,11 @@ export const mockProperties: PropertyListing[] = [
 		faqs: commonFaqs,
 		googleReviews: commonGoogleReviews,
 		relatedProperties: commonRelatedProperties,
+			newInclusion:[
+			"Induction, Microwave, washing machine, refrigerator ",
+			"Fully-furnished AC rooms with attached bathroom with 24/7 hot water",
+			'Chill Zone( Table Tennies, TV lounge, Carrom, Chess, etc)'
+		]
 	},
 	{
 		id: "yv-balewadi-2",
@@ -845,6 +868,11 @@ export const mockProperties: PropertyListing[] = [
 		faqs: commonFaqs,
 		googleReviews: commonGoogleReviews,
 		relatedProperties: commonRelatedProperties,
+			newInclusion:[
+			"Induction, Microwave, washing machine, refrigerator ",
+			"Fully-furnished AC rooms with attached bathroom with 24/7 hot water",
+			'Chill Zone( Table Tennies, TV lounge, Carrom, Chess, etc)'
+		]
 	},
 	{
 		id: "yv-mahalunge-1",
@@ -1339,6 +1367,12 @@ export const mockProperties: PropertyListing[] = [
 		faqs: commonFaqs,
 		googleReviews: commonGoogleReviews,
 		relatedProperties: commonRelatedProperties,
+			newInclusion:[
+			"Induction, Microwave, washing machine, refrigerator ",
+			"Fully-furnished AC rooms with attached bathroom with 24/7 hot water",
+			'Chill Zone( Table Tennies, TV lounge, Carrom, Chess, etc)',
+			'GYM Service'
+		]
 	},
 	{
 		id: "yv-powai-1",

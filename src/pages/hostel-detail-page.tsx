@@ -148,7 +148,7 @@ export function HostelDetailPage() {
 					</div>
 
 					<div className="sticky top-28 h-fit space-y-5">
-						<ScheduleVisitForm />
+						{/* <ScheduleVisitForm /> */}
 						<SidebarFeatures
 							eyebrow={property.sidebarEyebrow}
 							title={property.sidebarTitle}

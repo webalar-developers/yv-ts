@@ -1,3 +1,6 @@
+import { cn } from "#/lib/utils";
+import { useEffect, useState } from "react";
+
 const gridItems = [
 	{
 		title: "Comfort",
@@ -66,45 +69,67 @@ const gridItems = [
 ];
 
 export function BuildGrid() {
+	const [columns, setColumns] = useState(1);
+
+	useEffect(() => {
+		const updateColumns = () => {
+			if (window.innerWidth >= 1024) {
+				setColumns(4);
+				return;
+			}
+
+			if (window.innerWidth >= 768) {
+				setColumns(2);
+				return;
+			}
+
+			setColumns(1);
+		};
+
+		updateColumns();
+		window.addEventListener("resize", updateColumns);
+
+		return () => window.removeEventListener("resize", updateColumns);
+	}, []);
+
 	return (
-		<section className="bg-white px-6 py-16 md:px-12 md:py-10 lg:px-10">
+		<section id="build-grid" className="bg-white px-6 py-8 md:px-12 md:py-8 lg:px-10">
 			<div>
-				<h2 className="mx-auto mb-16 max-w-4xl text-center font-gilda text-[32px] leading-tight text-yv-dark-purple md:text-[40px] lg:text-[48px]">
+				<h2 className="mx-auto mb-8 max-w-4xl text-center font-gilda text-[28px] leading-tight text-slate-900 md:text-[34px] lg:text-[40px]">
 					Youthville is built around what truly matters in everyday living.
 				</h2>
 
-				<div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
-					{gridItems.map((item) => (
-						<div
+				<div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4 xl:gap-6">
+					{gridItems.map((item, idx) => {
+						const row = Math.floor(idx / columns);
+						const col = idx % columns;
+						const isLight = (row + col) % 2 === 0;
+
+						return (
+						<article
 							key={item.title}
-							className={`relative flex min-h-[350px] flex-col justify-center overflow-hidden rounded-xl p-10 transition-all duration-300 hover:shadow-lg ${
-								item.hasBg ? "bg-[#FBE2D9]" : "border border-gray-100 bg-white"
-							}`}
+							className={
+								cn("relative flex min-h-[120px] flex-col justify-between overflow-hidden rounded-lg p-4 transition-transform duration-200 border border-border hover:-translate-y-1 hover:shadow-sm",
+									isLight ? "bg-white" : "bg-[#f5f3f0]"
+								)}
+							tabIndex={0}
 						>
-							{/* Ghost Icon Decoration */}
-							<img
-								src={item.bgIcon}
-								alt=""
-								className="pointer-events-none absolute -right-2 -bottom-2 h-26 w-26 opacity-[0.05]"
-							/>
+							<div className="flex items-center gap-4">
+								<div className={`flex h-12 w-12 items-center justify-center rounded-md shrink-0 ${item.hasBg ? "bg-white ring-1 ring-gray-100" : "bg-white"}`}>
+									<img src={item.icon} alt="" className="h-6 w-6" aria-hidden />
+								</div>
 
-							<div
-								className={`mb-6 flex h-14 w-14 items-center justify-center rounded-xl ${
-									item.hasBg ? "bg-white" : "bg-[#FBE2D9]"
-								}`}
-							>
-								<img src={item.icon} alt={item.title} className="h-7 w-7" />
+								<h3 className="text-[16px] font-gilda font-semibold text-slate-900">
+									{item.title}
+								</h3>
 							</div>
-
-							<h3 className="mb-4 font-gilda text-[26px] font-medium text-yv-dark-purple">
-								{item.title}
-							</h3>
-
-							<p className="text-[15px] leading-relaxed text-gray-600">
-								{item.description}
-							</p>
-						</div>
-					))}
+							<div className="flex gap-4" >
+								<div className="h-12 w-12" />
+								<p className="mt-3 text-[14px] text-slate-700 w-56">{item.description}</p>
+							</div>
+						</article>
+						);
+					})}
 				</div>
 			</div>
 		</section>

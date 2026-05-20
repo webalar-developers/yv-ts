@@ -54,10 +54,11 @@ export function HeroBannerLife() {
 				</div>
 			</div>
 
-			{/* Scroll down indicator */}
-			<div className="absolute right-8 bottom-8 flex size-12 animate-bounce items-center justify-center rounded-full bg-white/90 text-gray-700 shadow-lg">
+			<a href="#build-grid" className="absolute inset-x-0 bottom-6 flex justify-center">
+				<div className="absolute right-8 bottom-8 flex size-12 animate-bounce items-center justify-center rounded-full bg-white/90 text-gray-700 shadow-lg">
 				<ArrowDown className="size-5" />
 			</div>
+			</a>
 		</section>
 	);
 }

@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { InfiniteSlider } from "@/components/ui/infinite-slider";
 import { LazyVideo } from "@/components/ui/lazy-video";
+import { cn } from "#/lib/utils";
 
 const videoItems = [
 	{ image: "", alt: "Parent Review 1", videoUrl: "/life/mp4/i1.mp4" },
@@ -32,11 +33,14 @@ function VideoCard({
 	item: VideoItem;
 	onClick: () => void;
 }) {
+	const [isHovering, setIsHovering] = useState(false);
 	return (
 		<button
 			type="button"
 			className="group relative block aspect-[9/16] w-[220px] shrink-0 cursor-pointer overflow-hidden rounded-2xl border-none bg-transparent p-0 shadow-xl transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl focus:outline-none focus:ring-2 focus:ring-yv-orange"
 			onClick={onClick}
+			onMouseEnter={() => setIsHovering(true)}
+			onMouseLeave={() => setIsHovering(false)}
 		>
 			{item.videoUrl ? (
 				<LazyVideo
@@ -45,6 +49,7 @@ function VideoCard({
 					loop
 					muted
 					playsInline
+					paused={!isHovering}
 					className="h-full w-full"
 				/>
 			) : (
@@ -55,7 +60,10 @@ function VideoCard({
 				/>
 			)}
 			<div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60 transition-opacity group-hover:opacity-80" />
-			<div className="absolute top-1/2 left-1/2 flex size-14 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white/20 shadow-2xl backdrop-blur-md transition-all duration-500 group-hover:scale-110 group-hover:bg-yv-orange">
+			<div className={cn(
+				"absolute top-1/2 left-1/2 flex size-14 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white/20 shadow-2xl backdrop-blur-md transition-all duration-500 group-hover:scale-110 group-hover:bg-yv-orange",
+				!isHovering ? "opacity-100" : "opacity-0"
+			)}>
 				<Play className="ml-1 size-6 text-white" fill="currentColor" />
 			</div>
 		</button>

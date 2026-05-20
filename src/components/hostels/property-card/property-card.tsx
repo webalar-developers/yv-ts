@@ -6,7 +6,7 @@ import {
 	Star,
 	Users,
 } from "lucide-react";
-import type { ReactNode } from "react";
+import React, { useState, type ReactNode } from "react";
 import { Link } from "react-router";
 import type { PropertyListing } from "@/components/hostel-detail/property-listing/property-listing.types";
 import { ScheduleVisitForm } from "@/components/hostel-detail/schedule-visit-form/schedule-visit-form";
@@ -21,6 +21,7 @@ import {
 	DialogTrigger,
 } from "@/components/ui/dialog";
 import { cn } from "@/lib/utils";
+import { Select, SelectContent, SelectTrigger, SelectItem } from "#/components/ui/select";
 
 const TieIcon = ({ className }: { className?: string }) => (
 	<svg
@@ -59,6 +60,15 @@ export function PropertyCard({
 			: property.gender === "Female"
 				? "Female"
 				: "Male & Female";
+
+	const [selectedRoomId, setSelectedRoomId] = useState<string | null>(
+		property.rooms?.[0]?.id?.toString() ?? null,
+	);
+
+	const selectedRoom =
+		property.rooms?.find((r) => String(r.id) === selectedRoomId) ?? property.rooms?.[0];
+	const displayPrice = selectedRoom?.price ?? property.price;
+	const hasDisplayPrice = (displayPrice ?? 0) > 0;
 
 	return (
 		<div className="overflow-hidden rounded-md bg-white shadow-sm ring-1 ring-black/5 transition-shadow hover:shadow-md">
@@ -180,14 +190,36 @@ export function PropertyCard({
 							STARTS FROM
 						</span>
 						<p className="mt-0 text-[15px] font-bold text-yv-orange sm:text-[16px]  md:text-[15px] xl:text-[17px]">
-							{hasPrice
-								? `₹${property.price.toLocaleString("en-IN")}`
-								: "Coming Soon"}
-							{hasPrice && (
-								<span className="ml-1 text-[12px] font-normal text-gray-400">
-									/mo
-								</span>
-							)}
+						
+							<Select
+								value={selectedRoomId ?? undefined}
+								onValueChange={(val) => setSelectedRoomId(val)}
+							>
+								<SelectTrigger className="border-none">
+									{hasDisplayPrice
+										? `₹${displayPrice.toLocaleString("en-IN")}`
+										: "Coming Soon"}
+									{hasDisplayPrice && (
+										<span className="ml-1 text-[12px] font-normal text-gray-400">
+											/mo
+										</span>
+									)}
+								</SelectTrigger>
+								<SelectContent className="min-w-2 w-24">
+									{property.rooms?.map((item) => (
+										<SelectItem
+											key={item.id}
+											value={String(item.id)}
+											title={`${item.title} - ₹${item.price.toLocaleString("en-IN")}/mo`}
+											className="flex items-center gap-4 justify-center py-2 px-2"
+										>
+											<span className="text-sm font-medium text-gray-900">
+												₹{item.price.toLocaleString("en-IN")}
+											</span>
+										</SelectItem>
+									))}
+								</SelectContent>
+							</Select>
 						</p>
 					</div>
 				</div>

@@ -23,11 +23,6 @@ const LocationHighlights = lazy(() =>
 		"@/components/hostel-detail/location-highlights/location-highlights"
 	).then((m) => ({ default: m.LocationHighlights })),
 );
-const WhatsAround = lazy(() =>
-	import("@/components/hostel-detail/whats-around/whats-around").then((m) => ({
-		default: m.WhatsAround,
-	})),
-);
 // const AttractionsNearby = lazy(() =>
 // 	import(
 // 		"@/components/hostel-detail/attractions-nearby/attractions-nearby"

@@ -44,20 +44,6 @@ export function PropertyHeader({ property }: { property: PropertyListing }) {
 				</div>
 
 				<div className="flex flex-col gap-4 sm:flex-row sm:items-center">
-					<Button
-						variant="yv-orange"
-						type="button"
-						onClick={() => {
-							window.open(
-								"https://wa.me/919595200200",
-								"_blank",
-								"noopener,noreferrer",
-							);
-						}}
-						className="h-12 rounded-none px-8 text-[17px] font-medium"
-					>
-						Book Now
-					</Button>
 					<div className="flex items-start gap-3">
 						<Star className="mt-0.5 size-6 fill-[#facc15] text-[#facc15]" />
 						<div>

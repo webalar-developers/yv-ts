@@ -35,7 +35,7 @@ const cards = [
 
 export function FeaturesSection() {
 	return (
-		<section className="w-full bg-[#f7f7f7] px-6 py-16 md:px-10 md:py-[40px]">
+		<section id="feature-section" className="w-full bg-[#f7f7f7] px-6 py-16 md:px-10 md:py-[40px]">
 			<div className="mx-auto flex flex-col-reverse gap-10 md:flex-row md:items-center md:gap-[60px]">
 				{/* Left Side: Grid Cards */}
 				<div className="grid w-full grid-cols-2 gap-4 sm:grid-cols-3 md:w-[60%] md:gap-[18px] lg:grid-cols-4">

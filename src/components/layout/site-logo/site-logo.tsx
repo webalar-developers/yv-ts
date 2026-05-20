@@ -15,7 +15,7 @@ export function SiteLogo({
 		<a href={href} className={cn("relative flex items-center", className)}>
 			{/* Full Logo */}
 			<img
-				src="/layout/png/logo.png"
+				src="/layout/png/logo-new.jpeg"
 				alt="Youthville"
 				className={cn(
 					"h-12 transition-all duration-500 md:h-16",

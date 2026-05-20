@@ -1,3 +1,4 @@
+import { Navigation } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import type { LocationHighlight } from "./location-highlights.types";
 import { PROPERTY_TO_AREA } from "../whats-around/property-to-area";
@@ -88,17 +89,9 @@ export function LocationHighlights({
 						className="rounded-xl border-0 bg-[#fbefe6] py-0 ring-1 ring-[#f1dfd2]"
 					>
 						<CardContent className="border-b-2 border-yv-orange px-6 py-6">
-							{typeof item.icon === "string" ? (
-								<img
-									src={item.icon}
-									alt=""
-									className="size-5"
-									loading="lazy"
-									decoding="async"
-								/>
-							) : (
-								<item.icon className="size-5 text-yv-orange" />
-							)}
+								<div className="flex size-10 items-center justify-center rounded-full bg-yv-orange/10">
+								<Navigation className="size-4 text-yv-orange" />
+							</div>
 							<p className="mt-5 text-[18px] font-bold text-[#231f1c]">
 								{item.title}
 							</p>
@@ -115,7 +108,7 @@ export function LocationHighlights({
 					>
 						<CardContent className="border-b-2 border-yv-orange px-6 py-6">
 							<div className="flex size-10 items-center justify-center rounded-full bg-yv-orange/10">
-								<div className="size-2 rounded-full bg-yv-orange" />
+								<Navigation className="size-4 text-yv-orange" />
 							</div>
 							<p className="mt-5 text-[18px] font-bold text-[#231f1c]">
 								{item.name}

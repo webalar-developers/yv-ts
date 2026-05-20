@@ -7,6 +7,8 @@ import { Button } from "@/components/ui/button";
 import { useScroll } from "@/hooks/use-scroll";
 import { cn } from "@/lib/utils";
 import { navLinks } from "./site-header.data";
+import { Dialog, DialogContent, DialogTrigger } from "#/components/ui/dialog";
+import { ScheduleVisitForm } from "#/components/hostel-detail/schedule-visit-form/schedule-visit-form";
 
 export function SiteHeader() {
 	const scrolled = useScroll(10);
@@ -66,12 +68,19 @@ export function SiteHeader() {
 				</div>
 
 				<div className="flex w-[150px] items-center justify-end gap-3 rounded-none lg:w-[250px]">
-					<Button
-						variant="outline"
-						className="hidden rounded-md border-black p-5 px-4 text-black transition-colors hover:bg-transparent hover:text-black sm:flex lg:px-7"
-					>
-						Schedule Visit
-					</Button>
+					<Dialog>
+						<DialogTrigger >
+							<Button
+								variant="outline"
+								className="hidden rounded-md border-black p-5 px-4 text-black transition-colors hover:bg-transparent hover:text-black sm:flex lg:px-7"
+							>
+								Schedule Visit
+							</Button>
+						</DialogTrigger>
+							<DialogContent className="max-w-lg border-0 bg-transparent p-0 shadow-none sm:max-w-[500px]">
+							<ScheduleVisitForm />
+						</DialogContent>
+					</Dialog>
 					<div className="relative hidden sm:block">
 						<Button
 							variant="yv-orange"

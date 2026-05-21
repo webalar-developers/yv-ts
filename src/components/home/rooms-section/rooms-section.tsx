@@ -68,7 +68,7 @@ export function RoomsSection() {
 			return (
 				(!cityFilter || property.location === cityFilter) &&
 				(!locationFilter || property.area === locationFilter) &&
-				(!genderFilter || property.gender === genderFilter) &&
+				(!genderFilter || property.gender.includes(genderFilter as "Male" | "Female" | "Other" | "Only Girls")) &&
 				(!accommodationFilter ||
 					badgeType === accommodationFilter.toLowerCase())
 			);

@@ -219,7 +219,7 @@ const commonRooms = [
 		price: 18500,
 		tag: "LIMITED" as const,
 		description: "Quiet room with study desk, wardrobe, AC, and attached bath.",
-		meta: ["220 SQ. FT.", "ENSUITE BATH"],
+		meta: ["220 SQ. FT."],
 	},
 	{
 		id: "twin",
@@ -228,7 +228,7 @@ const commonRooms = [
 		image: "/shared/jpg/2.jpg",
 		price: 14500,
 		description: "Smartly planned shared room with storage and housekeeping.",
-		meta: ["280 SQ. FT.", "SHARED DECK"],
+		meta: ["280 SQ. FT."],
 	},
 	{
 		id: "triple",
@@ -238,7 +238,7 @@ const commonRooms = [
 		price: 11000,
 		description:
 			"A perfect balance of community living and personal space, ideal for students and professionals.",
-		meta: ["350 SQ. FT.", "SHARED DECK"],
+		meta: ["350 SQ. FT."],
 	},
 ];
 
@@ -350,7 +350,7 @@ export const mockProperties: PropertyListing[] = [
 			"Senapati Bapat Rd, Shivaji Co operative Housing Society, Bhageerath, Gokhalenagar, Pune, Maharashtra 411016",
 		city: "Pune",
 		area: "Senapati Bapat Road",
-		gender: "Male/Female",
+		gender: ["Male",'Female'],
 		occupancy: "2, 3 Sharing",
 		proximity: "Near Colleges",
 		price: 37000,
@@ -422,9 +422,12 @@ export const mockProperties: PropertyListing[] = [
 			{ label: "Electricity (40 units incl.)", amount: 0 },
 		],
 		locationHighlights: [
-			{ icon: GraduationCap, title: "BMCC College", subtitle: "10 mins walk" },
-			{ icon: Building2, title: "Shivajinagar", subtitle: "5 mins drive" },
-			{ icon: Landmark, title: "FC Road", subtitle: "8 mins drive" },
+			{ icon: GraduationCap, title: "Symbiosis College", subtitle: "2 min" },
+			{ icon: GraduationCap, title: "Law College", subtitle: "5 min" },
+			{ icon: Landmark, title: "JW Marriott", subtitle: "1 min" },
+			{ icon: Landmark, title: "FC Road", subtitle: "5 min" },
+			{ icon: GraduationCap, title: "COEP College", subtitle: "10 min" },
+			{ icon: Building2, title: "Shivaji Nagar Metro Station", subtitle: "10 min" },
 		],
 		lifeAtYouthville: commonLifeAtYouthville,
 		faqs: commonFaqs,
@@ -434,7 +437,8 @@ export const mockProperties: PropertyListing[] = [
 			"Induction, Microwave, washing machine, refrigerator ",
 			"Fully-furnished AC rooms with attached bathroom with 24/7 hot water",
 			"Chill Zone( Table Tennies, TV lounge, Carrom, Chess, etc)"
-		]
+		],
+		accomodationType: "Student"
 	},
 	{
 		id: "yv-sbr-2",
@@ -446,7 +450,7 @@ export const mockProperties: PropertyListing[] = [
 			"Ashok Society, Plot 24-A & 24-B, off Senapati Bapat Road, near Hotel Management College, Laxmi Society, Model Colony, Shivajinagar, Pune, Maharashtra 411016",
 		city: "Pune",
 		area: "Model Colony",
-		gender: "Only Girls",
+		gender: ["Only Girls"],
 		occupancy: "2, 3 Sharing",
 		proximity: "Near IT Hub",
 		price: 33000,
@@ -518,13 +522,12 @@ export const mockProperties: PropertyListing[] = [
 			{ label: "Electricity (40 units incl.)", amount: 0 },
 		],
 		locationHighlights: [
-			{
-				icon: GraduationCap,
-				title: "Hotel Management College",
-				subtitle: "2 mins walk",
-			},
-			{ icon: Building2, title: "Shivajinagar", subtitle: "7 mins drive" },
-			{ icon: Landmark, title: "JM Road", subtitle: "10 mins drive" },
+			{ icon: GraduationCap, title: "Symbiosis College", subtitle: "2 min" },
+			{ icon: GraduationCap, title: "Law College", subtitle: "5 min" },
+			{ icon: Landmark, title: "JW Marriott", subtitle: "1 min" },
+			{ icon: Landmark, title: "FC Road", subtitle: "5 min" },
+			{ icon: GraduationCap, title: "COEP College", subtitle: "10 min" },
+			{ icon: Building2, title: "Shivaji Nagar Metro Station", subtitle: "10 min" },
 		],
 		lifeAtYouthville: commonLifeAtYouthville,
 		faqs: commonFaqs,
@@ -533,7 +536,8 @@ export const mockProperties: PropertyListing[] = [
 		newInclusion:[
 			"Induction, Microwave, washing machine, refrigerator ",
 			"Fully-furnished AC rooms with attached bathroom with 24/7 hot water"
-		]
+		],
+		accomodationType: "Student"
 	},
 	{
 		id: "yv-sbr-3",
@@ -545,7 +549,7 @@ export const mockProperties: PropertyListing[] = [
 			"Plot no 16, Gokhale Nagar Rd, Shivaji Co operative Housing Society, Bhageerath, Gokhalenagar, Pune, Maharashtra 411016",
 		city: "Pune",
 		area: "Gokhalenagar",
-		gender: "Male/Female",
+		gender: ["Male", "Female"],
 		occupancy: "2, 3 Sharing",
 		proximity: "Near Colleges",
 		price: 31000,
@@ -617,13 +621,12 @@ export const mockProperties: PropertyListing[] = [
 			{ label: "Electricity (40 units incl.)", amount: 0 },
 		],
 		locationHighlights: [
-			{
-				icon: GraduationCap,
-				title: "Fergusson College",
-				subtitle: "12 mins drive",
-			},
-			{ icon: Building2, title: "Deccan Gymkhana", subtitle: "10 mins drive" },
-			{ icon: Landmark, title: "Senapati Bapat Rd", subtitle: "3 mins walk" },
+			{ icon: GraduationCap, title: "Symbiosis College", subtitle: "2 min" },
+			{ icon: GraduationCap, title: "Law College", subtitle: "5 min" },
+			{ icon: Landmark, title: "JW Marriott", subtitle: "1 min" },
+			{ icon: Landmark, title: "FC Road", subtitle: "5 min" },
+			{ icon: GraduationCap, title: "COEP College", subtitle: "10 min" },
+			{ icon: Building2, title: "Shivaji Nagar Metro Station", subtitle: "10 min" },
 		],
 		lifeAtYouthville: commonLifeAtYouthville,
 		faqs: commonFaqs,
@@ -633,7 +636,8 @@ export const mockProperties: PropertyListing[] = [
 			"Induction, Microwave, washing machine, refrigerator ",
 			"Fully-furnished AC rooms with attached bathroom with 24/7 hot water",
 			'Chill Zone( Table Tennies, TV lounge, Carrom, Chess, etc)'
-		]
+		],
+		accomodationType: "Student"
 	},
 	{
 		id: "yv-karve-nagar",
@@ -644,7 +648,7 @@ export const mockProperties: PropertyListing[] = [
 		fullAddress: "Lane No. 1, Karvenagar, Pune, Maharashtra 411052",
 		city: "Pune",
 		area: "Karve Nagar",
-		gender: "Male/Female",
+		gender: ["Male", "Female"],
 		occupancy: "3 Sharing",
 		price: 29000,
 		badge: "NEAR METRO",
@@ -698,9 +702,12 @@ export const mockProperties: PropertyListing[] = [
 			{ label: "Electricity (40 units incl.)", amount: 0 },
 		],
 		locationHighlights: [
-			{ icon: Landmark, title: "Karve Road", subtitle: "4 mins walk" },
-			{ icon: Building2, title: "City Center", subtitle: "12 mins drive" },
-			{ icon: GraduationCap, title: "MIT Kothrud", subtitle: "14 mins drive" },
+			{ icon: GraduationCap, title: "MIT", subtitle: "10 min" },
+			{ icon: GraduationCap, title: "Cummins College", subtitle: "2 min" },
+			{ icon: Building2, title: "Vanaz Metro Station", subtitle: "15 min" },
+			{ icon: Landmark, title: "Karve Putla", subtitle: "10 min" },
+			{ icon: Landmark, title: "City Pride", subtitle: "5 min" },
+			{ icon: Landmark, title: "Nal Stop Station", subtitle: "10 min" },
 		],
 		lifeAtYouthville: commonLifeAtYouthville,
 		faqs: commonFaqs,
@@ -709,7 +716,8 @@ export const mockProperties: PropertyListing[] = [
 		newInclusion:[
 			"Induction, Microwave, washing machine, refrigerator ",
 			"Fully-furnished AC rooms with attached bathroom with 24/7 hot water"
-		]
+		],
+		accomodationType: "Uncategorized"
 	},
 	{
 		id: "yv-balewadi-1",
@@ -722,7 +730,7 @@ export const mockProperties: PropertyListing[] = [
 			"1/9+10+11+15+16+17, Balewadi High St, near Sopan Baug Road, next to Cummins, Balewadi Gaon, Balewadi, Pune, Maharashtra 411045",
 		city: "Pune",
 		area: "Balewadi",
-		gender: "Only Male",
+		gender:["Male", "Female"],
 		feature: "Full Gym",
 		price: 16200,
 		badge: "PREMIUM",
@@ -757,7 +765,7 @@ export const mockProperties: PropertyListing[] = [
 				tag: "LIMITED",
 				description:
 					"Private room with premium furnishings, workspace, and AC comfort.",
-				meta: ["220 SQ. FT.", "ENSUITE BATH"],
+				meta: ["220 SQ. FT."],
 			},
 			{
 				id: "balewadi1-twin",
@@ -767,7 +775,7 @@ export const mockProperties: PropertyListing[] = [
 				price: 16200,
 				description:
 					"Bright twin-sharing setup with generous storage and daily upkeep.",
-				meta: ["320 SQ. FT.", "SHARED DECK"],
+				meta: ["320 SQ. FT."],
 			},
 			{
 				id: "balewadi1-triple",
@@ -777,7 +785,7 @@ export const mockProperties: PropertyListing[] = [
 				price: 12500,
 				description:
 					"A perfect balance of community living and personal space, ideal for students and professionals.",
-				meta: ["350 SQ. FT.", "SHARED DECK"],
+				meta: ["350 SQ. FT."],
 			},
 		],
 		investmentBreakdown: [
@@ -785,17 +793,13 @@ export const mockProperties: PropertyListing[] = [
 			{ label: "Utilities (Electricity & Water)", amount: 2000 },
 		],
 		locationHighlights: [
-			{
-				icon: "/shared/svg/icon-shopping-bag.svg",
-				title: "Balewadi High Street",
-				subtitle: "5 mins walk",
-			},
-			{
-				icon: "/shared/svg/icon-building.svg",
-				title: "Hinjewadi IT Park",
-				subtitle: "15 mins drive",
-			},
-			{ icon: GraduationCap, title: "MIT WPU", subtitle: "20 mins drive" },
+			{ icon: Landmark, title: "Balewadi High Street", subtitle: "2 min" },
+			{ icon: Building2, title: "Amar Tech Park", subtitle: "2 min" },
+			{ icon: Building2, title: "Hinjewadi IT Park", subtitle: "10 min" },
+			{ icon: Building2, title: "Metro Station", subtitle: "2 min" },
+			{ icon: Landmark, title: "Aundh", subtitle: "10 min" },
+			{ icon: GraduationCap, title: "NICMAR University", subtitle: "2 min" },
+			{ icon: Landmark, title: "NIA", subtitle: "5 min" },
 		],
 		lifeAtYouthville: commonLifeAtYouthville,
 		faqs: commonFaqs,
@@ -805,7 +809,8 @@ export const mockProperties: PropertyListing[] = [
 			"Induction, Microwave, washing machine, refrigerator ",
 			"Fully-furnished AC rooms with attached bathroom with 24/7 hot water",
 			'Chill Zone( Table Tennies, TV lounge, Carrom, Chess, etc)'
-		]
+		],
+		accomodationType: "Co-Living"
 	},
 	{
 		id: "yv-balewadi-2",
@@ -817,7 +822,7 @@ export const mockProperties: PropertyListing[] = [
 			"HQG8+J9W, Youthville Balewadi 2, next to Amar Tech Park, Pune, Maharashtra 411045",
 		city: "Pune",
 		area: "Balewadi",
-		gender: "Mixed",
+		gender: ["Male", "Female"],
 		meals: "3 Meals Incl.",
 		price: 9500,
 		badge: "OFFERS AVAILABLE",
@@ -852,17 +857,13 @@ export const mockProperties: PropertyListing[] = [
 		rooms: commonRooms,
 		investmentBreakdown: commonInvestmentBreakdown,
 		locationHighlights: [
-			{ icon: Building2, title: "Amar Tech Park", subtitle: "2 mins walk" },
-			{
-				icon: Landmark,
-				title: "Balewadi High Street",
-				subtitle: "8 mins walk",
-			},
-			{
-				icon: GraduationCap,
-				title: "University Zone",
-				subtitle: "18 mins drive",
-			},
+			{ icon: Landmark, title: "Balewadi High Street", subtitle: "2 min" },
+			{ icon: Building2, title: "Amar Tech Park", subtitle: "2 min" },
+			{ icon: Building2, title: "Hinjewadi IT Park", subtitle: "10 min" },
+			{ icon: Building2, title: "Metro Station", subtitle: "2 min" },
+			{ icon: Landmark, title: "Aundh", subtitle: "10 min" },
+			{ icon: GraduationCap, title: "NICMAR University", subtitle: "2 min" },
+			{ icon: Landmark, title: "NIA", subtitle: "5 min" },
 		],
 		lifeAtYouthville: commonLifeAtYouthville,
 		faqs: commonFaqs,
@@ -872,7 +873,8 @@ export const mockProperties: PropertyListing[] = [
 			"Induction, Microwave, washing machine, refrigerator ",
 			"Fully-furnished AC rooms with attached bathroom with 24/7 hot water",
 			'Chill Zone( Table Tennies, TV lounge, Carrom, Chess, etc)'
-		]
+		],
+		accomodationType: "Co-Living"
 	},
 	{
 		id: "yv-mahalunge-1",
@@ -883,7 +885,7 @@ export const mockProperties: PropertyListing[] = [
 		fullAddress: "Mahalunge, Pune, Maharashtra",
 		city: "Pune",
 		area: "Mahalunge",
-		gender: "Co-living",
+		gender: ["Male", "Female"],
 		occupancy: "2, 3 Sharing",
 		proximity: "Near IT Park",
 		price: 9000,
@@ -939,7 +941,7 @@ export const mockProperties: PropertyListing[] = [
 			"Gandhi Chowk, Youthville Mundhwa, Bhawani Estate, near Mundwa veg.Market, Mundhwa, Pune, Maharashtra 411036",
 		city: "Pune",
 		area: "Mundhwa",
-		gender: "Co-living",
+		gender: ["Male", "Female"],
 		occupancy: "1, 2, 3 Sharing",
 		proximity: "Near Kharadi IT",
 		price: 10000,
@@ -967,9 +969,14 @@ export const mockProperties: PropertyListing[] = [
 		rooms: commonRooms,
 		investmentBreakdown: commonInvestmentBreakdown,
 		locationHighlights: [
-			{ icon: Building2, title: "Kharadi IT Park", subtitle: "8 mins drive" },
-			{ icon: Landmark, title: "Koregaon Park", subtitle: "10 mins drive" },
-			{ icon: GraduationCap, title: "EON IT Park", subtitle: "12 mins drive" },
+			{ icon: Building2, title: "Commerzzone", subtitle: "1 min" },
+			{ icon: Building2, title: "Business Bay", subtitle: "5 min" },
+			{ icon: Building2, title: "Airport", subtitle: "10 min" },
+			{ icon: Landmark, title: "Ritz Carlton", subtitle: "5 min" },
+			{ icon: Landmark, title: "Poona Golf Club", subtitle: "5 min" },
+			{ icon: Landmark, title: "Phoenix Mall", subtitle: "5 min" },
+			{ icon: Building2, title: "Skyone Corporate Park", subtitle: "10 min" },
+			{ icon: Landmark, title: "Ballr Kalyani Nagar", subtitle: "15 min" },
 		],
 		lifeAtYouthville: commonLifeAtYouthville,
 		faqs: commonFaqs,
@@ -986,7 +993,7 @@ export const mockProperties: PropertyListing[] = [
 			"Survey No, Youthvile, 154/2, Maji Sainik Nagar, Mohanwadi, Yerawada, Pune, Maharashtra 411006",
 		city: "Pune",
 		area: "Yerwada",
-		gender: "Co-living",
+		gender: ["Male", "Female"],
 		occupancy: "1, 2, 3 Sharing",
 		proximity: "Near Aga Khan",
 		price: 11500,
@@ -1014,9 +1021,14 @@ export const mockProperties: PropertyListing[] = [
 		rooms: commonRooms,
 		investmentBreakdown: commonInvestmentBreakdown,
 		locationHighlights: [
-			{ icon: Landmark, title: "Aga Khan Palace", subtitle: "5 mins drive" },
-			{ icon: Building2, title: "Nagar Road IT", subtitle: "10 mins drive" },
-			{ icon: GraduationCap, title: "Koregaon Park", subtitle: "8 mins drive" },
+			{ icon: Building2, title: "Commerzzone", subtitle: "1 min" },
+			{ icon: Building2, title: "Business Bay", subtitle: "5 min" },
+			{ icon: Building2, title: "Airport", subtitle: "10 min" },
+			{ icon: Landmark, title: "Ritz Carlton", subtitle: "5 min" },
+			{ icon: Landmark, title: "Poona Golf Club", subtitle: "5 min" },
+			{ icon: Landmark, title: "Phoenix Mall", subtitle: "5 min" },
+			{ icon: Building2, title: "Skyone Corporate Park", subtitle: "10 min" },
+			{ icon: Landmark, title: "Ballr Kalyani Nagar", subtitle: "15 min" },
 		],
 		lifeAtYouthville: commonLifeAtYouthville,
 		faqs: commonFaqs,
@@ -1032,7 +1044,7 @@ export const mockProperties: PropertyListing[] = [
 		fullAddress: "Moshi, Pune, Maharashtra",
 		city: "Pune",
 		area: "Moshi",
-		gender: "Co-living",
+		gender: ["Male", "Female"],
 		occupancy: "2, 3 Sharing",
 		proximity: "Near PCMC",
 		price: 8500,
@@ -1082,7 +1094,7 @@ export const mockProperties: PropertyListing[] = [
 		fullAddress: "Wakad, Pune, Maharashtra",
 		city: "Pune",
 		area: "Wakad",
-		gender: "Co-living",
+		gender: ["Male", "Female"],
 		occupancy: "1, 2, 3 Sharing",
 		proximity: "Near Hinjewadi",
 		price: 10000,
@@ -1132,7 +1144,7 @@ export const mockProperties: PropertyListing[] = [
 		fullAddress: "Balewadi, Pune, Maharashtra 411045",
 		city: "Pune",
 		area: "Balewadi",
-		gender: "Co-living",
+		gender: ["Male", "Female"],
 		occupancy: "2, 3 Sharing",
 		meals: "3 Meals Incl.",
 		price: 9500,
@@ -1160,16 +1172,8 @@ export const mockProperties: PropertyListing[] = [
 		rooms: commonRooms,
 		investmentBreakdown: commonInvestmentBreakdown,
 		locationHighlights: [
-			{
-				icon: "/shared/svg/icon-shopping-bag.svg",
-				title: "Balewadi High Street",
-				subtitle: "7 mins walk",
-			},
-			{
-				icon: "/shared/svg/icon-building.svg",
-				title: "Hinjewadi IT Park",
-				subtitle: "15 mins drive",
-			},
+			{ icon: Landmark, title: "Balewadi High Street", subtitle: "5 mins walk" },
+			{ icon: Building2, title: "Hinjewadi IT Park", subtitle: "15 mins drive" },
 			{ icon: GraduationCap, title: "MIT WPU", subtitle: "20 mins drive" },
 		],
 		lifeAtYouthville: commonLifeAtYouthville,
@@ -1186,7 +1190,7 @@ export const mockProperties: PropertyListing[] = [
 		fullAddress: "Hinjewadi, Pune, Maharashtra",
 		city: "Pune",
 		area: "Hinjewadi",
-		gender: "Co-living",
+		gender: ["Male", "Female"],
 		occupancy: "1, 2, 3 Sharing",
 		proximity: "Near IT Park",
 		price: 10500,
@@ -1233,7 +1237,7 @@ export const mockProperties: PropertyListing[] = [
 			"GVJ3+875 Morya Mitra Mandal, Wellesley Rd, Baluchi Vasti, Shivajinagar, Pune, Maharashtra 411005",
 		city: "Pune",
 		area: "Shivajinagar",
-		gender: "Co-living",
+		gender: ["Male", "Female"],
 		occupancy: "1, 2, 3 Sharing",
 		proximity: "Near Sancheti Hospital",
 		price: 12000,
@@ -1261,17 +1265,13 @@ export const mockProperties: PropertyListing[] = [
 		rooms: commonRooms,
 		investmentBreakdown: commonInvestmentBreakdown,
 		locationHighlights: [
-			{ icon: Landmark, title: "Sancheti Hospital", subtitle: "2 mins walk" },
-			{
-				icon: GraduationCap,
-				title: "Fergusson College",
-				subtitle: "8 mins drive",
-			},
-			{
-				icon: Building2,
-				title: "Shivajinagar Station",
-				subtitle: "5 mins drive",
-			},
+			{ icon: Building2, title: "JM/FC Road", subtitle: "5 min" },
+			{ icon: Building2, title: "Shivaji Nagar Metro Station", subtitle: "5 min" },
+			{ icon: Landmark, title: "Sancheti Hospital", subtitle: "1 min" },
+			{ icon: Building2, title: "Wakadewadi Bus Stop", subtitle: "2 min" },
+			{ icon: Building2, title: "Sangamwadi Bus Stop", subtitle: "10 min" },
+			{ icon: Building2, title: "LTI Mindtree", subtitle: "2 min" },
+			{ icon: GraduationCap, title: "COEP College", subtitle: "2 min" },
 		],
 		lifeAtYouthville: commonLifeAtYouthville,
 		faqs: commonFaqs,
@@ -1288,7 +1288,7 @@ export const mockProperties: PropertyListing[] = [
 			"MP6C+WW2, Kiwale, Ravet, Pimpri-Chinchwad, Maharashtra 412101",
 		city: "Pune",
 		area: "Kiwale",
-		gender: "Co-living",
+		gender: ["Male", "Female"],
 		occupancy: "1, 2 Sharing",
 		proximity: "Near IT Park",
 		price: 14500,
@@ -1323,7 +1323,7 @@ export const mockProperties: PropertyListing[] = [
 				tag: "LIMITED",
 				description:
 					"Quiet room with study desk, wardrobe, AC, and attached bath.",
-				meta: ["220 SQ. FT.", "ENSUITE BATH"],
+				meta: ["220 SQ. FT."],
 			},
 			{
 				id: "kiwale-twin",
@@ -1333,7 +1333,7 @@ export const mockProperties: PropertyListing[] = [
 				price: 14500,
 				description:
 					"Smartly planned shared room with storage and housekeeping.",
-				meta: ["280 SQ. FT.", "SHARED DECK"],
+				meta: ["280 SQ. FT."],
 			},
 			{
 				id: "kiwale-triple",
@@ -1343,7 +1343,7 @@ export const mockProperties: PropertyListing[] = [
 				price: 18500,
 				description:
 					"A perfect balance of community living and personal space, ideal for students and professionals.",
-				meta: ["350 SQ. FT.", "SHARED DECK"],
+				meta: ["350 SQ. FT."],
 			},
 		],
 		investmentBreakdown: [
@@ -1351,17 +1351,12 @@ export const mockProperties: PropertyListing[] = [
 			{ label: "Utilities (Electricity & Water)", amount: 2000 },
 		],
 		locationHighlights: [
-			{
-				icon: "/shared/svg/icon-shopping-bag.svg",
-				title: "Balewadi High Street",
-				subtitle: "5 mins walk",
-			},
-			{
-				icon: "/shared/svg/icon-building.svg",
-				title: "Hinjewadi IT Park",
-				subtitle: "15 mins drive",
-			},
-			{ icon: GraduationCap, title: "MIT WPU", subtitle: "20 mins drive" },
+			{ icon: GraduationCap, title: "SSPU", subtitle: "2 min" },
+			{ icon: Landmark, title: "Mukai Chowk", subtitle: "2 min" },
+			{ icon: GraduationCap, title: "DY Patil", subtitle: "15 min" },
+			{ icon: Landmark, title: "Pune-Mumbai Express", subtitle: "1 min" },
+			{ icon: GraduationCap, title: "Indira College", subtitle: "15 min" },
+			{ icon: GraduationCap, title: "JSPM College", subtitle: "15 min" },
 		],
 		lifeAtYouthville: commonLifeAtYouthville,
 		faqs: commonFaqs,
@@ -1372,7 +1367,8 @@ export const mockProperties: PropertyListing[] = [
 			"Fully-furnished AC rooms with attached bathroom with 24/7 hot water",
 			'Chill Zone( Table Tennies, TV lounge, Carrom, Chess, etc)',
 			'GYM Service'
-		]
+		],
+		accomodationType: "Student"
 	},
 	{
 		id: "yv-powai-1",
@@ -1383,7 +1379,7 @@ export const mockProperties: PropertyListing[] = [
 		fullAddress: "Central Ave, Powai, Mumbai, Maharashtra 400076",
 		city: "Mumbai",
 		area: "Powai",
-		gender: "Co-living",
+		gender: ["Male", "Female"],
 		occupancy: "1, 2 Sharing",
 		proximity: "Near IIT Bombay",
 		price: 22000,
@@ -1430,7 +1426,7 @@ export const mockProperties: PropertyListing[] = [
 		fullAddress: "Link Road, Andheri West, Mumbai, Maharashtra 400053",
 		city: "Mumbai",
 		area: "Andheri",
-		gender: "Co-living",
+		gender: ["Male", "Female"],
 		occupancy: "1, 2, 3 Sharing",
 		proximity: "Near Metro Station",
 		price: 18000,

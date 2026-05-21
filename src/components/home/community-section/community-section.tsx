@@ -91,7 +91,7 @@ function Card({
 					<div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
 					<div className="absolute bottom-4 left-4">
 						<div className="mb-1.5 h-0.5 w-8 bg-pink-500" />
-						<p className="text-base font-semibold text-white">{item.label}</p>
+						<p className="text-base font-semibold text-white">Memories of Youthville</p>
 					</div>
 				</motion.div>
 			</AnimatePresence>

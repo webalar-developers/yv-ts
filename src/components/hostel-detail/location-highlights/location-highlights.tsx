@@ -101,7 +101,7 @@ export function LocationHighlights({
 						</CardContent>
 					</Card>
 				))}
-				{connectivityItems.map(({ item, key }) => (
+				{/* {connectivityItems.map(({ item, key }) => (
 					<Card
 						key={key}
 						className="rounded-xl border-0 bg-[#fbefe6] py-0 ring-1 ring-[#f1dfd2]"
@@ -118,7 +118,7 @@ export function LocationHighlights({
 							</p>
 						</CardContent>
 					</Card>
-				))}
+				))} */}
 			</div>
 		</section>
 	);

@@ -152,7 +152,7 @@ export function LocationSection() {
 											Starts at
 										</p>
 										<p className="text-[19px] font-bold text-[#1f1f1f]">
-											₹{property.price}{" "}
+											₹{property.price}{"*"}
 											<span className="text-[12px] font-normal text-gray-500">
 												/mo
 											</span>

@@ -17,7 +17,7 @@ export const propertyListingSchema = z.object({
 	fullAddress: z.string(),
 	city: z.string(),
 	area: z.string(),
-	gender: z.string(),
+	gender: z.array(z.enum(["Male", "Female", "Other", "Only Girls"])),
 	occupancy: z.string().optional(),
 	feature: z.string().optional(),
 	meals: z.string().optional(),
@@ -66,4 +66,5 @@ export const propertyListingSchema = z.object({
 		.optional(),
 	relatedProperties: z.array(relatedPropertySchema),
 	newInclusion: z.array(z.string()).optional(),
+	accomodationType: z.enum(["Student", "Co-Living", "Uncategorized"]).optional(),
 });

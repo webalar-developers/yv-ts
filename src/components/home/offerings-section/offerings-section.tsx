@@ -6,12 +6,12 @@ export function OfferingsSection() {
 	const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 
 	return (
-		<section className="w-full bg-[#f7f2ec] px-6 py-12 md:px-10 md:py-14">
+		<section className="w-full bg-[#ed6f34] px-6 py-12 md:px-10 md:py-14">
 			<div className="w-full">
 				{/* Section Header */}
 				<div className="mb-10">
-					<div className="mb-3 h-1 w-12 bg-yv-orange" />
-					<h2 className="font-gilda text-[40px] font-normal text-[#1f1a17] md:text-4xl">
+					<div className="mb-3 h-1 w-12 bg-[#a3d356]" />
+					<h2 className="font-gilda text-[40px] font-normal text-white md:text-4xl">
 						Thoughtful Offerings
 					</h2>
 				</div>

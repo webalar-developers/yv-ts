@@ -297,11 +297,7 @@ export function MapExplorerSection() {
 														Property Type
 													</p>
 													<p className="text-[14px] font-semibold text-gray-900">
-														{selectedProperty.gender === "Only Female"
-															? "Girls Hostel"
-															: selectedProperty.gender === "Only Male"
-																? "Boys Hostel"
-																: "Co-living"}
+														{selectedProperty.gender.join(" / ")}
 													</p>
 												</div>
 												<div>
@@ -309,7 +305,7 @@ export function MapExplorerSection() {
 														Monthly Rent
 													</p>
 													<p className="text-[14px] font-semibold text-yv-orange">
-														₹{selectedProperty.price.toLocaleString("en-IN")}{" "}
+														₹{selectedProperty.price.toLocaleString("en-IN")}{"*"}
 														<span className="text-[11px] font-normal text-gray-500">
 															onwards
 														</span>
@@ -524,7 +520,7 @@ function PropertyListCard({
 							isActive ? "text-white" : "text-yv-orange group-hover:text-white",
 						)}
 					>
-						₹{property.price.toLocaleString("en-IN")}
+						₹{property.price.toLocaleString("en-IN")}{"*"}
 					</p>
 				</div>
 			</CardContent>

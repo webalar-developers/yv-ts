@@ -161,7 +161,7 @@ export function ScheduleVisitForm() {
 							Phone Number <span className="text-red-500">*</span>
 						</label>
 						<input
-							type="tel"
+							type="number"
 							id="phone-number"
 							name="phone"
 							value={formData.phone}

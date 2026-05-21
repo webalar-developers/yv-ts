@@ -5,11 +5,11 @@ export const propertyCardSchema = z.object({
 	name: z.string(),
 	location: z.string(),
 	area: z.string(),
-	gender: z.enum(["Male", "Female", "Other"]),
+	gender: z.array(z.enum(["Male", "Female", "Other", "Only Girls"])),
 	type: z.string(),
 	price: z.string(),
 	badge: z.string(),
-	badgeVariant: z.enum(["default", "student-housing", "co-living"]).optional(),
+	badgeVariant: z.enum(["Uncategorized", "Student", "Co-living"]).optional(),
 	image: z.string(),
 	available: z.boolean(),
 });

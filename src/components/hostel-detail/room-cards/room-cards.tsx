@@ -1,8 +1,22 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import type { PropertyRoom } from "./room-cards.types";
+import { Dialog, DialogContent, DialogTrigger } from "#/components/ui/dialog";
+import { ScheduleVisitForm } from "../schedule-visit-form/schedule-visit-form";
 
 export function RoomCards({ rooms }: { rooms: PropertyRoom[] }) {
+	const handleVisitProperty = () => {
+		window.location.href = "/contact";
+	};
+
+	const handleScheduleVisit = () => {
+		window.location.href = "/contact#location";
+	};
+
+	const handleEnquireNow = () => {
+		window.open("https://wa.me/919595200200", "_blank", "noopener,noreferrer");
+	};
+
 	return (
 		<section id="rooms" className="mt-16">
 			<h2 className="font-['Gilda_Display'] text-[27px] font-normal text-[#1f1a17]">
@@ -48,26 +62,42 @@ export function RoomCards({ rooms }: { rooms: PropertyRoom[] }) {
 
 								<div className="mt-auto flex flex-col gap-3 pt-3 md:flex-row md:items-center md:justify-between">
 									<p className="text-[22px] font-bold text-yv-orange">
-										₹{room.price.toLocaleString("en-IN")}
+										₹{room.price.toLocaleString("en-IN")}{"*"}
 										<span className="ml-1.5 text-[16px] font-normal text-[#7d7671]">
 											/ month
 										</span>
 									</p>
-									<div className="flex items-center gap-2 md:gap-3">
+									<div className="flex flex-col gap-2 md:flex-row md:items-center md:gap-3">
 										<Button
 											variant="yv-orange"
 											type="button"
-											onClick={() => {
-												window.open(
-													"https://wa.me/919595200200",
-													"_blank",
-													"noopener,noreferrer",
-												);
-											}}
-											className="h-10 flex-1 rounded-lg px-4 text-[16px] font-medium md:h-12 md:px-7"
+											onClick={handleVisitProperty}
+											className="h-10 flex-1  px-4 text-[16px] font-semibold shadow-[0_14px_30px_rgba(232,109,51,0.24)] md:h-12 md:px-7"
 										>
-											Book Now
+											Visit Property
 										</Button>
+										<Dialog>
+											<DialogTrigger >
+												<Button
+													variant="yv-orange-outline"
+													type="button"
+													className="h-10 flex-1  px-4 text-[16px] font-semibold shadow-sm md:h-12 md:px-7"
+												>
+													Schedule Visit
+												</Button>
+											</DialogTrigger>
+											<DialogContent className="max-w-lg border-0 bg-transparent p-0 shadow-none sm:max-w-[500px]">
+												<ScheduleVisitForm />
+											</DialogContent>
+											</Dialog>
+											<Button
+												variant="yv-orange"
+												type="button"
+												onClick={handleEnquireNow}
+												className="h-10 flex-1  bg-[#1f1a17] px-4 text-[16px] font-semibold text-white shadow-[0_14px_30px_rgba(31,26,23,0.22)] hover:bg-[#2d2622] md:h-12 md:px-7"
+											>
+												Enquire Now
+											</Button>
 									</div>
 								</div>
 							</div>

@@ -53,12 +53,12 @@ export function PropertyCard({
 	const badgeTone = isStudentHousing ? "bg-[#E8612D]" : "bg-[#709E32]";
 	const badgeShort = isStudentHousing ? "SH" : "CL";
 	const badgeFull = isStudentHousing ? "Student Housing" : "Co-Living";
-	const genderLabel =
-		property.gender === "Male"
-			? "Male"
-			: property.gender === "Female"
-				? "Female"
-				: "Male & Female";
+	const hasGirlsAndBoysFloors = property.gender.includes("Male") && property.gender.includes("Female");
+	const floorAccessLabel = hasGirlsAndBoysFloors
+		? "Floors for Girls & Boys"
+		: property.gender.includes("Only Girls")
+			? "Girls Only Floors"
+			: `${property.gender.join(" & ")} Floors`;
 
 	return (
 		<div className="overflow-hidden rounded-md bg-white shadow-sm ring-1 ring-black/5 transition-shadow hover:shadow-md">
@@ -79,14 +79,14 @@ export function PropertyCard({
 
 				<div className="absolute top-3 left-3 right-3 flex items-center justify-between gap-3">
 					<div className="flex min-w-0 items-center gap-2">
-						{/* <div className="group relative">
+						<div className="group relative">
 							<Badge
 								variant={property.badgeVariant}
 								className={cn(
 									"inline-flex h-7 max-w-full items-center rounded-full border-transparent px-3 text-[0.75rem] font-bold tracking-wide whitespace-nowrap text-white shadow-sm",
 									badgeTone,
 									onBadgeClick &&
-										"cursor-pointer transition-transform hover:scale-105 active:scale-95",
+									"cursor-pointer transition-transform hover:scale-105 active:scale-95",
 								)}
 								onClick={(e) => {
 									e.preventDefault();
@@ -94,18 +94,22 @@ export function PropertyCard({
 									onBadgeClick?.(property.badge);
 								}}
 							>
-								{badgeShort}
+								{property.badgeVariant}
 							</Badge>
 							<div className="pointer-events-none absolute top-[calc(100%+6px)] left-0 z-20 rounded-md bg-gray-900 px-2.5 py-1.5 text-[11px] font-semibold whitespace-nowrap text-white opacity-0 shadow-md transition-opacity duration-200 group-hover:opacity-100">
 								{badgeFull}
 							</div>
-						</div> */}
-						{/* <Badge
-							variant="outline"
-							className="inline-flex h-7 max-w-full items-center rounded-full border-transparent bg-white px-3 text-[0.75rem] font-bold tracking-wide whitespace-nowrap text-gray-800 shadow-sm"
-						>
-							{genderLabel}
-						</Badge> */}
+						</div>
+						{
+							property.gender.map((gender) => (
+								<Badge
+									variant="outline"
+									className="inline-flex h-7 max-w-full items-center rounded-full border-transparent bg-white px-3 text-[0.75rem] font-bold tracking-wide whitespace-nowrap text-gray-800 shadow-sm"
+								>
+									{gender}
+								</Badge>
+							))
+						}
 
 
 					</div>
@@ -151,10 +155,11 @@ export function PropertyCard({
 				</div>
 
 				<div className="flex items-center justify-between gap-4 border-t border-gray-100 pt-2">
-					<div className="flex items-center gap-3">
-						<DetailTooltip
+					<div className="flex flex-col gap-3">
+						<div className="flex items-center gap-3" >
+							<DetailTooltip
 							icon={<Users className="size-4 text-gray-400" />}
-							value={property.gender}
+							value={property.gender.join(", ")}
 						/>
 						{property.occupancy && (
 							<DetailTooltip
@@ -168,11 +173,17 @@ export function PropertyCard({
 									<TieIcon className="size-4 text-gray-400" />
 								) : (
 									<GraduationCap className="size-4 text-gray-400" />
-								)}
-
+								)
+							}
 							value={property.category === "professional" ? "Professional" : "Student"}
 						/>
-
+						</div>
+						<div className="group relative">
+							<div className="inline-flex items-center gap-2 rounded-full border border-gray-200 bg-linear-to-r from-[#FFF7F2] to-white px-3 py-2 text-[12px] font-semibold text-gray-700 shadow-sm transition-colors hover:border-yv-orange">
+								<Users className="size-4 text-yv-orange" />
+								<span className="whitespace-nowrap">{floorAccessLabel}</span>
+							</div>
+						</div>
 					</div>
 
 					<div className="text-right">
@@ -181,7 +192,7 @@ export function PropertyCard({
 						</span>
 						<p className="mt-0 text-[15px] font-bold text-yv-orange sm:text-[16px]  md:text-[15px] xl:text-[17px]">
 							{hasPrice
-								? `₹${property.price.toLocaleString("en-IN")}`
+								? `₹${property.price.toLocaleString("en-IN")}*`
 								: "Coming Soon"}
 							{hasPrice && (
 								<span className="ml-1 text-[12px] font-normal text-gray-400">

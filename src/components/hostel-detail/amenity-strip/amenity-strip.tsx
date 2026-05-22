@@ -17,7 +17,7 @@ export function AmenityStrip({ amenities }: { amenities: PropertyFeature[] }) {
 					<div
 						key={item.label}
 						className={cn(
-							"relative flex min-h-[200px] flex-col justify-between overflow-hidden rounded-xl border p-7 transition-transform hover:-translate-y-1 hover:shadow-lg",
+							"relative flex min-h-30 flex-col justify-between overflow-hidden rounded-xl border p-4 transition-transform hover:-translate-y-1 hover:shadow-lg",
 							isPink
 								? "border-transparent bg-[#fdeee4]"
 								: "border-[#f1dfd2] bg-white",
@@ -29,7 +29,7 @@ export function AmenityStrip({ amenities }: { amenities: PropertyFeature[] }) {
 								<img
 									src={item.icon}
 									alt=""
-									className="size-24"
+									className="size-16"
 									style={{
 										filter:
 											"brightness(0) saturate(100%) invert(43%) sepia(50%) saturate(2339%) hue-rotate(349deg) brightness(98%) contrast(92%)",
@@ -38,14 +38,14 @@ export function AmenityStrip({ amenities }: { amenities: PropertyFeature[] }) {
 									decoding="async"
 								/>
 							) : (
-								<item.icon className="size-24" strokeWidth={1.5} />
+								<item.icon className="size-16" strokeWidth={1.5} />
 							)}
 						</div>
 
 						{/* Top Icon Container */}
 						<div
 							className={cn(
-								"flex size-14 shrink-0 items-center justify-center rounded-2xl",
+								"flex size-10 shrink-0 items-center justify-center rounded-xl",
 								isPink
 									? "bg-white text-yv-orange shadow-sm"
 									: "bg-[#fdeee4] text-yv-orange",
@@ -64,17 +64,17 @@ export function AmenityStrip({ amenities }: { amenities: PropertyFeature[] }) {
 									decoding="async"
 								/>
 							) : (
-								<item.icon className="size-6" strokeWidth={2.5} />
+								<item.icon className="size-5" strokeWidth={2.5} />
 							)}
 						</div>
 
 						{/* Content */}
-						<div className="relative z-10 mt-6">
-							<h4 className="font-['Gilda_Display'] text-[20px] font-normal leading-tight text-[#231f1c]">
+						<div className="relative z-10 mt-3">
+							<h4 className="font-['Gilda_Display'] text-[16px] font-normal leading-tight text-[#231f1c]">
 								{item.label}
 							</h4>
 							{item.subtitle && (
-								<p className="mt-2 text-[13px] font-medium text-[#766f6a]">
+								<p className="mt-1 text-[12px] font-medium text-[#766f6a]">
 									{item.subtitle}
 								</p>
 							)}

@@ -20,7 +20,6 @@ interface FilterSidebarProps {
 const SPECIAL_TAGS = [
 	"Girls Only",
 	"Student Only",
-	"Working Professionals Only",
 	"Co-living",
 	"Near Metro Station",
 	"Near Public Transport",

@@ -66,7 +66,7 @@ export function SiteFooter() {
 							</div>
 						</div>
 						<div className="flex items-center gap-3 pt-3">
-							{[Link2, MessageSquareText].map((Icon) => (
+							{[MessageSquareText].map((Icon) => (
 								<button
 									type="button"
 									key={`contact-${Icon.name || Icon.displayName}`}

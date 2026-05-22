@@ -106,7 +106,7 @@ export function HostelDetailPage() {
 				<AmenityStrip amenities={property.amenityStrip} />
 
 				<section className="mt-10 grid gap-10 md:grid-cols-1 xl:grid-cols-[1fr_0.42fr]">
-					<div>
+					<div className="min-w-0">
 						<OverviewSection
 							overview={property.overview}
 							whyChooseTitle={property.whyChooseTitle}

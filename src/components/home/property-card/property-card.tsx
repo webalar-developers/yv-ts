@@ -79,7 +79,7 @@ export function PropertyCard({
 
 				<div className="absolute top-3 left-3 right-3 flex items-center justify-between gap-3">
 					<div className="flex min-w-0 items-center gap-2">
-						<div className="group relative">
+						{/* <div className="group relative">
 							<Badge
 								variant={property.badgeVariant}
 								className={cn(
@@ -99,8 +99,8 @@ export function PropertyCard({
 							<div className="pointer-events-none absolute top-[calc(100%+6px)] left-0 z-20 rounded-md bg-gray-900 px-2.5 py-1.5 text-[11px] font-semibold whitespace-nowrap text-white opacity-0 shadow-md transition-opacity duration-200 group-hover:opacity-100">
 								{badgeFull}
 							</div>
-						</div>
-						{
+						</div> */}
+						{/* {
 							property.gender.map((gender) => (
 								<Badge
 									variant="outline"
@@ -109,12 +109,12 @@ export function PropertyCard({
 									{gender}
 								</Badge>
 							))
-						}
+						} */}
 
 
 					</div>
 
-					<button
+					{/* <button
 						type="button"
 						onClick={(e) => {
 							e.preventDefault();
@@ -131,7 +131,7 @@ export function PropertyCard({
 									: "text-gray-400",
 							)}
 						/>
-					</button>
+					</button> */}
 				</div>
 			</div>
 
@@ -149,18 +149,18 @@ export function PropertyCard({
 					</div>
 				</div>
 
-				<div className="-mt-1 flex items-center gap-1 text-[15px] text-gray-500">
+				{/* <div className="-mt-1 flex items-center gap-1 text-[15px] text-gray-500">
 					<MapPin className="size-3.5" />
 					{property.location}
-				</div>
+				</div> */}
 
 				<div className="flex items-center justify-between gap-4 border-t border-gray-100 pt-2">
 					<div className="flex flex-col gap-3">
 						<div className="flex items-center gap-3" >
-							<DetailTooltip
+							{/* <DetailTooltip
 							icon={<Users className="size-4 text-gray-400" />}
 							value={property.gender.join(", ")}
-						/>
+						/> */}
 						{property.occupancy && (
 							<DetailTooltip
 								icon={<BedDouble className="size-4 text-gray-400" />}

@@ -30,14 +30,7 @@ export function HeroBanner() {
 				}}
 			/>
 			{shouldLoadVideo && (
-				<iframe
-					src={HERO_VIDEO_SRC}
-					title="Youthville hero video"
-					className="absolute inset-0 h-full w-full scale-[1.2] object-cover pointer-events-none"
-					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-					referrerPolicy="strict-origin-when-cross-origin"
-					loading="lazy"
-					allowFullScreen
+				<iframe src={HERO_VIDEO_SRC} className="pointer-events-none absolute top-1/2 left-1/2 h-[100%] min-h-[56.25vw] w-[177.77vh] min-w-full -translate-x-1/2 -translate-y-1/2"  title="Background Video"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 				/>
 			)}
 			<div className="absolute inset-0 bg-black/50" />

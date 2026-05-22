@@ -87,7 +87,7 @@ export function PropertyCard({
 				<div className="absolute top-3 left-3 right-3 flex items-center justify-between gap-3">
 					<div className="flex min-w-0 items-center gap-2">
 						<div className="group relative">
-							<Badge
+							{/* <Badge
 								variant={property.badgeVariant}
 								className={cn(
 									"inline-flex h-7 max-w-full items-center rounded-full border-transparent px-3 text-[0.75rem] font-bold tracking-wide whitespace-nowrap text-white shadow-sm",
@@ -102,12 +102,12 @@ export function PropertyCard({
 								}}
 							>
 								{property.accomodationType}
-							</Badge>
+							</Badge> */}
 							{/* <div className="pointer-events-none absolute top-[calc(100%+6px)] left-0 z-20 rounded-md bg-gray-900 px-2.5 py-1.5 text-[11px] font-semibold whitespace-nowrap text-white opacity-0 shadow-md transition-opacity duration-200 group-hover:opacity-100">
 								{badgeFull}
 							</div> */}
 						</div>
-						{
+						{/* {
 							property.gender.map((gender) => (
 								<Badge
 									variant="outline"
@@ -116,13 +116,13 @@ export function PropertyCard({
 									{gender}
 								</Badge>
 							))
-						}
+						} */}
 
 
 
 					</div>
 
-					<button
+					{/* <button
 						type="button"
 						onClick={(e) => {
 							e.preventDefault();
@@ -139,7 +139,7 @@ export function PropertyCard({
 									: "text-gray-400",
 							)}
 						/>
-					</button>
+					</button> */}
 				</div>
 			</div>
 
@@ -164,10 +164,10 @@ export function PropertyCard({
 
 				<div className="flex items-center justify-between gap-4 border-t border-gray-100 pt-2">
 					<div className="flex items-center gap-3">
-						<DetailTooltip
+						{/* <DetailTooltip
 							icon={<Users className="size-4 text-gray-400" />}
 							value={property.gender.join(", ")}
-						/>
+						/> */}
 						{property.occupancy && (
 							<DetailTooltip
 								icon={<BedDouble className="size-4 text-gray-400" />}

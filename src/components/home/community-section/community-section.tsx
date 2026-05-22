@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 
 const cardItems = [
 	{
-		label: "Events",
+		label: "Memories of Youthville",
 		images: [
 			"/home/community/events.jpg",
 			"/home/community/community.jpg",
@@ -12,7 +12,6 @@ const cardItems = [
 		],
 	},
 	{
-		label: "Live Sports",
 		images: [
 			"/home/community/live-sports.jpg",
 			"/home/community/trusted.jpg",
@@ -20,7 +19,6 @@ const cardItems = [
 		],
 	},
 	{
-		label: "Movie Nights",
 		images: [
 			"/home/community/comfort.jpg",
 			"/home/community/daily-meals.jpg",
@@ -28,7 +26,6 @@ const cardItems = [
 		],
 	},
 	{
-		label: "Empowering Sessions",
 		images: [
 			"/home/community/empowerment.jpg",
 			"/home/community/one-price.jpg",
@@ -36,7 +33,6 @@ const cardItems = [
 		],
 	},
 	{
-		label: "Cultural Fests",
 		images: [
 			"/home/community/christmas.jpg",
 			"/home/community/ganpati.jpg",
@@ -89,10 +85,10 @@ function Card({
 						decoding="async"
 					/>
 					<div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-					<div className="absolute bottom-4 left-4">
+						{item.label &&	<div className="absolute bottom-4 left-4">
 						<div className="mb-1.5 h-0.5 w-8 bg-pink-500" />
-						<p className="text-base font-semibold text-white">Memories of Youthville</p>
-					</div>
+						<p className="text-base font-semibold text-white">{item.label}</p>
+					</div>}
 				</motion.div>
 			</AnimatePresence>
 		</div>

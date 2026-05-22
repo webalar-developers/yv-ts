@@ -8,23 +8,19 @@ import { cn } from "@/lib/utils";
 
 const cardItems = [
 	{
-		label: "Community Moments",
+		label: "Memories of Youthville",
 		images: ["/shared/jpg/1.jpg", "/shared/jpg/2.jpg", "/shared/jpg/3.jpg"],
 	},
 	{
-		label: "Ganpati Festival",
 		images: ["/shared/jpg/2.jpg", "/shared/jpg/4.jpg", "/shared/jpg/1.jpg"],
 	},
 	{
-		label: "Christmas Celebration",
 		images: ["/shared/jpg/3.jpg", "/shared/jpg/1.jpg", "/shared/jpg/2.jpg"],
 	},
 	{
-		label: "Fun Activities",
 		images: ["/shared/jpg/4.jpg", "/shared/jpg/3.jpg", "/shared/jpg/1.jpg"],
 	},
 	{
-		label: "Cultural Night",
 		images: ["/shared/jpg/2.jpg", "/shared/jpg/3.jpg", "/shared/jpg/4.jpg"],
 	},
 ];
@@ -34,7 +30,7 @@ const allMediaItems: MediaItemType[] = cardItems.flatMap((card, cardIdx) =>
 	card.images.map((img, imgIdx) => ({
 		id: cardIdx * 10 + imgIdx,
 		type: "image",
-		title: card.label,
+		title: card.label as string,
 		desc: "",
 		url: img,
 		span: "",
@@ -94,11 +90,15 @@ function Card({
 						alt={item.label}
 						className="h-full w-full object-cover"
 					/>
-					<div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-					<div className="absolute bottom-4 left-4">
-						<div className="mb-1.5 h-0.5 w-8 bg-pink-500" />
-						<p className="text-base font-semibold text-white">{item.label}</p>
-					</div>
+					{item.label && (
+						<div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+					)}
+					{item.label && (
+						<div className="absolute bottom-4 left-4">
+							<div className="mb-1.5 h-0.5 w-8 bg-pink-500" />
+							<p className="text-base font-semibold text-white">{item.label}</p>
+						</div>
+					)}
 				</motion.div>
 			</AnimatePresence>
 		</button>

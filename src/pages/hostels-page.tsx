@@ -47,10 +47,15 @@ export function HostelsPage() {
 		city: cityFromSearch,
 		areas: [] as string[],
 		gender: null as string | null,
-		coLiving: true,
+		coLiving: false,
 		roomTypes: [] as string[],
 		tags: [] as string[],
 	});
+
+	const handleFilterChange = (newFilters: typeof filters) => {
+		setFilters(newFilters);
+		setCurrentPage(1);
+	};
 
 	useEffect(() => {
 		setFilters((prev) => ({
@@ -87,20 +92,12 @@ export function HostelsPage() {
 		}
 
 		if (filters.gender) {
-			// Logic for gender: Boys -> Only Male/Co-living, Girls -> Only Female/Co-living
 			if (filters.gender === "Boys") {
-				result = result.filter(
-					(p) =>
-						p.gender === "Only Male" ||
-						p.gender === "Co-living" ||
-						p.gender === "Mixed",
-				);
+				result = result.filter((p) => p.gender.includes("Male"));
 			} else if (filters.gender === "Girls") {
 				result = result.filter(
 					(p) =>
-						p.gender === "Only Female" ||
-						p.gender === "Co-living" ||
-						p.gender === "Mixed",
+						p.gender.includes("Female") || p.gender.includes("Only Girls"),
 				);
 			}
 		}
@@ -108,13 +105,21 @@ export function HostelsPage() {
 		if (filters.tags.length > 0) {
 			result = result.filter((p) => {
 				return filters.tags.every((tag) => {
-					if (tag === "Girls Only") return p.gender === "Only Female";
+					if (tag === "Girls Only")
+						return (
+							p.gender.includes("Only Girls") && !p.gender.includes("Male")
+						);
 					if (tag === "Student Only")
-						return p.category === "student" || !p.category;
+						return (
+							p.category !== "professional" &&
+							p.accomodationType !== "Co-Living"
+						);
 					if (tag === "Working Professionals Only")
 						return p.category === "professional";
 					if (tag === "Co-living")
-						return p.gender === "Co-living" || p.gender === "Mixed";
+						return (
+							p.gender.length > 1 || p.accomodationType === "Co-Living"
+						);
 					if (tag === "Near Metro Station") return p.badge === "NEAR METRO";
 					if (tag === "Near Public Transport")
 						return (
@@ -176,7 +181,7 @@ export function HostelsPage() {
 		<main className="bg-[#faf8f3] py-8 md:py-10">
 			<div className="mx-auto flex w-full gap-8 px-6 md:px-4">
 				<div className="hidden lg:block">
-					<HostelsFilterSidebar filters={filters} onFilterChange={setFilters} />
+					<HostelsFilterSidebar filters={filters} onFilterChange={handleFilterChange} />
 				</div>
 
 				<section className="min-w-0 flex-1">
@@ -276,7 +281,7 @@ export function HostelsPage() {
 						<div className="p-4">
 							<HostelsFilterSidebar
 								filters={filters}
-								onFilterChange={setFilters}
+								onFilterChange={handleFilterChange}
 								onClose={() => setFiltersOpen(false)}
 							/>
 						</div>

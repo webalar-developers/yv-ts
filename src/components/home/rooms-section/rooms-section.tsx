@@ -3,7 +3,7 @@ import { useMemo, useRef, useState } from "react";
 import { PropertyCard } from "@/components/home/property-card/property-card";
 import type { PropertyListing } from "@/components/hostel-detail/property-listing/property-listing.types";
 import { Button } from "@/components/ui/button";
-import { filters, properties } from "./rooms-section.data";
+import { filters, nearbyLocations, properties } from "./rooms-section.data";
 
 type RoomsProperty = (typeof properties)[number];
 
@@ -55,25 +55,38 @@ export function RoomsSection() {
 	>({});
 	const sliderRef = useRef<HTMLDivElement | null>(null);
 
-	const filteredProperties = useMemo(() => {
-		return properties.filter((property) => {
-			const cityFilter = selectedFilters.City;
-			const locationFilter = selectedFilters.Location;
-			const genderFilter = selectedFilters.Gender;
-			const accommodationFilter = selectedFilters["Accommodation Type"];
+	const { exactProperties, nearbyProperties } = useMemo(() => {
+		const cityFilter = selectedFilters.City;
+		const locationFilter = selectedFilters.Location;
+		const genderFilter = selectedFilters.Gender;
+		const accommodationFilter = selectedFilters["Accommodation Type"];
+		const nearbyAreas = locationFilter ? (nearbyLocations[locationFilter] ?? []) : [];
 
-			const badgeType =
-				property.badgeVariant?.replace(/-/g, " ").toLowerCase() ?? "";
-
+		const matchesOtherFilters = (property: RoomsProperty) => {
+			const badgeType = property.badgeVariant?.toLowerCase() ?? "";
 			return (
 				(!cityFilter || property.location === cityFilter) &&
-				(!locationFilter || property.area === locationFilter) &&
 				(!genderFilter || property.gender.includes(genderFilter as "Male" | "Female" | "Other" | "Only Girls")) &&
-				(!accommodationFilter ||
-					badgeType === accommodationFilter.toLowerCase())
+				(!accommodationFilter || badgeType.toLocaleLowerCase() === accommodationFilter.toLowerCase())
 			);
-		});
+		};
+
+		const exact = properties.filter(
+			(p) => matchesOtherFilters(p) && (!locationFilter || p.area === locationFilter),
+		);
+		const nearby = locationFilter
+			? properties.filter(
+				(p) =>
+					matchesOtherFilters(p) &&
+					p.area !== locationFilter &&
+					nearbyAreas.includes(p.area),
+			)
+			: [];
+
+		return { exactProperties: exact, nearbyProperties: nearby };
 	}, [selectedFilters]);
+
+	const filteredProperties = [...exactProperties, ...nearbyProperties];
 
 	const handleFilterChange = (label: string, value: string) => {
 		setSelectedFilters((prev) => ({ ...prev, [label]: value }));
@@ -178,20 +191,35 @@ export function RoomsSection() {
 					No rooms match the selected filters. Try a different combination.
 				</div>
 			) : (
-				<div
-					ref={sliderRef}
-					className="flex snap-x snap-mandatory gap-6 overflow-x-auto pb-4 scroll-smooth [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
-				>
-					{filteredProperties.map((property) => (
-						<div
-							key={property.id}
-							data-room-slide
-							className="w-[88%] shrink-0 snap-start sm:w-[calc(50%-12px)] lg:w-[calc(25%-18px)]"
-						>
-							<PropertyCard property={toPropertyListing(property)} />
-						</div>
-					))}
-				</div>
+				<>
+					<div
+						ref={sliderRef}
+						className="flex snap-x snap-mandatory gap-6 overflow-x-auto pb-4 scroll-smooth scrollbar-none [&::-webkit-scrollbar]:hidden"
+					>
+						{exactProperties.map((property) => (
+							<div
+								key={property.id}
+								data-room-slide
+								className="w-[88%] shrink-0 snap-start sm:w-[calc(50%-12px)] lg:w-[calc(25%-18px)]"
+							>
+								<PropertyCard property={toPropertyListing(property)} />
+							</div>
+						))}
+						{nearbyProperties.length > 0 && (
+							<>
+								{nearbyProperties.map((property) => (
+									<div
+										key={property.id}
+										data-room-slide
+										className="w-[88%] shrink-0 snap-start sm:w-[calc(50%-12px)] lg:w-[calc(25%-18px)]"
+									>
+										<PropertyCard property={toPropertyListing(property)} />
+									</div>
+								))}
+							</>
+						)}
+					</div>
+				</>
 			)}
 		</section>
 	);

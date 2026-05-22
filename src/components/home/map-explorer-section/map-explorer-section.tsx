@@ -104,52 +104,57 @@ export function MapExplorerSection() {
 		}
 	}, [selectedProperty, filters.city]);
 
-	const mapProperties = useMemo(() => {
-		let result = [...mockProperties];
+	const { mapProperties, nearbyProperties } = useMemo(() => {
+		let base = [...mockProperties];
 
 		if (mapFilter === "Operational") {
-			result = result.filter((p) => p.badgeVariant !== "new-opening");
+			base = base.filter((p) => p.badgeVariant !== "new-opening");
 		} else if (mapFilter === "Upcoming") {
-			result = result.filter((p) => p.badgeVariant === "new-opening");
+			base = base.filter((p) => p.badgeVariant === "new-opening");
 		}
-
 		if (filters.search) {
 			const search = filters.search.toLowerCase();
-			result = result.filter(
+			base = base.filter(
 				(p) =>
 					p.name.toLowerCase().includes(search) ||
 					p.area.toLowerCase().includes(search),
 			);
 		}
 		if (filters.city) {
-			result = result.filter((p) => p.city === filters.city);
-		}
-		if (filters.areas.length > 0) {
-			result = result.filter((p) => filters.areas.includes(p.area));
+			base = base.filter((p) => p.city === filters.city);
 		}
 		if (filters.gender) {
 			if (filters.gender === "Boys") {
-				result = result.filter(
-					(p) =>
-						p.gender === "Only Male" ||
-						p.gender === "Co-living" ||
-						p.gender === "Mixed",
-				);
+				base = base.filter((p) => p.gender.includes("Male"));
 			} else if (filters.gender === "Girls") {
-				result = result.filter((p) => p.gender === "Only Female");
+				base = base.filter(
+					(p) => p.gender.includes("Female") || p.gender.includes("Only Girls"),
+				);
 			}
 		}
 
-		return result;
+		const withArea =
+			filters.areas.length > 0
+				? base.filter((p) => filters.areas.includes(p.area))
+				: base;
+
+		return {
+			mapProperties: withArea,
+			nearbyProperties: withArea.length === 0 ? base : [],
+		};
 	}, [filters, mapFilter]);
 
 	useEffect(() => {
 		setShowAllMobileProperties(false);
 	}, []);
 
+	const displayProperties =
+		mapProperties.length > 0 ? mapProperties : nearbyProperties;
+	const isShowingNearby = mapProperties.length === 0 && nearbyProperties.length > 0;
+
 	const mobileVisibleProperties = showAllMobileProperties
-		? mapProperties
-		: mapProperties.slice(0, 4);
+		? displayProperties
+		: displayProperties.slice(0, 4);
 
 	return (
 		<section
@@ -169,7 +174,7 @@ export function MapExplorerSection() {
 						<MapExplorerFilters
 							filters={filters}
 							onFilterChange={setFilters}
-							resultCount={mapProperties.length}
+							resultCount={displayProperties.length}
 						/>
 					</aside>
 
@@ -369,21 +374,29 @@ export function MapExplorerSection() {
 							<>
 								<div className="flex items-center justify-between border-b bg-white px-6 py-4">
 									<h3 className="font-gilda text-[18px] text-gray-900">
-										Available Properties
+										{isShowingNearby ? "Nearby Properties" : "Available Properties"}
 									</h3>
 									<Badge
 										variant="outline"
 										className="bg-white text-[10px] font-bold text-gray-500"
 									>
-										{mapProperties.length} FOUND
+										{displayProperties.length} FOUND
 									</Badge>
 								</div>
+
+								{isShowingNearby && (
+									<div className="border-b bg-amber-50 px-6 py-2.5">
+										<p className="text-[11px] font-medium text-amber-700">
+											No properties in the selected area — showing nearby options in {filters.city}.
+										</p>
+									</div>
+								)}
 
 								<ScrollArea
 									key="list-scroll"
 									className="bg-[#faf8f3] lg:flex-1"
 								>
-									{mapProperties.length === 0 ? (
+									{displayProperties.length === 0 ? (
 										<div className="py-10 text-center">
 											<p className="text-gray-500">
 												No properties found matching these filters.
@@ -406,7 +419,7 @@ export function MapExplorerSection() {
 											</div>
 
 											<div className="hidden space-y-3 lg:block">
-												{mapProperties.map((property) => {
+												{displayProperties.map((property) => {
 													const isActive = selectedPropertyId === property.id;
 													return (
 														<PropertyListCard
@@ -419,7 +432,7 @@ export function MapExplorerSection() {
 												})}
 											</div>
 
-											{mapProperties.length > 4 && (
+											{displayProperties.length > 4 && (
 												<div className="pt-2 lg:hidden">
 													<Button
 														type="button"
@@ -431,7 +444,7 @@ export function MapExplorerSection() {
 													>
 														{showAllMobileProperties
 															? "View Less"
-															: `View More (${mapProperties.length - 4} more)`}
+															: `View More (${displayProperties.length - 4} more)`}
 													</Button>
 												</div>
 											)}

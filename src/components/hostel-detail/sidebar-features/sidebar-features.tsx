@@ -7,6 +7,8 @@ import {
 } from "@/components/ui/card";
 import type { PropertyFeature } from "../amenity-strip/amenity-strip.types";
 import { featureDescriptions } from "./sidebar-features.data";
+import { Dialog, DialogContent, DialogTrigger } from "#/components/ui/dialog";
+import { ScheduleVisitForm } from "../schedule-visit-form/schedule-visit-form";
 
 export function SidebarFeatures({
 	eyebrow,
@@ -51,12 +53,19 @@ export function SidebarFeatures({
 					))}
 				</div>
 
-				<Button
-					variant="yv-orange"
-					className="mt-7 h-14 w-full rounded-md text-[20px] font-bold"
-				>
-					Get Details
-				</Button>
+				<Dialog>
+					<DialogTrigger className="w-full">
+						<Button
+							variant="yv-orange"
+							className="mt-7 h-14 w-full rounded-md text-[20px] font-bold"
+						>
+							Get Details
+						</Button>
+					</DialogTrigger>
+					<DialogContent className="max-w-lg border-0 bg-transparent p-0 shadow-none sm:max-w-[500px]">
+						<ScheduleVisitForm />
+					</DialogContent>
+				</Dialog>
 				<p className="mt-4 text-center text-[12px] font-bold tracking-[0.16em] text-[#6b635f] uppercase">
 					No hidden charges &bull; direct booking
 				</p>

@@ -1,5 +1,21 @@
 import type { PropertyCard } from "./rooms-section.types";
 
+export const nearbyLocations: Record<string, string[]> = {
+	Baner: ["Balewadi", "Mahalunge", "Hinjewadi"],
+	Balewadi: ["Baner", "Kiwale", "Mahalunge", "Hinjewadi"],
+	Hinjewadi: ["Balewadi", "Mahalunge", "Baner", "Kiwale"],
+	Mahalunge: ["Balewadi", "Hinjewadi", "Baner"],
+	Kiwale: ["Balewadi", "Hinjewadi"],
+	Kothrud: ["Karve Nagar", "SB Road", "Shivaji Nagar"],
+	"Karve Nagar": ["Kothrud", "SB Road", "Shivaji Nagar"],
+	"SB Road": ["Karve Nagar", "Kothrud", "Shivaji Nagar", "Sancheti"],
+	"Shivaji Nagar": ["SB Road", "Sancheti", "Yerwada"],
+	Sancheti: ["Shivaji Nagar", "SB Road"],
+	Yerwada: ["Shivaji Nagar", "Mundhwa"],
+	Mundhwa: ["Yerwada", "Shivaji Nagar"],
+	"Juhu- JVPD": [],
+};
+
 export const filters = [
 	{
 		label: "City",
@@ -11,7 +27,6 @@ export const filters = [
 			"Baner",
 			"Balewadi",
 			"Mundhwa",
-			"Mulshi",
 			"Yerwada",
 			"Karve Nagar",
 			"Kothrud",
@@ -19,7 +34,6 @@ export const filters = [
 			"Shivaji Nagar",
 			"Hinjewadi",
 			"Mahalunge",
-			"Bhosari",
 		],
 	},
 	{
@@ -28,7 +42,7 @@ export const filters = [
 	},
 	{
 		label: "Accommodation Type",
-		options: ["Student housing", "Co-living"],
+		options: ["Student", "Co-living"],
 	},
 ];
 

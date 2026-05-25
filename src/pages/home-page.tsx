@@ -33,7 +33,7 @@ const SectionSkeleton = ({ height = "h-96" }: { height?: string }) => (
 
 export function HomePage() {
 	usePageHead({
-		title: "Youthville Hostels | Premium Student Living & Co-living in Pune",
+		title: "Youthville | Premium Serviced Hostel in Pune & Mumbai | PG with Meals, WiFi & Housekeeping",
 		description:
 			"Premium student housing and co-living in Pune. Fully-furnished private and shared rooms, all-inclusive amenities, and a vibrant community across Kiwale, Hinjewadi, and Wakad.",
 		keywords:

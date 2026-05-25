@@ -47,6 +47,51 @@ const commonAmenityStrip = [
 	},
 ] satisfies PropertyFeature[];
 
+// Student properties: 3 meals + electricity included
+const studentAmenityStrip = [
+	{ icon: Wifi, label: "High-Speed Wi-Fi", subtitle: "Seamless connectivity" },
+	{
+		icon: "/shared/svg/icon-property-managers.svg",
+		label: "Housekeeping",
+		subtitle: "3 times a week",
+	},
+	{
+		icon: "/shared/svg/icon-laundry.svg",
+		label: "Laundry",
+		subtitle: "Upto 10 kg",
+	},
+	{
+		icon: "/shared/svg/icon-meals.svg",
+		label: "3 Meals/Day",
+		subtitle: "Breakfast, High-tea & Dinner",
+	},
+	{
+		icon: Zap,
+		label: "Electricity",
+		subtitle: "120 units per room included",
+	},
+] satisfies PropertyFeature[];
+
+// Co-living properties: 2 meals, no electricity clause
+const coLivingAmenityStrip = [
+	{ icon: Wifi, label: "High-Speed Wi-Fi", subtitle: "Seamless connectivity" },
+	{
+		icon: "/shared/svg/icon-property-managers.svg",
+		label: "Housekeeping",
+		subtitle: "3 times a week",
+	},
+	{
+		icon: "/shared/svg/icon-laundry.svg",
+		label: "Laundry",
+		subtitle: "Upto 10 kg",
+	},
+	{
+		icon: "/shared/svg/icon-meals.svg",
+		label: "2 Meals/Day",
+		subtitle: "Breakfast & Dinner",
+	},
+] satisfies PropertyFeature[];
+
 const commonSidebarFeatures = [
 	{ icon: "/shared/svg/icon-top-location.svg", label: "Top Location" },
 	{ icon: "/shared/svg/icon-furnished.svg", label: "Meals Included" },
@@ -360,7 +405,7 @@ export const mockProperties: PropertyListing[] = [
 		isFavorited: false,
 		featureTags: [],
 		gallery: sbr1Gallery,
-		amenityStrip: commonAmenityStrip,
+		amenityStrip: studentAmenityStrip,
 		overview:
 			"Located on the iconic Senapati Bapat Road in Gokhalenagar, Youthville SBR-1 offers a premium co-living experience in one of Pune's most well-connected neighborhoods. Ideal for students and young professionals seeking convenience and community.",
 		whyChooseTitle: "Why choose Youthville SBR-1?",
@@ -380,7 +425,7 @@ export const mockProperties: PropertyListing[] = [
 				id: "sbr1-triple",
 				title: "3-Sharing",
 				occupancy: "Triple occupancy",
-				image: "/property/sbr-1/1.jpg",
+				image: "/property/sbr-1/7.jpg",
 				price: 37000,
 				description:
 					"High-speed Wi-fi, Housekeeping 3x/week, Laundry up to 10 kg, 3 meals (Breakfast, High-tea & Dinner), Electricity: 40 units included.",
@@ -392,7 +437,7 @@ export const mockProperties: PropertyListing[] = [
 				id: "sbr1-twin",
 				title: "2-Sharing",
 				occupancy: "Double occupancy",
-				image: "/property/sbr-1/2.jpg",
+				image: "/property/sbr-1/8.jpg",
 				price: 43000,
 				description:
 					"High-speed Wi-fi, Housekeeping 3x/week, Laundry up to 10 kg, 3 meals (Breakfast, High-tea & Dinner), Electricity: 60 units included.",
@@ -404,7 +449,7 @@ export const mockProperties: PropertyListing[] = [
 				id: "sbr1-twin-premium",
 				title: "2-Sharing Premium",
 				occupancy: "Double occupancy premium",
-				image: "/property/sbr-1/3.jpg",
+				image: "/property/sbr-1/8.jpg",
 				price: 49000,
 				description:
 					"Premium 2-sharing with all amenities. High-speed Wi-fi, Housekeeping 3x/week, Laundry up to 10 kg, 3 meals (Breakfast, High-tea & Dinner), Electricity: 60 units included.",
@@ -460,7 +505,7 @@ export const mockProperties: PropertyListing[] = [
 		isFavorited: false,
 		featureTags: [],
 		gallery: sbr2Gallery,
-		amenityStrip: commonAmenityStrip,
+		amenityStrip: studentAmenityStrip,
 		overview:
 			"Situated off Senapati Bapat Road in the upscale Model Colony area, Youthville SBR-2 provides a polished living experience near Hotel Management College. Perfect for students who want a quiet, well-maintained environment.",
 		whyChooseTitle: "Why choose Youthville SBR-2?",
@@ -559,7 +604,7 @@ export const mockProperties: PropertyListing[] = [
 		isFavorited: false,
 		featureTags: [],
 		gallery: sbr3Gallery,
-		amenityStrip: commonAmenityStrip,
+		amenityStrip: studentAmenityStrip,
 		overview:
 			"Youthville SBR-3 is nestled in the heart of Gokhalenagar along the main road, offering easy access to educational institutions and daily essentials. A reliable choice for students seeking affordability without compromise.",
 		whyChooseTitle: "Why choose Youthville SBR-3?",
@@ -657,7 +702,7 @@ export const mockProperties: PropertyListing[] = [
 		isFavorited: true,
 		featureTags: ["Biometric Access"],
 		gallery: karveNagarGallery,
-		amenityStrip: commonAmenityStrip,
+		amenityStrip: studentAmenityStrip,
 		overview:
 			"Karve Nagar brings together secure living, accessible commuting, and a calm neighborhood atmosphere with all the practical essentials already taken care of.",
 		whyChooseTitle: "Why choose Youthville Karve Nagar?",
@@ -732,7 +777,7 @@ export const mockProperties: PropertyListing[] = [
 		area: "Balewadi",
 		gender:["Male", "Female"],
 		feature: "Full Gym",
-		price: 16200,
+		price: 16500,
 		badge: "PREMIUM",
 		badgeVariant: "premium",
 		image: "/property/balewadi-1/cover.png",
@@ -740,7 +785,7 @@ export const mockProperties: PropertyListing[] = [
 		isFavorited: false,
 		featureTags: [],
 		gallery: balewadi1Gallery,
-		amenityStrip: commonAmenityStrip,
+		amenityStrip: coLivingAmenityStrip,
 		overview:
 			"Located on the bustling Balewadi High Street next to Cummins, YV Balewadi 1 offers an unparalleled living experience for students and young professionals. Designed with a modern aesthetic, it provides the perfect balance between academic focus and premium lifestyle.",
 		whyChooseTitle: "Why choose YV Balewadi 1?",
@@ -757,39 +802,38 @@ export const mockProperties: PropertyListing[] = [
 		},
 		rooms: [
 			{
-				id: "balewadi1-private",
-				title: "Private Room",
-				occupancy: "Single occupancy",
-				image: "/shared/jpg/1.jpg",
-				price: 19800,
-				tag: "LIMITED",
-				description:
-					"Private room with premium furnishings, workspace, and AC comfort.",
-				meta: ["220 SQ. FT."],
-			},
-			{
-				id: "balewadi1-twin",
-				title: "Twin Sharing",
-				occupancy: "Double occupancy",
-				image: "/shared/jpg/2.jpg",
-				price: 16200,
-				description:
-					"Bright twin-sharing setup with generous storage and daily upkeep.",
-				meta: ["320 SQ. FT."],
-			},
-			{
-				id: "balewadi1-triple",
-				title: "Triple Sharing",
-				occupancy: "Community sharing",
+				id: "balewadi1-comfort",
+				title: "Comfort AC Room",
+				occupancy: "Comfort occupancy",
 				image: "/shared/jpg/3.jpg",
-				price: 12500,
+				price: 16500,
 				description:
-					"A perfect balance of community living and personal space, ideal for students and professionals.",
-				meta: ["350 SQ. FT."],
+					"High-speed Wi-fi, Housekeeping 3x/week, Laundry up to 10 kg, 2 meals (Breakfast & Dinner).",
+				meta: ["AC ROOM", "ATTACHED BATH", "24/7 HOT WATER"],
+			},
+			{
+				id: "balewadi1-premium",
+				title: "Premium AC Room",
+				occupancy: "Premium occupancy",
+				image: "/shared/jpg/2.jpg",
+				price: 19000,
+				description:
+					"High-speed Wi-fi, Housekeeping 3x/week, Laundry up to 10 kg, 2 meals (Breakfast & Dinner).",
+				meta: ["AC ROOM", "ATTACHED BATH", "24/7 HOT WATER"],
+			},
+			{
+				id: "balewadi1-luxury",
+				title: "Luxury AC Room",
+				occupancy: "Luxury occupancy",
+				image: "/shared/jpg/1.jpg",
+				price: 22000,
+				description:
+					"High-speed Wi-fi, Housekeeping 3x/week, Laundry up to 10 kg, 2 meals (Breakfast & Dinner).",
+				meta: ["AC ROOM", "ATTACHED BATH", "24/7 HOT WATER"],
 			},
 		],
 		investmentBreakdown: [
-			{ label: "Base Rent (Triple Sharing)", amount: 16500 },
+			{ label: "Base Rent (Comfort AC Room)", amount: 16500 },
 			{ label: "Utilities (Electricity & Water)", amount: 2000 },
 		],
 		locationHighlights: [
@@ -808,7 +852,7 @@ export const mockProperties: PropertyListing[] = [
 			newInclusion:[
 			"Induction, Microwave, washing machine, refrigerator ",
 			"Fully-furnished AC rooms with attached bathroom with 24/7 hot water",
-			'Chill Zone( Table Tennies, TV lounge, Carrom, Chess, etc)'
+			'Chill Zone( Table Tennis, Carrom, Pool Table, etc)'
 		],
 		accomodationType: "Co-Living"
 	},
@@ -823,8 +867,8 @@ export const mockProperties: PropertyListing[] = [
 		city: "Pune",
 		area: "Balewadi",
 		gender: ["Male", "Female"],
-		meals: "3 Meals Incl.",
-		price: 9500,
+		meals: "2 Meals Incl.",
+		price: 18000,
 		badge: "OFFERS AVAILABLE",
 		badgeVariant: "offers",
 		image: "/property/balewadi-2/cover.png",
@@ -832,7 +876,7 @@ export const mockProperties: PropertyListing[] = [
 		isFavorited: false,
 		featureTags: [],
 		gallery: balewadi2Gallery,
-		amenityStrip: commonAmenityStrip,
+		amenityStrip: coLivingAmenityStrip,
 		overview:
 			"Located next to Amar Tech Park in Balewadi, YV Balewadi 2 is tuned for affordability without losing the polished Youthville experience. A strong fit for young professionals working in the nearby IT corridor.",
 		whyChooseTitle: "Why choose YV Balewadi 2?",
@@ -854,8 +898,32 @@ export const mockProperties: PropertyListing[] = [
 			lng: 73.772,
 			label: "Balewadi, Pune",
 		},
-		rooms: commonRooms,
-		investmentBreakdown: commonInvestmentBreakdown,
+		rooms: [
+			{
+				id: "balewadi2-comfort",
+				title: "Comfort AC Room",
+				occupancy: "Comfort occupancy",
+				image: "/shared/jpg/1.jpg",
+				price: 18000,
+				description:
+					"High-speed Wi-fi, Housekeeping 3x/week, Laundry up to 10 kg, 2 meals (Breakfast & Dinner).",
+				meta: ["AC ROOM", "ATTACHED BATH", "24/7 HOT WATER"],
+			},
+			{
+				id: "balewadi2-premium",
+				title: "Premium AC Room",
+				occupancy: "Premium occupancy",
+				image: "/shared/jpg/2.jpg",
+				price: 22000,
+				description:
+					"High-speed Wi-fi, Housekeeping 3x/week, Laundry up to 10 kg, 2 meals (Breakfast & Dinner).",
+				meta: ["AC ROOM", "ATTACHED BATH", "24/7 HOT WATER"],
+			},
+		],
+		investmentBreakdown: [
+			{ label: "Base Rent (Comfort AC Room)", amount: 18000 },
+			{ label: "Utilities (Electricity & Water)", amount: 2000 },
+		],
 		locationHighlights: [
 			{ icon: Landmark, title: "Balewadi High Street", subtitle: "2 min" },
 			{ icon: Building2, title: "Amar Tech Park", subtitle: "2 min" },
@@ -872,7 +940,7 @@ export const mockProperties: PropertyListing[] = [
 			newInclusion:[
 			"Induction, Microwave, washing machine, refrigerator ",
 			"Fully-furnished AC rooms with attached bathroom with 24/7 hot water",
-			'Chill Zone( Table Tennies, TV lounge, Carrom, Chess, etc)'
+			'Chill Zone( Table Tennis, Fuss Ball, etc)'
 		],
 		accomodationType: "Co-Living"
 	},
@@ -1291,14 +1359,14 @@ export const mockProperties: PropertyListing[] = [
 		gender: ["Male", "Female"],
 		occupancy: "1, 2 Sharing",
 		proximity: "Near IT Park",
-		price: 14500,
+		price: 27000,
 		badge: "PREMIUM",
 		badgeVariant: "premium",
 		image: "/property/kiwale/cover.png",
 		isFavorited: false,
 		featureTags: [],
 		gallery: commonGallery,
-		amenityStrip: commonAmenityStrip,
+		amenityStrip: studentAmenityStrip,
 		overview:
 			"Located in Kiwale near Ravet in Pimpri-Chinchwad, this Youthville address is designed for young professionals who want smooth commutes, calm interiors, and a premium serviced-hostel experience that feels curated rather than crowded.",
 		whyChooseTitle: "Why choose YV Kiwale?",
@@ -1315,40 +1383,39 @@ export const mockProperties: PropertyListing[] = [
 		},
 		rooms: [
 			{
-				id: "kiwale-private",
-				title: "Private Room",
-				occupancy: "Single occupancy",
-				image: "/shared/jpg/1.jpg",
-				price: 18500,
-				tag: "LIMITED",
-				description:
-					"Quiet room with study desk, wardrobe, AC, and attached bath.",
-				meta: ["220 SQ. FT."],
-			},
-			{
-				id: "kiwale-twin",
-				title: "Twin Sharing",
-				occupancy: "Double occupancy",
-				image: "/shared/jpg/2.jpg",
-				price: 14500,
-				description:
-					"Smartly planned shared room with storage and housekeeping.",
-				meta: ["280 SQ. FT."],
-			},
-			{
-				id: "kiwale-triple",
-				title: "Triple Sharing",
-				occupancy: "Community sharing",
+				id: "kiwale-comfort",
+				title: "Comfort AC Room",
+				occupancy: "Comfort occupancy",
 				image: "/shared/jpg/3.jpg",
-				price: 18500,
+				price: 27000,
 				description:
-					"A perfect balance of community living and personal space, ideal for students and professionals.",
-				meta: ["350 SQ. FT."],
+					"High-speed Wi-fi, Housekeeping 3x/week, Laundry up to 10 kg, 3 meals (Breakfast, High-tea & Dinner), Electricity: 40 units included.",
+				meta: ["AC ROOM", "ATTACHED BATH", "24/7 HOT WATER"],
+			},
+			{
+				id: "kiwale-premium",
+				title: "Premium AC Room",
+				occupancy: "Premium occupancy",
+				image: "/shared/jpg/2.jpg",
+				price: 29000,
+				description:
+					"High-speed Wi-fi, Housekeeping 3x/week, Laundry up to 10 kg, 3 meals (Breakfast, High-tea & Dinner), Electricity: 40 units included.",
+				meta: ["AC ROOM", "ATTACHED BATH", "24/7 HOT WATER"],
+			},
+			{
+				id: "kiwale-luxury",
+				title: "Luxury AC Room",
+				occupancy: "Luxury occupancy",
+				image: "/shared/jpg/1.jpg",
+				price: 31000,
+				description:
+					"High-speed Wi-fi, Housekeeping 3x/week, Laundry up to 10 kg, 3 meals (Breakfast, High-tea & Dinner), Electricity: 60 units included.",
+				meta: ["AC ROOM", "ATTACHED BATH", "24/7 HOT WATER"],
 			},
 		],
 		investmentBreakdown: [
-			{ label: "Base Rent (Triple Sharing)", amount: 16500 },
-			{ label: "Utilities (Electricity & Water)", amount: 2000 },
+			{ label: "Base Rent (Comfort AC Room)", amount: 27000 },
+			{ label: "Electricity (40 units incl.)", amount: 0 },
 		],
 		locationHighlights: [
 			{ icon: GraduationCap, title: "SSPU", subtitle: "2 min" },

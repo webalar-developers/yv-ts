@@ -66,7 +66,7 @@ export function FeaturesSection() {
 				<div className="flex w-full flex-col justify-center md:w-[40%] md:px-5">
 					<div className="mb-3 h-0.5 w-10 rounded-sm bg-[#ff5a3c]" />
 					<h2 className="mb-4 font-century-gothic text-2xl leading-[1.3] font-normal text-[#1f1f1f] md:text-[36px]">
-						 How You Can Live Unforgettably how Youth will be living in India
+						 How You Can Live Unforgettably
 					</h2>
 					<p className="mb-3.5 text-[16px] leading-relaxed text-[#666] text-justify md:text-[18px]">
 						At Youthville, we build vibrant co-living communities for students

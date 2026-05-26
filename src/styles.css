@@ -3,6 +3,7 @@
 @import "shadcn/tailwind.css";
 @import "@fontsource-variable/dancing-script";
 @import "@fontsource/gilda-display";
+@import "@fontsource/roboto";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -16,6 +17,7 @@
   --font-century-gothic: 'Century Gothic', sans-serif;
     --font-script: 'Dancing Script Variable', cursive;
     --font-gilda: 'Gilda Display', serif;
+    --font-roboto: 'Roboto', sans-serif;
     --color-yv-orange: var(--yv-orange);
     --color-yv-orange-hover: var(--yv-orange-hover);
     --color-yv-dark-purple: var(--yv-dark-purple);

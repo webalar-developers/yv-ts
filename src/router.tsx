@@ -49,6 +49,12 @@ const LifeYvPage = lazy(() =>
 	})),
 );
 
+const BlogsAndNewsPage = lazy(() =>
+	import("@/pages/blogs-and-new-page").then((module) => ({
+		default: module.BlogsAndNewsPage,
+	})),
+);
+
 function withSuspense(element: ReactNode) {
 	return <Suspense fallback={null}>{element}</Suspense>;
 }
@@ -98,6 +104,10 @@ export const router = createBrowserRouter([
 			{
 				path: "life-yv",
 				element: withSuspense(<LifeYvPage />),
+			},
+			{
+				 path: "blogs-and-news",
+				 element: withSuspense(<BlogsAndNewsPage />),
 			},
 			{
 				path: "*",

@@ -2,7 +2,6 @@ import fs from "node:fs";
 
 const todosPath = "./mcp-todos.json";
 
-// In-memory todos storage
 const todos = fs.existsSync(todosPath)
 	? JSON.parse(fs.readFileSync(todosPath, "utf8"))
 	: [
@@ -12,7 +11,6 @@ const todos = fs.existsSync(todosPath)
 			},
 		];
 
-// Subscription callbacks per userID
 let subscribers: ((todos: Todo[]) => void)[] = [];
 
 export type Todo = {
@@ -20,19 +18,16 @@ export type Todo = {
 	title: string;
 };
 
-// Get the todos for a user
 export function getTodos(): Todo[] {
 	return todos;
 }
 
-// Add an item to the todos
 export function addTodo(title: string) {
 	todos.push({ id: todos.length + 1, title });
 	fs.writeFileSync(todosPath, JSON.stringify(todos, null, 2));
 	notifySubscribers();
 }
 
-// Subscribe to cart changes for a user
 export function subscribeToTodos(callback: (todos: Todo[]) => void) {
 	subscribers.push(callback);
 	callback(todos);
@@ -41,7 +36,6 @@ export function subscribeToTodos(callback: (todos: Todo[]) => void) {
 	};
 }
 
-// Notify all subscribers of a user's cart
 function notifySubscribers() {
 	for (const cb of subscribers) {
 		try {

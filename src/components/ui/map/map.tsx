@@ -30,32 +30,22 @@ const defaultStyles = {
 
 type MapProps = {
 	children?: ReactNode;
-	/** Additional CSS classes for the map container */
+
 	className?: string;
-	/**
-	 * Theme for the map. If not provided, automatically detects system preference.
-	 * Pass your theme value here.
-	 */
+
 	theme?: Theme;
-	/** Custom map styles for light and dark themes. Overrides the default Carto styles. */
+
 	styles?: {
 		light?: MapStyleOption;
 		dark?: MapStyleOption;
 	};
-	/** Map projection type. Use `{ type: "globe" }` for 3D globe view. */
+
 	projection?: MapLibreGL.ProjectionSpecification;
-	/**
-	 * Controlled viewport. When provided with onViewportChange,
-	 * the map becomes controlled and viewport is driven by this prop.
-	 */
+
 	viewport?: Partial<MapViewport>;
-	/**
-	 * Callback fired continuously as the viewport changes (pan, zoom, rotate, pitch).
-	 * Can be used standalone to observe changes, or with `viewport` prop
-	 * to enable controlled mode where the map viewport is driven by your state.
-	 */
+
 	onViewportChange?: (viewport: MapViewport) => void;
-	/** Show a loading indicator on the map */
+
 	loading?: boolean;
 } & Omit<MapLibreGL.MapOptions, "container" | "style">;
 
@@ -136,9 +126,7 @@ const MapRoot = forwardRef<MapRef, MapProps>(function MapComponent(
 
 		const styleDataHandler = () => {
 			clearStyleTimeout();
-			// Delay to ensure style is fully processed before allowing layer operations
-			// This is a workaround to avoid race conditions with the style loading
-			// else we have to force update every layer on setStyle change
+
 			styleTimeoutRef.current = setTimeout(() => {
 				setIsStyleLoaded(true);
 				if (projection) {
@@ -168,7 +156,7 @@ const MapRoot = forwardRef<MapRef, MapProps>(function MapComponent(
 			setIsStyleLoaded(false);
 			setMapInstance(null);
 		};
-		// eslint-disable-next-line react-hooks/exhaustive-deps
+
 	}, [
 		clearStyleTimeout,
 		mapStyles.dark,
@@ -234,7 +222,7 @@ const MapRoot = forwardRef<MapRef, MapProps>(function MapComponent(
 				className={cn("relative h-full w-full", className)}
 			>
 				{(!isLoaded || loading) && <DefaultLoader />}
-				{/* SSR-safe: children render only when map is loaded on client */}
+
 				{mapInstance && children}
 			</div>
 		</MapContext.Provider>

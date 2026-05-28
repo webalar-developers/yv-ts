@@ -9,23 +9,23 @@ import { useMap } from "./map-context";
 import { MarkerContext, useMarkerContext } from "./marker-context";
 
 type MapMarkerProps = {
-	/** Longitude coordinate for marker position */
+
 	longitude: number;
-	/** Latitude coordinate for marker position */
+
 	latitude: number;
-	/** Marker subcomponents (MarkerContent, MarkerPopup, MarkerTooltip, MarkerLabel) */
+
 	children: ReactNode;
-	/** Callback when marker is clicked */
+
 	onClick?: (e: MouseEvent) => void;
-	/** Callback when mouse enters marker */
+
 	onMouseEnter?: (e: MouseEvent) => void;
-	/** Callback when mouse leaves marker */
+
 	onMouseLeave?: (e: MouseEvent) => void;
-	/** Callback when marker drag starts (requires draggable: true) */
+
 	onDragStart?: (lngLat: { lng: number; lat: number }) => void;
-	/** Callback during marker drag (requires draggable: true) */
+
 	onDrag?: (lngLat: { lng: number; lat: number }) => void;
-	/** Callback when marker drag ends (requires draggable: true) */
+
 	onDragEnd?: (lngLat: { lng: number; lat: number }) => void;
 } & Omit<MarkerOptions, "element">;
 
@@ -101,7 +101,6 @@ export function MapMarker({
 
 		return markerInstance;
 
-		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [draggable, latitude, longitude, markerOptions]);
 
 	useEffect(() => {
@@ -113,7 +112,6 @@ export function MapMarker({
 			marker.remove();
 		};
 
-		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [map, isLoaded, marker]);
 
 	if (
@@ -153,9 +151,9 @@ export function MapMarker({
 }
 
 type MarkerContentProps = {
-	/** Custom marker content. Defaults to a blue dot if not provided */
+
 	children?: ReactNode;
-	/** Additional CSS classes for the marker container */
+
 	className?: string;
 };
 

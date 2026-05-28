@@ -23,11 +23,7 @@ const LocationHighlights = lazy(() =>
 		"@/components/hostel-detail/location-highlights/location-highlights"
 	).then((m) => ({ default: m.LocationHighlights })),
 );
-// const AttractionsNearby = lazy(() =>
-// 	import(
-// 		"@/components/hostel-detail/attractions-nearby/attractions-nearby"
-// 	).then((m) => ({ default: m.AttractionsNearby })),
-// );
+
 const LifeAtYouthville = lazy(() =>
 	import(
 		"@/components/hostel-detail/life-at-youthville/life-at-youthville"
@@ -124,12 +120,7 @@ export function HostelDetailPage() {
 									highlights={property.locationHighlights}
 								/>
 							</Suspense>
-							{/* <Suspense fallback={<Skeleton />}>
-								<WhatsAround propertyId={property.id} />
-							</Suspense> */}
-							{/* <Suspense fallback={<Skeleton />}>
-								<AttractionsNearby />
-							</Suspense> */}
+
 							<Suspense fallback={<Skeleton />}>
 								<LifeAtYouthville items={property.lifeAtYouthville} />
 							</Suspense>
@@ -143,7 +134,7 @@ export function HostelDetailPage() {
 					</div>
 
 					<div className="sticky top-28 h-fit space-y-5">
-						{/* <ScheduleVisitForm /> */}
+
 						<SidebarFeatures
 							eyebrow={property.sidebarEyebrow}
 							title={property.sidebarTitle}

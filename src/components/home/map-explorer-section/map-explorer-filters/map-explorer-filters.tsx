@@ -257,70 +257,10 @@ export function MapExplorerFilters({
 										))}
 									</RadioGroup>
 
-									{/* <Separator className="bg-[#f1dfd2]/60" />
-
-									<Label className="flex cursor-pointer items-center justify-between gap-2 rounded-md px-1 py-1 text-[13px] font-normal text-gray-700">
-										<span>Co-living spaces only</span>
-										<Switch
-											checked={filters.coLiving}
-											onCheckedChange={(checked) =>
-												update({ coLiving: checked })
-											}
-										/>
-									</Label> */}
 								</div>
 							</AccordionContent>
 						</AccordionItem>
 
-						{/* <AccordionItem value="room">
-							<AccordionTrigger className="text-[12px] font-bold tracking-wider text-gray-600 uppercase hover:no-underline">
-								<span className="flex items-center gap-2">
-									<BedDouble className="size-3.5 text-yv-orange" />
-									Room type
-								</span>
-							</AccordionTrigger>
-							<AccordionContent>
-								<div className="space-y-1.5 pb-2">
-									{ROOM_TYPES.map((type) => (
-										<Label
-											key={type}
-											className="flex cursor-pointer items-center gap-2.5 rounded-md px-1 py-1 text-[13px] font-normal text-gray-700 hover:bg-white"
-										>
-											<Checkbox
-												checked={filters.roomTypes.includes(type)}
-												onCheckedChange={() => toggleInArray("roomTypes", type)}
-											/>
-											{type}
-										</Label>
-									))}
-								</div>
-							</AccordionContent>
-						</AccordionItem> */}
-
-						{/* <AccordionItem value="tags">
-							<AccordionTrigger className="text-[12px] font-bold tracking-wider text-gray-600 uppercase hover:no-underline">
-								<span className="flex items-center gap-2">
-									<Tag className="size-3.5 text-yv-orange" />
-									Amenities & tags
-								</span>
-							</AccordionTrigger>
-							<AccordionContent>
-								<div className="space-y-2.5 pb-2">
-									{SPECIAL_TAGS.map((tag) => (
-										<Label
-											key={tag}
-											className="flex cursor-pointer items-center justify-between gap-2 rounded-md px-1 py-1 text-[13px] font-normal text-gray-700"
-										>
-											<span>{tag}</span>
-											<Switch
-												checked={filters.tags.includes(tag)}
-												onCheckedChange={() => toggleInArray("tags", tag)}
-											/>
-										</Label>
-									))}
-								</div>
-							</AccordionContent>
-						</AccordionItem> */}
 					</Accordion>
 				</div>
 			</div>

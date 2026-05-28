@@ -76,7 +76,7 @@ export function Testimonials() {
 	return (
 		<section className="bg-white px-6 py-16 md:px-10 md:py-20 lg:px-10">
 			<div className="flex flex-col gap-12 lg:flex-row lg:items-center">
-				{/* Left: 70% — infinite video slider */}
+
 				<div className="w-full overflow-hidden lg:w-[70%]">
 					<div className="mb-8">
 						<div className="mb-3 h-1 w-10 rounded-sm bg-yv-orange" />
@@ -102,7 +102,7 @@ export function Testimonials() {
 						<DialogContent className="max-w-4xl border-none bg-transparent p-0 shadow-none ring-0">
 							{selectedVideo && (
 								<div className="relative aspect-[9/16] w-full max-w-[400px] mx-auto overflow-hidden rounded-2xl bg-black">
-									{/* biome-ignore lint/a11y/useMediaCaption: no captions available for these testimonials */}
+
 									<video
 										src={selectedVideo.videoUrl}
 										autoPlay
@@ -115,7 +115,6 @@ export function Testimonials() {
 					</Dialog>
 				</div>
 
-				{/* Right: 30% — reviews */}
 				<div className="w-full lg:w-[30%]">
 					<div className="space-y-5 mt-10">
 						{reviews.map((review) => (

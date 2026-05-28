@@ -6,13 +6,6 @@ interface UseInViewOptions {
 	triggerOnce?: boolean;
 }
 
-/**
- * Reusable IntersectionObserver hook.
- * Returns a ref to attach to the target element and a boolean indicating
- * whether that element is currently intersecting the viewport.
- *
- * triggerOnce: false by default so videos can pause when scrolled away.
- */
 export function useInView<T extends Element = Element>({
 	rootMargin = "200px",
 	threshold = 0,

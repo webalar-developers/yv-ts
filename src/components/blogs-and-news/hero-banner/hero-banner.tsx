@@ -24,7 +24,7 @@ export function HeroBannerBlogsAndNews() {
     }, [images.length]);
 
     return (
-        <section className="relative m-5 h-[60vh] min-h-125 overflow-hidden rounded-lg">
+        <section className="relative m-2 h-[50vh] min-h-[280px] overflow-hidden rounded-lg sm:m-5 sm:h-[60vh] md:min-h-[400px] lg:min-h-[500px]">
             <div className="absolute inset-0">
                 {images.map((image, index) => (
                     <img
@@ -47,9 +47,8 @@ export function HeroBannerBlogsAndNews() {
                 />
             </div>
 
-            {/* Content */}
             <div className="relative flex h-full max-w-4xl flex-col items-start justify-center px-6 leading-none md:px-12 lg:px-20">
-                <h2 className="mb-6 font-gilda text-[56px] text-white lg:text-[83px]">
+                <h2 className="mb-6 font-gilda text-[28px] text-white sm:text-[38px] md:text-[56px] lg:text-[83px]">
                     Explore. Learn. <br />
                     <span className='text-[#FECA07]' >
                         Grow @ Youthville

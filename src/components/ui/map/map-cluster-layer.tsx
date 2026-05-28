@@ -8,24 +8,24 @@ import { useMap } from "./map-context";
 type MapClusterLayerProps<
 	P extends GeoJSON.GeoJsonProperties = GeoJSON.GeoJsonProperties,
 > = {
-	/** GeoJSON FeatureCollection data or URL to fetch GeoJSON from */
+
 	data: string | GeoJSON.FeatureCollection<GeoJSON.Point, P>;
-	/** Maximum zoom level to cluster points on (default: 14) */
+
 	clusterMaxZoom?: number;
-	/** Radius of each cluster when clustering points in pixels (default: 50) */
+
 	clusterRadius?: number;
-	/** Colors for cluster circles: [small, medium, large] based on point count (default: ["#22c55e", "#eab308", "#ef4444"]) */
+
 	clusterColors?: [string, string, string];
-	/** Point count thresholds for color/size steps: [medium, large] (default: [100, 750]) */
+
 	clusterThresholds?: [number, number];
-	/** Color for unclustered individual points (default: "#3b82f6") */
+
 	pointColor?: string;
-	/** Callback when an unclustered point is clicked */
+
 	onPointClick?: (
 		feature: GeoJSON.Feature<GeoJSON.Point, P>,
 		coordinates: [number, number],
 	) => void;
-	/** Callback when a cluster is clicked. If not provided, zooms into the cluster */
+
 	onClusterClick?: (
 		clusterId: number,
 		coordinates: [number, number],
@@ -136,10 +136,10 @@ export function MapClusterLayer<
 				if (map.getLayer(clusterLayerId)) map.removeLayer(clusterLayerId);
 				if (map.getSource(sourceId)) map.removeSource(sourceId);
 			} catch {
-				// ignore
+
 			}
 		};
-		// eslint-disable-next-line react-hooks/exhaustive-deps
+
 	}, [
 		isLoaded,
 		map,

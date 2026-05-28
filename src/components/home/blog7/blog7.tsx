@@ -93,7 +93,7 @@ const Blog7 = ({
 					<Badge variant="secondary" className="mb-6">
 						{tagline}
 					</Badge>
-					<h2 className="mb-3 text-5xl tracking-tighter text-pretty md:mb-4 lg:mb-6 lg:max-w-3xl lg:text-7xl">
+					<h2 className="mb-3 text-3xl tracking-tighter text-pretty sm:text-4xl md:mb-4 md:text-5xl lg:mb-6 lg:max-w-3xl lg:text-7xl">
 						{heading}
 					</h2>
 					<p className="mb-8 text-muted-foreground md:text-base lg:max-w-2xl lg:text-lg">

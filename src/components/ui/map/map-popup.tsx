@@ -9,17 +9,17 @@ import { useMap } from "./map-context";
 import { PopupCloseButton } from "./popup-close-button";
 
 type MapPopupProps = {
-	/** Longitude coordinate for popup position */
+
 	longitude: number;
-	/** Latitude coordinate for popup position */
+
 	latitude: number;
-	/** Callback when popup is closed */
+
 	onClose?: () => void;
-	/** Popup content */
+
 	children: ReactNode;
-	/** Additional CSS classes for the popup container */
+
 	className?: string;
-	/** Show a close button in the popup (default: false) */
+
 	closeButton?: boolean;
 } & Omit<PopupOptions, "className" | "closeButton">;
 
@@ -48,7 +48,7 @@ export function MapPopup({
 			.setLngLat([longitude, latitude]);
 
 		return popupInstance;
-		// eslint-disable-next-line react-hooks/exhaustive-deps
+
 	}, [latitude, longitude, popupOptions]);
 
 	useEffect(() => {
@@ -67,7 +67,7 @@ export function MapPopup({
 				popup.remove();
 			}
 		};
-		// eslint-disable-next-line react-hooks/exhaustive-deps
+
 	}, [
 		map,
 		container,

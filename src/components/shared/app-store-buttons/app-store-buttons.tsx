@@ -7,7 +7,7 @@ interface AppStoreButtonsProps {
 export function AppStoreButtons({ className }: AppStoreButtonsProps) {
 	return (
 		<div className={cn("flex flex-col gap-3", className)}>
-			{/* Apple App Store */}
+
 			<a
 				href="https://apps.apple.com/in/app/youthville/id6590629037"
 				target="_blank"
@@ -34,7 +34,6 @@ export function AppStoreButtons({ className }: AppStoreButtonsProps) {
 				</div>
 			</a>
 
-			{/* Google Play Store */}
 			<a
 				href="https://play.google.com/store/apps/details?id=net.eazypg.eazypgtenant.youthville&pli=1"
 				target="_blank"

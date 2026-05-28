@@ -1,4 +1,4 @@
-import { LogoCloud } from "@/components/shared/logo-cloud/logo-cloud"; // @efferd/logo-cloud-3
+import { LogoCloud } from "@/components/shared/logo-cloud/logo-cloud";
 
 export function LogosSection() {
 	return (

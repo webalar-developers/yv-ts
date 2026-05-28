@@ -4,7 +4,6 @@ import type React from "react";
 import { useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
 
-// MediaItemType defines the structure of a media item
 export interface MediaItemType {
 	id: number;
 	type: string;
@@ -14,7 +13,7 @@ export interface MediaItemType {
 	span: string;
 	icon?: React.ComponentType<{ className?: string }>;
 }
-// MediaItem component renders either a video or image based on item.type
+
 const MediaItem = ({
 	item,
 	className,
@@ -24,11 +23,10 @@ const MediaItem = ({
 	className?: string;
 	onClick?: () => void;
 }) => {
-	const videoRef = useRef<HTMLVideoElement>(null); // Reference for video element
-	const [isInView, setIsInView] = useState(false); // To track if video is in the viewport
-	const [isBuffering, setIsBuffering] = useState(true); // To track if video is buffering
+	const videoRef = useRef<HTMLVideoElement>(null);
+	const [isInView, setIsInView] = useState(false);
+	const [isBuffering, setIsBuffering] = useState(true);
 
-	// Intersection Observer to detect if video is in view and play/pause accordingly
 	useEffect(() => {
 		const options = {
 			root: null,
@@ -38,36 +36,36 @@ const MediaItem = ({
 
 		const observer = new IntersectionObserver((entries) => {
 			entries.forEach((entry) => {
-				setIsInView(entry.isIntersecting); // Set isInView to true if the video is in view
+				setIsInView(entry.isIntersecting);
 			});
 		}, options);
 
 		if (videoRef.current) {
-			observer.observe(videoRef.current); // Start observing the video element
+			observer.observe(videoRef.current);
 		}
 
 		return () => {
 			if (videoRef.current) {
-				observer.unobserve(videoRef.current); // Clean up observer when component unmounts
+				observer.unobserve(videoRef.current);
 			}
 		};
 	}, []);
-	// Handle video play/pause based on whether the video is in view or not
+
 	useEffect(() => {
 		let mounted = true;
 
 		const handleVideoPlay = async () => {
-			if (!videoRef.current || !isInView || !mounted) return; // Don't play if video is not in view or component is unmounted
+			if (!videoRef.current || !isInView || !mounted) return;
 
 			try {
 				if (videoRef.current.readyState >= 3) {
 					setIsBuffering(false);
-					await videoRef.current.play(); // Play the video if it's ready
+					await videoRef.current.play();
 				} else {
 					setIsBuffering(true);
 					await new Promise((resolve) => {
 						if (videoRef.current) {
-							videoRef.current.oncanplay = resolve; // Wait until the video can start playing
+							videoRef.current.oncanplay = resolve;
 						}
 					});
 					if (mounted) {
@@ -95,8 +93,6 @@ const MediaItem = ({
 			}
 		};
 	}, [isInView]);
-
-	// Render either a video or image based on item.type
 
 	if (item.type === "video") {
 		return (
@@ -137,23 +133,22 @@ const MediaItem = ({
 			onClick={onClick}
 		>
 			<img
-				src={item.url} // Image source URL
-				alt={item.title} // Alt text for the image
+				src={item.url}
+				alt={item.title}
 				className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
-				loading="lazy" // Lazy load the image for performance
-				decoding="async" // Decode the image asynchronously
+				loading="lazy"
+				decoding="async"
 			/>
 		</button>
 	);
 };
 
-// GalleryModal component displays the selected media item in a modal
 interface GalleryModalProps {
 	selectedItem: MediaItemType;
 	isOpen: boolean;
 	onClose: () => void;
 	setSelectedItem: (item: MediaItemType | null) => void;
-	mediaItems: MediaItemType[]; // List of media items to display in the modal
+	mediaItems: MediaItemType[];
 }
 export const GalleryModal = ({
 	selectedItem,
@@ -162,9 +157,8 @@ export const GalleryModal = ({
 	setSelectedItem,
 	mediaItems,
 }: GalleryModalProps) => {
-	const [dockPosition, setDockPosition] = useState({ x: 0, y: 0 }); // Track the position of the dockable panel
+	const [dockPosition, setDockPosition] = useState({ x: 0, y: 0 });
 
-	// Handle keyboard navigation
 	useEffect(() => {
 		if (!isOpen) return;
 
@@ -188,11 +182,11 @@ export const GalleryModal = ({
 		return () => window.removeEventListener("keydown", handleKeyDown);
 	}, [selectedItem, mediaItems, setSelectedItem, onClose, isOpen]);
 
-	if (!isOpen) return null; // Return null if the modal is not open
+	if (!isOpen) return null;
 
 	return (
 		<>
-			{/* Main Modal */}
+
 			<motion.div
 				initial={{ scale: 0.98 }}
 				animate={{ scale: 1 }}
@@ -205,7 +199,7 @@ export const GalleryModal = ({
 				className="fixed inset-0 w-full h-full backdrop-blur-2xl bg-black/40
                           overflow-hidden z-[100]"
 			>
-				{/* Main Content */}
+
 				<div className="h-full flex flex-col pt-16 pb-20">
 					<div className="flex-1 px-4 sm:px-6 md:px-8 flex flex-col items-center justify-center">
 						<AnimatePresence mode="wait">
@@ -217,7 +211,7 @@ export const GalleryModal = ({
 								exit={{ opacity: 0, y: -20 }}
 								transition={{ duration: 0.3 }}
 							>
-								{/* Text Content at the top, OUTSIDE the image */}
+
 								<div className="mb-6 text-center">
 									<h3 className="text-white text-2xl sm:text-3xl md:text-4xl font-bold mb-2">
 										{selectedItem.title}
@@ -227,7 +221,6 @@ export const GalleryModal = ({
 									</p>
 								</div>
 
-								{/* Image/Video Container */}
 								<button
 									type="button"
 									className="relative aspect-video w-full rounded-md overflow-hidden shadow-2xl bg-black/20 cursor-pointer p-0 border-none block"
@@ -245,10 +238,9 @@ export const GalleryModal = ({
 					</div>
 				</div>
 
-				{/* Close Button */}
 				<motion.button
 					className="absolute top-6 right-6 z-[110]
-                              p-3 rounded-md bg-black/60 text-white hover:bg-black/80 
+                              p-3 rounded-md bg-black/60 text-white hover:bg-black/80
                               backdrop-blur-md transition-colors shadow-2xl border border-white/20"
 					onClick={onClose}
 					whileHover={{ scale: 1.1 }}
@@ -274,7 +266,7 @@ export const GalleryModal = ({
 				className="fixed z-[120] left-1/2 bottom-4 -translate-x-1/2 touch-none"
 			>
 				<motion.div
-					className="relative rounded-md bg-sky-400/20 backdrop-blur-xl 
+					className="relative rounded-md bg-sky-400/20 backdrop-blur-xl
                              border border-blue-400/30 shadow-lg
                              cursor-grab active:cursor-grabbing"
 				>
@@ -294,8 +286,8 @@ export const GalleryModal = ({
 								}}
 								className={`
                                     relative group
-                                    w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 flex-shrink-0 
-                                    rounded-md overflow-hidden 
+                                    w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 flex-shrink-0
+                                    rounded-md overflow-hidden
                                     cursor-pointer hover:z-20
                                     ${
 																			selectedItem.id === item.id
@@ -368,7 +360,7 @@ const InteractiveBentoGallery: React.FC<InteractiveBentoGalleryProps> = ({
 		<div className="w-full py-8">
 			<div className="mb-8 text-center">
 				<motion.h1
-					className="text-2xl sm:text-3xl md:text-4xl font-bold bg-clip-text text-transparent 
+					className="text-2xl sm:text-3xl md:text-4xl font-bold bg-clip-text text-transparent
                              bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900
                              dark:from-white dark:via-gray-200 dark:to-white"
 					initial={{ opacity: 0, y: 20 }}

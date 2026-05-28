@@ -32,16 +32,14 @@ export const seo = ({
 		{ name: "description", content: description },
 		{ name: "keywords", content: keywords },
 		{ name: "robots", content: "index, follow" },
-		{ name: "theme-color", content: "#f36e21" }, // YV Orange
+		{ name: "theme-color", content: "#f36e21" },
 
-		// Open Graph
 		{ property: "og:type", content: type },
 		{ property: "og:title", content: title },
 		{ property: "og:description", content: description },
 		{ property: "og:site_name", content: siteName },
 		...(url ? [{ property: "og:url", content: url }] : []),
 
-		// Twitter
 		{ name: "twitter:title", content: title },
 		{ name: "twitter:description", content: description },
 		{

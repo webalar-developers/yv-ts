@@ -13,7 +13,7 @@ export function SiteLogo({
 }) {
 	return (
 		<a href={href} className={cn("relative flex items-center", className)}>
-			{/* Full Logo */}
+
 			<img
 				src="/layout/png/logo-new.jpeg"
 				alt="Youthville"
@@ -25,7 +25,7 @@ export function SiteLogo({
 					imgClassName,
 				)}
 			/>
-			{/* Small/Icon Logo */}
+
 			<img
 				src="/shared/png/yv_logo.png"
 				alt="YV"

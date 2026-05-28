@@ -8,9 +8,9 @@ import { cn } from "@/lib/utils";
 import { useMarkerContext } from "./marker-context";
 
 type MarkerTooltipProps = {
-	/** Tooltip content */
+
 	children: ReactNode;
-	/** Additional CSS classes for the tooltip container */
+
 	className?: string;
 } & Omit<PopupOptions, "className" | "closeButton" | "closeOnClick">;
 
@@ -32,7 +32,7 @@ export function MarkerTooltip({
 		}).setMaxWidth("none");
 
 		return tooltipInstance;
-		// eslint-disable-next-line react-hooks/exhaustive-deps
+
 	}, [popupOptions]);
 
 	useEffect(() => {
@@ -53,7 +53,7 @@ export function MarkerTooltip({
 			marker.getElement()?.removeEventListener("mouseleave", handleMouseLeave);
 			tooltip.remove();
 		};
-		// eslint-disable-next-line react-hooks/exhaustive-deps
+
 	}, [
 		map,
 		container,

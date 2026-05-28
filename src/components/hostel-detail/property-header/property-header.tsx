@@ -16,7 +16,7 @@ export function PropertyHeader({ property }: { property: PropertyListing }) {
 
 			<section className="mt-6 flex flex-col gap-8 xl:flex-row xl:items-start xl:justify-between">
 				<div>
-					<h1 className="font-gilda text-[54px] leading-none text-[#1f1a17]">
+					<h1 className="font-gilda text-[30px] leading-none text-[#1f1a17] sm:text-[40px] md:text-[54px]">
 						{property.name}
 					</h1>
 					{property.newInclusion?.length ? (

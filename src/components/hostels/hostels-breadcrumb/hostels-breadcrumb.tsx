@@ -14,7 +14,7 @@ export function HostelsBreadcrumb({
 }) {
 	return (
 		<div className="mb-6 flex flex-wrap items-center justify-between gap-4">
-			{/* Breadcrumb */}
+
 			<div className="text-md flex items-center gap-1.5 font-medium">
 				<Link to="/" className="text-gray-400 hover:text-gray-600">
 					Home
@@ -23,7 +23,6 @@ export function HostelsBreadcrumb({
 				<span className="font-medium text-gray-800">{city} Properties</span>
 			</div>
 
-			{/* Count + Sort */}
 			<div className="flex items-center gap-6">
 				<span className="text-base font-medium text-gray-500">
 					<span className="font-medium">{count}</span> properties found

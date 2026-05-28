@@ -13,13 +13,6 @@ interface LazyVideoProps {
 	className?: string;
 }
 
-/**
- * Lazy video wrapper that defers decode and playback until the element
- * approaches the viewport. When it scrolls back out, playback is paused.
- *
- * Keeps poster always visible so the user sees a thumbnail before play begins.
- * Never ships autoPlay in SSR HTML — playback is driven entirely by JS.
- */
 export function LazyVideo({
 	src,
 	poster,

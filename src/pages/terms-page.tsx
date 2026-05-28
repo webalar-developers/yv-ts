@@ -21,7 +21,7 @@ export function TermsPage() {
 				</h1>
 				<div className="prose prose-sm max-w-none space-y-6 text-[#6b635f]">
 					<p>
-						Welcome to https://www.youthvillehostel.com/. Please read these
+						Welcome to https:
 						Terms and Conditions (“T&C”) carefully before using this Website,
 						which is operated by Radiant Stays Pvt Ltd and its affiliated
 						Companies (collectively known as, “Youthville Serviced

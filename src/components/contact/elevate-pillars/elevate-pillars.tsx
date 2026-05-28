@@ -41,7 +41,7 @@ export function ElevatePillarsContact() {
 					{pillars.map((pillar) => (
 						<div
 							key={pillar.title}
-							className={`flex min-h-[350px] flex-col rounded-md p-10 transition-all duration-300 hover:shadow-xl ${
+							className={`flex min-h-[220px] flex-col rounded-md p-6 transition-all duration-300 hover:shadow-xl md:min-h-[350px] md:p-10 ${
 								pillar.variant === "peach"
 									? "bg-[#FBE2D9]"
 									: pillar.variant === "orange"

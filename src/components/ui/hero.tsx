@@ -10,7 +10,7 @@ import { cn } from "@/lib/utils";
 export function HeroSection() {
 	return (
 		<section className="mx-auto w-full max-w-5xl">
-			{/* Top Shades */}
+
 			<div
 				aria-hidden="true"
 				className="absolute inset-0 isolate hidden overflow-hidden contain-strict lg:block"
@@ -18,7 +18,6 @@ export function HeroSection() {
 				<div className="absolute inset-0 -top-14 isolate -z-10 bg-[radial-gradient(35%_80%_at_49%_0%,--theme(--color-foreground/.08),transparent)] contain-strict" />
 			</div>
 
-			{/* X Bold Faded Borders */}
 			<div
 				aria-hidden="true"
 				className="absolute inset-0 mx-auto hidden min-h-screen w-full max-w-5xl lg:block"
@@ -27,10 +26,8 @@ export function HeroSection() {
 				<div className="absolute inset-y-0 right-0 z-10 h-full w-px bg-foreground/15 mask-y-from-80% mask-y-to-100%" />
 			</div>
 
-			{/* main content */}
-
 			<div className="relative flex flex-col items-center justify-center gap-5 pt-32 pb-30">
-				{/* X Content Faded Borders */}
+
 				<div
 					aria-hidden="true"
 					className="absolute inset-0 -z-1 size-full overflow-hidden"

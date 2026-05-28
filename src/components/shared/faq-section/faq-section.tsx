@@ -47,11 +47,11 @@ export function FaqSection() {
 	return (
 		<section className="bg-white px-6 py-5 md:px-12 md:py-10">
 			<div className="mx-auto max-w-7xl">
-				<div className="grid gap-16 lg:grid-cols-[1fr_1.5fr]">
-					{/* Left Column: Heading and CTA */}
+				<div className="grid gap-8 md:gap-16 lg:grid-cols-[1fr_1.5fr]">
+
 					<div className="flex flex-col">
 						<div className="mb-4 h-1 w-12 rounded-full bg-yv-orange" />
-						<h2 className="mb-8 font-gilda text-[40px] leading-tight font-normal text-gray-900 md:text-5xl">
+						<h2 className="mb-8 font-gilda text-[26px] leading-tight font-normal text-gray-900 sm:text-[34px] md:text-[40px] lg:text-5xl">
 							Got Questions?
 							<br />
 							<span className="text-yv-orange">We've Got Answers.</span>

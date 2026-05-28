@@ -11,7 +11,6 @@ export function SearchBar() {
 	const containerRef = useRef<HTMLDivElement>(null);
 	const navigate = useNavigate();
 
-	// Extract unique areas/locations for mock autocomplete
 	const suggestions = useMemo(() => {
 		const lowerQuery = query.toLowerCase();
 
@@ -54,8 +53,8 @@ export function SearchBar() {
 					An Unforgettable Experience, One Click Away
 				</h2>
 
-				<div className="flex flex-col gap-3 px-15 md:flex-row md:items-end">
-					{/* City Select */}
+				<div className="flex flex-col gap-3 px-0 md:flex-row md:items-end md:px-8">
+
 					<div className="flex-1">
 						<label
 							htmlFor="city-select"
@@ -77,7 +76,6 @@ export function SearchBar() {
 						</div>
 					</div>
 
-					{/* Area / Locality Input (Mock Google Search) */}
 					<div className="relative flex-[2]" ref={containerRef}>
 						<label
 							htmlFor="area-search"
@@ -110,7 +108,6 @@ export function SearchBar() {
 							)}
 						</div>
 
-						{/* Dropdown - shows all properties on focus, filtered on search */}
 						{isOpen && (
 							<div className="absolute top-full left-0 z-[9999] mt-1 w-full overflow-hidden rounded-md border border-gray-200 bg-white shadow-lg ring-1 ring-black/5">
 								<div className="bg-gray-50 p-2 px-4 text-[10px] font-bold tracking-wider text-gray-400 uppercase">
@@ -150,7 +147,6 @@ export function SearchBar() {
 						)}
 					</div>
 
-					{/* Search Button */}
 					<Button
 						onClick={handleSearch}
 						variant="yv-orange"

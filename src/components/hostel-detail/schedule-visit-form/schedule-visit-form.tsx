@@ -9,7 +9,6 @@ const allLocations = [
 	...new Set(mockProperties.map((p) => p.location)),
 ].sort();
 
-
 const cityOptions = [
 	...new Set(
 		allLocations.map((loc) => {
@@ -48,7 +47,6 @@ export function ScheduleVisitForm() {
 		} else if (!/^[a-zA-Z\s]+$/.test(formData.name)) {
 			newErrors.name = "Full name can only contain letters and spaces";
 		}
-
 
 		if (!formData.phone.trim()) {
 			newErrors.phone = "Phone number is required";
@@ -125,9 +123,9 @@ export function ScheduleVisitForm() {
 					className="mt-7 space-y-5"
 					onSubmit={handleFormSubmit}
 				>
-					{/* Honeypot */}
+
 					<input type="text" name="_honey" style={{ display: "none" }} />
-					{/* Disable Captcha */}
+
 					<input type="hidden" name="_captcha" value="false" />
 
 					<div>
@@ -243,26 +241,7 @@ export function ScheduleVisitForm() {
 						)}
 					</div>
 					<div>
-						{/* <div>
-							<label
-								htmlFor="room-type"
-								className="text-[12px] font-normal tracking-[0.16em] text-[#6b635f] uppercase"
-							>
-								Room Type
-							</label>
-							<div className="relative mt-2">
-								<select
-									id="room-type"
-									name="room_type"
-									className="h-12 w-full appearance-none rounded-xl border border-[#ddd7d2] bg-[#FAFAFA] px-5 pr-10 text-sm text-[#231f1c] outline-none focus:border-yv-orange"
-								>
-									<option>Private</option>
-									<option>Twin Sharing</option>
-									<option>Triple Sharing</option>
-								</select>
-								<ChevronDown className="pointer-events-none absolute top-1/2 right-4 size-4 -translate-y-1/2 text-[#6b635f]" />
-							</div>
-						</div> */}
+
 						<div>
 							<label
 								htmlFor="visit-date"
@@ -318,9 +297,7 @@ export function ScheduleVisitForm() {
 					>
 						Schedule Visit
 					</Button>
-					{/* <p className="text-center text-[10px] font-normal tracking-[0.16em] text-[#6b635f] uppercase">
-						Secured &amp; Encrypted
-					</p> */}
+
 				</form>
 			</CardContent>
 		</Card>

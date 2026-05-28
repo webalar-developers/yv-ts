@@ -41,7 +41,7 @@ const cardItems = [
 	},
 ];
 
-const MOBILE_H = "h-[1088px]";
+const MOBILE_H = "";
 const DESKTOP_H = "md:h-[650px]";
 
 function Card({
@@ -97,7 +97,7 @@ function Card({
 
 function ImageGrid() {
 	return (
-		<div className="grid h-full grid-cols-1 gap-4 md:grid-cols-[2fr_1fr_1fr] md:grid-rows-[317px_317px]">
+		<div className="grid h-auto gap-4 grid-cols-1 md:h-full md:grid-cols-[2fr_1fr_1fr] md:grid-rows-[317px_317px]">
 			<div className="group relative row-span-1 h-64 overflow-hidden rounded-xl md:row-span-2 md:h-auto">
 				<Card item={cardItems[0]} offset={0} />
 			</div>
@@ -120,7 +120,7 @@ export function CommunitySection() {
 				<div className="mb-10 flex flex-col items-start justify-between gap-4 md:flex-row md:items-center">
 					<div className="text-center md:text-left">
 						<div className="mx-auto mb-3 h-1 w-10 rounded-sm bg-yv-orange md:mx-0" />
-						<h2 className="font-gilda text-[40px] font-normal text-[#1f1f1f] md:text-4xl">
+						<h2 className="font-gilda text-[26px] font-normal text-[#1f1f1f] sm:text-[32px] md:text-4xl">
 							A Community That Feels Alive
 						</h2>
 						<p className="mt-2 text-[16px] text-[#666]">

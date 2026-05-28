@@ -5,11 +5,11 @@ import type { ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
 type MarkerLabelProps = {
-	/** Label text content */
+
 	children: ReactNode;
-	/** Additional CSS classes for the label */
+
 	className?: string;
-	/** Position of the label relative to the marker (default: "top") */
+
 	position?: "top" | "bottom";
 };
 

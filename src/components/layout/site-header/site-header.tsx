@@ -67,12 +67,12 @@ export function SiteHeader() {
 					))}
 				</div>
 
-				<div className="flex w-[150px] items-center justify-end gap-3 rounded-none lg:w-[250px]">
+				<div className="flex w-[150px] items-center justify-end gap-3 rounded-none lg:w-[260px]">
 					<Dialog>
 						<DialogTrigger >
 							<Button
 								variant="outline"
-								className="hidden rounded-md border-black p-5 px-4 text-black transition-colors hover:bg-transparent hover:text-black sm:flex lg:px-7"
+								className="hidden rounded-md border-black p-5 px-4 text-black transition-colors hover:bg-transparent hover:text-black sm:flex"
 							>
 								Schedule Visit
 							</Button>
@@ -84,7 +84,7 @@ export function SiteHeader() {
 					<div className="relative hidden sm:block">
 						<Button
 							variant="yv-orange"
-							className="rounded-md p-5 px-4 lg:px-7"
+							className="rounded-md p-5 px-4"
 							type="button"
 							onClick={() => setShowContactMenu((prev) => !prev)}
 						>

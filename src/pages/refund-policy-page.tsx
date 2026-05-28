@@ -159,7 +159,7 @@ export function RefundPolicyPage() {
 								target="_blank"
 								rel="noreferrer"
 							>
-								https://yv-ts.netlify.app/
+								https:
 							</a>
 							.
 						</p>

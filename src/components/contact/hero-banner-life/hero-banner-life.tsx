@@ -12,7 +12,7 @@ import { ContactForm } from "../contact-form";
 export function HeroBannerContact() {
 	return (
 		<section className="relative h-[70vh] min-h-[600px] w-full overflow-hidden">
-			{/* Background image */}
+
 			<div
 				className="absolute inset-0 bg-cover bg-center bg-no-repeat"
 				style={{
@@ -29,7 +29,6 @@ export function HeroBannerContact() {
 				/>
 			</div>
 
-			{/* Content */}
 			<div className="relative flex h-full max-w-5xl flex-col items-start justify-center px-6 md:px-12 lg:px-20">
 				<h1 className="mb-10 font-gilda text-[38px] leading-tight md:text-[50px] lg:text-[67px]">
 					<span className="mb-4 inline-block pb-2">
@@ -65,7 +64,6 @@ export function HeroBannerContact() {
 				</Dialog>
 			</div>
 
-			{/* Scroll down indicator */}
 			<div className="absolute right-8 bottom-8 flex size-12 animate-bounce items-center justify-center rounded-full bg-white/90 text-gray-700 shadow-lg">
 				<ArrowDown className="size-5" />
 			</div>

@@ -125,7 +125,7 @@ export function BuildGrid() {
 							</div>
 							<div className="flex gap-4" >
 								<div className="h-12 w-12" />
-								<p className="mt-3 text-[14px] text-slate-700 w-56">{item.description}</p>
+								<p className="mt-3 text-[14px] text-slate-700">{item.description}</p>
 							</div>
 						</article>
 						);

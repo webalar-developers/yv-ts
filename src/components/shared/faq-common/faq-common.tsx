@@ -5,7 +5,7 @@ export function FaqCommon() {
 	return (
 		<section className="bg-white px-6 py-10 md:px-12 md:py-14">
 			<div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-				{/* Left: Got Questions */}
+
 				<div className="rounded-2xl border border-yv-orange/30 bg-white p-8">
 					<h3 className="mb-3 text-[20px] font-bold text-[#1f1a17]">
 						Got Questions?
@@ -23,7 +23,6 @@ export function FaqCommon() {
 					</Link>
 				</div>
 
-				{/* Right: Still have doubts */}
 				<div className="rounded-2xl bg-[#fdf1eb] p-8">
 					<h3 className="mb-3 text-[20px] font-bold text-[#1f1a17]">
 						Still have doubts?

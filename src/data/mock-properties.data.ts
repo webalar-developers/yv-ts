@@ -47,7 +47,6 @@ const commonAmenityStrip = [
 	},
 ] satisfies PropertyFeature[];
 
-// Student properties: 3 meals + electricity included
 const studentAmenityStrip = [
 	{ icon: Wifi, label: "High-Speed Wi-Fi", subtitle: "Seamless connectivity" },
 	{
@@ -72,7 +71,6 @@ const studentAmenityStrip = [
 	},
 ] satisfies PropertyFeature[];
 
-// Co-living properties: 2 meals, no electricity clause
 const coLivingAmenityStrip = [
 	{ icon: Wifi, label: "High-Speed Wi-Fi", subtitle: "Seamless connectivity" },
 	{

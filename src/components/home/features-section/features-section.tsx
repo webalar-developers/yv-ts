@@ -37,7 +37,7 @@ export function FeaturesSection() {
 	return (
 		<section id="feature-section" className="w-full bg-[#f7f7f7] px-6 py-16 md:px-10 md:py-[40px]">
 			<div className="mx-auto flex flex-col-reverse gap-10 md:flex-row md:items-center md:gap-[60px]">
-				{/* Left Side: Grid Cards */}
+
 				<div className="grid w-full grid-cols-2 gap-4 sm:grid-cols-3 md:w-[60%] md:gap-[18px] lg:grid-cols-4">
 					{cards.map((item) => (
 						<div
@@ -62,10 +62,9 @@ export function FeaturesSection() {
 					))}
 				</div>
 
-				{/* Right Side: Text Content */}
 				<div className="flex w-full flex-col justify-center md:w-[40%] md:px-5">
 					<div className="mb-3 h-0.5 w-10 rounded-sm bg-[#ff5a3c]" />
-					<h2 className="mb-4 font-century-gothic text-2xl leading-[1.3] font-normal text-[#1f1f1f] md:text-[36px]">
+					<h2 className="mb-4 font-century-gothic text-[22px] leading-[1.3] font-normal text-[#1f1f1f] sm:text-2xl md:text-[36px]">
 						 How You Can Live Unforgettably
 					</h2>
 					<p className="mb-3.5 text-[16px] leading-relaxed text-[#666] text-justify md:text-[18px]">

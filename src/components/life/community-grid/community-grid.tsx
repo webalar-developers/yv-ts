@@ -21,8 +21,6 @@ const slides = [
 	],
 ];
 
-// mobile: h-64 + 4×h-48 + 4×gap-4 = 256 + 768 + 64 = 1088px
-// desktop: 317 + 317 + gap-4 = 650px
 const MOBILE_H = "h-[1088px]";
 const DESKTOP_H = "md:h-[650px]";
 
@@ -53,7 +51,7 @@ function PhotoCard({
 function SlideGrid({ items }: { items: (typeof slides)[0] }) {
 	return (
 		<div className="grid h-full grid-cols-1 gap-4 md:grid-cols-[2fr_1fr_1fr] md:grid-rows-[317px_317px]">
-			{/* Large card — 2 rows on desktop */}
+
 			<PhotoCard
 				image={items[0].image}
 				label={items[0].label}
@@ -86,7 +84,7 @@ export function CommunityGrid() {
 	return (
 		<section className="bg-white px-6 pt-16 pb-0 md:px-10 md:pt-10 lg:px-10">
 			<div className="mx-auto">
-				{/* Header */}
+
 				<div className="mb-12 flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
 					<h2 className="font-gilda text-[36px] leading-tight text-yv-dark-purple md:text-[60px]">
 						Live the Youthville <span className="text-yv-orange">Life</span>
@@ -105,7 +103,6 @@ export function CommunityGrid() {
 					</Button>
 				</div>
 
-				{/* Fixed-height container — both slides position absolute inside, no reflow */}
 				<div
 					className={cn("relative w-full overflow-hidden", MOBILE_H, DESKTOP_H)}
 				>
@@ -129,7 +126,6 @@ export function CommunityGrid() {
 					</AnimatePresence>
 				</div>
 
-				{/* Footer */}
 				<div className="py-10 text-center md:py-10">
 					<p className="font-gilda text-[32px] leading-tight text-yv-dark-purple md:text-[48px] lg:text-[56px]">
 						At Youthville, you don't live alone —{" "}

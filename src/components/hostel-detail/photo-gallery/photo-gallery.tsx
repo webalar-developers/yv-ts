@@ -51,7 +51,7 @@ export function PhotoGallery({
 			<button
 				type="button"
 				onClick={() => open(0)}
-				className="block h-[250px] w-full cursor-pointer overflow-hidden rounded-sm bg-white md:h-[540px]"
+				className="block h-[200px] w-full cursor-pointer overflow-hidden rounded-sm bg-white sm:h-[280px] md:h-[400px] lg:h-[540px]"
 			>
 				<img
 					src={gallery[0]}
@@ -70,7 +70,7 @@ export function PhotoGallery({
 							key={image}
 							type="button"
 							onClick={() => open(index + 1)}
-							className="relative block h-[140px] w-full cursor-pointer overflow-hidden rounded-none bg-white md:h-[264px]"
+							className="relative block h-[100px] w-full cursor-pointer overflow-hidden rounded-none bg-white sm:h-[140px] md:h-[196px] lg:h-[264px]"
 						>
 							<img
 								src={image}

@@ -28,7 +28,7 @@ export function RoomCards({ rooms }: { rooms: PropertyRoom[] }) {
 						key={room.id}
 						className="overflow-hidden rounded-sm border-0 bg-white py-0 ring-black/6"
 					>
-						<div className="grid grid-cols-1 md:grid-cols-[300px_1fr]">
+						<div className="grid grid-cols-1 lg:grid-cols-[280px_1fr]">
 							<img
 								src={room.image}
 								alt={room.title}
@@ -60,28 +60,28 @@ export function RoomCards({ rooms }: { rooms: PropertyRoom[] }) {
 									</div>
 								)}
 
-								<div className="mt-auto flex flex-col gap-3 pt-3 md:flex-row md:items-center md:justify-between">
+								<div className="mt-auto flex flex-col gap-3 pt-3">
 									<p className="text-[22px] font-bold text-yv-orange">
 										₹{room.price.toLocaleString("en-IN")}{"*"}
 										<span className="ml-1.5 text-[16px] font-normal text-[#7d7671]">
 											/ month
 										</span>
 									</p>
-									<div className="flex flex-col gap-2 md:flex-row md:items-center md:gap-3">
+									<div className="grid grid-cols-1 gap-2 sm:grid-cols-3">
 										<Button
 											variant="yv-orange"
 											type="button"
 											onClick={handleVisitProperty}
-											className="h-10 flex-1  px-4 text-[16px] font-semibold shadow-[0_14px_30px_rgba(232,109,51,0.24)] md:h-12 md:px-7"
+											className="h-10 w-full px-4 text-[15px] font-semibold shadow-[0_14px_30px_rgba(232,109,51,0.24)]"
 										>
 											Visit Property
 										</Button>
 										<Dialog>
-											<DialogTrigger >
+											<DialogTrigger className="w-full">
 												<Button
 													variant="yv-orange-outline"
 													type="button"
-													className="h-10 flex-1  px-4 text-[16px] font-semibold shadow-sm md:h-12 md:px-7"
+													className="h-10 w-full px-4 text-[15px] font-semibold shadow-sm"
 												>
 													Schedule Visit
 												</Button>
@@ -89,15 +89,15 @@ export function RoomCards({ rooms }: { rooms: PropertyRoom[] }) {
 											<DialogContent className="max-w-lg border-0 bg-transparent p-0 shadow-none sm:max-w-[500px]">
 												<ScheduleVisitForm />
 											</DialogContent>
-											</Dialog>
-											<Button
-												variant="yv-orange"
-												type="button"
-												onClick={handleEnquireNow}
-												className="h-10 flex-1  bg-[#1f1a17] px-4 text-[16px] font-semibold text-white shadow-[0_14px_30px_rgba(31,26,23,0.22)] hover:bg-[#2d2622] md:h-12 md:px-7"
-											>
-												Enquire Now
-											</Button>
+										</Dialog>
+										<Button
+											variant="yv-orange"
+											type="button"
+											onClick={handleEnquireNow}
+											className="h-10 w-full bg-[#1f1a17] px-4 text-[15px] font-semibold text-white shadow-[0_14px_30px_rgba(31,26,23,0.22)] hover:bg-[#2d2622]"
+										>
+											Enquire Now
+										</Button>
 									</div>
 								</div>
 							</div>

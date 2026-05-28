@@ -42,7 +42,7 @@ export function DisclaimerPage() {
 						</h2>
 						<p>
 							The information provided on the website
-							[https://www.youthvillehostel.com/] (referred to as the "Website")
+							[https:
 							is for general informational purposes only. Youthville Serviced
 							Accommodations ("we," "us," or "our") makes no representations or
 							warranties of any kind—express or implied—regarding the accuracy,

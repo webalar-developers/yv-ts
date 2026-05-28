@@ -5,25 +5,23 @@ import { useEffect, useId, useMemo, useRef } from "react";
 
 import { useMap } from "./map-context";
 
-/** A single arc to render inside <MapArc data={...}>. */
 export type MapArcDatum = {
-	/** Unique identifier for this arc. Required for hover state tracking and event payloads. */
+
 	id: string | number;
-	/** Start coordinate as [longitude, latitude]. */
+
 	from: [number, number];
-	/** End coordinate as [longitude, latitude]. */
+
 	to: [number, number];
 };
 
-/** Event payload passed to MapArc interaction callbacks. */
 export type MapArcEvent<T extends MapArcDatum = MapArcDatum> = {
-	/** The arc datum that was hovered or clicked. */
+
 	arc: T;
-	/** Longitude of the cursor at the time of the event. */
+
 	longitude: number;
-	/** Latitude of the cursor at the time of the event. */
+
 	latitude: number;
-	/** The underlying MapLibre mouse event for advanced use cases. */
+
 	originalEvent: MapLibreGL.MapMouseEvent;
 };
 
@@ -33,45 +31,27 @@ type MapArcLineLayout = NonNullable<
 >;
 
 type MapArcProps<T extends MapArcDatum = MapArcDatum> = {
-	/** Array of arcs to render. Each arc must have a unique `id`. */
+
 	data: T[];
-	/** Optional unique identifier prefix for the arc source/layers. Auto-generated if not provided. */
+
 	id?: string;
-	/**
-	 * How far each arc bows away from a straight line. `0` renders straight
-	 * lines; higher values bend further. Negative values bend to the opposite
-	 * side. Arcs are computed as a quadratic Bézier in lng/lat space and do not
-	 * account for the antimeridian. (default: 0.2)
-	 */
+
 	curvature?: number;
-	/** Number of samples used to render each curve. Higher = smoother. (default: 64) */
+
 	samples?: number;
-	/**
-	 * MapLibre paint properties for the arc layer. Merged on top of sensible
-	 * defaults (`line-color: #4285F4`, `line-width: 2`, `line-opacity: 0.85`).
-	 * Any value can be a MapLibre expression for per-feature styling, every
-	 * field on each arc datum (besides `from`/`to`) is exposed via `["get", ...]`.
-	 */
+
 	paint?: MapArcLinePaint;
-	/** MapLibre layout properties for the arc layer. Defaults to rounded joins/caps. */
+
 	layout?: MapArcLineLayout;
-	/**
-	 * Paint properties applied to the arc currently under the cursor. Each key
-	 * is merged into `paint` as a `case` expression keyed on per-feature hover
-	 * state, so only the hovered arc changes appearance.
-	 */
+
 	hoverPaint?: MapArcLinePaint;
-	/** Callback when an arc is clicked. */
+
 	onClick?: (e: MapArcEvent<T>) => void;
-	/**
-	 * Callback fired when the hovered arc changes. Receives the cursor's
-	 * lng/lat at the moment of entry, and `null` when the cursor leaves the
-	 * last hovered arc.
-	 */
+
 	onHover?: (e: MapArcEvent<T> | null) => void;
-	/** Whether arcs respond to mouse events (default: true). */
+
 	interactive?: boolean;
-	/** Optional MapLibre layer id to insert the arc layers before (z-order control). */
+
 	beforeId?: string;
 };
 
@@ -244,10 +224,10 @@ export function MapArc<T extends MapArcDatum = MapArcDatum>({
 				if (map.getLayer(hitLayerId)) map.removeLayer(hitLayerId);
 				if (map.getSource(sourceId)) map.removeSource(sourceId);
 			} catch {
-				// ignore
+
 			}
 		};
-		// eslint-disable-next-line react-hooks/exhaustive-deps
+
 	}, [
 		isLoaded,
 		map,

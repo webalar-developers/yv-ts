@@ -103,7 +103,6 @@ export function SiteFooter() {
 				</section>
 			</div>
 
-			{/* Toggle Button with Line */}
 			<div className="relative mb-8 px-6">
 				<div
 					className="absolute inset-0 flex items-center px-6"
@@ -129,7 +128,6 @@ export function SiteFooter() {
 				</div>
 			</div>
 
-			{/* Expandable Archives Section */}
 			<AnimatePresence initial={false}>
 				{isExpanded && (
 					<motion.div

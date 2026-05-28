@@ -41,7 +41,7 @@ export function WhatsappCtaSection() {
 				showCloseButton={false}
 				className="flex max-w-4xl flex-col gap-0 overflow-hidden rounded-none border-0 p-0 !ring-0 shadow-2xl outline-none sm:max-w-4xl md:flex-row"
 			>
-				{/* Visually hidden title for accessibility */}
+
 				<DialogTitle className="sr-only">
 					Get Information On WhatsApp
 				</DialogTitle>
@@ -49,7 +49,6 @@ export function WhatsappCtaSection() {
 					Submit your details to receive property information via WhatsApp.
 				</DialogDescription>
 
-				{/* Left - Dark Gradient CTA */}
 				<div className="flex w-full flex-col justify-center bg-gradient-to-br from-[#092C3C] to-[#1E061D] p-10 text-white md:w-1/2 md:p-16">
 					<div className="mb-8 h-1 w-16 rounded-full bg-pink-500" />
 					<h2 className="mb-6 font-gilda text-[32px] leading-[1.1] font-normal md:text-[45px]">
@@ -79,7 +78,6 @@ export function WhatsappCtaSection() {
 					</ul>
 				</div>
 
-				{/* Right - Form */}
 				<div className="relative w-full bg-white p-8 md:w-1/2 md:p-12">
 					<button
 						type="button"

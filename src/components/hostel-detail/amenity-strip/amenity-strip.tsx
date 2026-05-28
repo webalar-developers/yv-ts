@@ -5,10 +5,10 @@ export function AmenityStrip({ amenities }: { amenities: PropertyFeature[] }) {
 	return (
 		<section
 			id="amenities"
-			className="mt-8 grid grid-cols-2 gap-4 md:grid-cols-4"
+			className="mt-8 grid grid-cols-2 gap-3 md:gap-4 md:grid-cols-4"
 		>
 			{amenities.map((item, index) => {
-				// Create a checkerboard pattern for 4 columns
+
 				const row = Math.floor(index / 4);
 				const col = index % 4;
 				const isPink = (row + col) % 2 === 0;
@@ -23,7 +23,7 @@ export function AmenityStrip({ amenities }: { amenities: PropertyFeature[] }) {
 								: "border-[#f1dfd2] bg-white",
 						)}
 					>
-						{/* Watermark Icon */}
+
 						<div className="absolute bottom-2 right-4 opacity-[0.07] text-yv-orange pointer-events-none">
 							{typeof item.icon === "string" ? (
 								<img
@@ -42,7 +42,6 @@ export function AmenityStrip({ amenities }: { amenities: PropertyFeature[] }) {
 							)}
 						</div>
 
-						{/* Top Icon Container */}
 						<div
 							className={cn(
 								"flex size-10 shrink-0 items-center justify-center rounded-xl",
@@ -68,7 +67,6 @@ export function AmenityStrip({ amenities }: { amenities: PropertyFeature[] }) {
 							)}
 						</div>
 
-						{/* Content */}
 						<div className="relative z-10 mt-3">
 							<h4 className="font-['Gilda_Display'] text-[16px] font-normal leading-tight text-[#231f1c]">
 								{item.label}

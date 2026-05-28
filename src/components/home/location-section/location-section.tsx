@@ -44,19 +44,18 @@ export function LocationSection() {
 	return (
 		<section className="px-6 py-5 md:px-10 md:py-10">
 			<div className="mx-auto">
-				{/* Heading */}
+
 				<div className="mb-2 text-center">
 					<div className="mx-auto mb-3 h-1 w-10 bg-yv-orange" />
-					<h2 className="font-gilda text-[40px] font-normal text-[#1f1f1f] md:text-[40px]">
+					<h2 className="font-gilda text-[24px] font-normal text-[#1f1f1f] sm:text-[32px] md:text-[40px]">
 						Close to Colleges. Close to Work. Close to Life.
 					</h2>
 				</div>
 
-				{/* Content */}
 				<div className="grid gap-0 overflow-hidden shadow-lg md:grid-cols-2">
-					{/* Left - Listings */}
+
 					<div className="bg-[#f7f7f7]">
-						{/* Applied Filters */}
+
 						<div className="m-5 border-b bg-white p-6">
 							<div className="mb-4 flex flex-wrap items-center gap-2">
 								<span className="text-[5.5px] font-bold tracking-wider text-gray-400 uppercase">
@@ -84,7 +83,6 @@ export function LocationSection() {
 								</button>
 							</div>
 
-							{/* Dropdowns */}
 							<div className="grid grid-cols-2 gap-4 md:grid-cols-4">
 								{[
 									{ label: "SELECT CITY", value: "Pune" },
@@ -111,14 +109,13 @@ export function LocationSection() {
 							</div>
 						</div>
 
-						{/* Property Cards */}
 						<div className="m-5 divide-y">
 							{properties.map((property) => (
 								<div
 									key={property.name}
 									className="mt-5 mb-5 flex gap-5 bg-white p-5"
 								>
-									<div className="h-36 w-40 flex-shrink-0 overflow-hidden rounded-lg">
+									<div className="h-24 w-28 flex-shrink-0 overflow-hidden rounded-lg sm:h-36 sm:w-40">
 										<img
 											src={property.image}
 											alt={property.name}
@@ -163,7 +160,6 @@ export function LocationSection() {
 						</div>
 					</div>
 
-					{/* Right - Map */}
 					<div className="relative block h-[400px] overflow-hidden bg-gray-100 md:h-auto">
 						<iframe
 							title="Youthville Hostel Pune Location Map"
@@ -177,7 +173,6 @@ export function LocationSection() {
 							referrerPolicy="no-referrer-when-downgrade"
 						></iframe>
 
-						{/* Map Legend Overlay */}
 						<div className="absolute bottom-6 left-6 rounded-lg border border-gray-100 bg-white/95 p-4 shadow-xl backdrop-blur-sm">
 							<p className="mb-2 text-[10px] font-bold tracking-wider text-yv-orange uppercase">
 								Location Legend

@@ -9,11 +9,11 @@ import { useMarkerContext } from "./marker-context";
 import { PopupCloseButton } from "./popup-close-button";
 
 type MarkerPopupProps = {
-	/** Popup content */
+
 	children: ReactNode;
-	/** Additional CSS classes for the popup container */
+
 	className?: string;
-	/** Show a close button in the popup (default: false) */
+
 	closeButton?: boolean;
 } & Omit<PopupOptions, "className" | "closeButton">;
 
@@ -37,7 +37,7 @@ export function MarkerPopup({
 			.setDOMContent(container);
 
 		return popupInstance;
-		// eslint-disable-next-line react-hooks/exhaustive-deps
+
 	}, [container, popupOptions]);
 
 	useEffect(() => {
@@ -49,7 +49,7 @@ export function MarkerPopup({
 		return () => {
 			marker.setPopup(null);
 		};
-		// eslint-disable-next-line react-hooks/exhaustive-deps
+
 	}, [map, container, marker.setPopup, popup]);
 
 	if (popup.isOpen()) {

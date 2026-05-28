@@ -32,7 +32,7 @@ export function SafetySection() {
 	return (
 		<section className="bg-[#F8F6F6] px-6 py-16 md:px-10 md:py-24">
 			<div className="mx-auto grid max-w-7xl items-stretch gap-10 md:grid-cols-2 md:gap-16">
-				{/* Left - Image */}
+
 				<div className="relative overflow-hidden rounded-2xl">
 					<img
 						src="/home/first.jpg"
@@ -43,10 +43,9 @@ export function SafetySection() {
 					/>
 				</div>
 
-				{/* Right - Content */}
 				<div>
 					<div className="mb-3 h-1 w-10 rounded-sm bg-yv-orange" />
-					<h2 className="mb-8 font-gilda text-[40px] leading-tight font-normal text-[#1f1f1f] md:text-[40px] md:leading-[1.2]">
+					<h2 className="mb-8 font-gilda text-[26px] leading-tight font-normal text-[#1f1f1f] sm:text-[32px] md:text-[40px] md:leading-[1.2]">
 						Safety First. Second. And Always.
 					</h2>
 

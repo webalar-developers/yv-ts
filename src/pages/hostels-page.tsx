@@ -73,7 +73,6 @@ export function HostelsPage() {
 			result = result.filter((p) => p.badge === selectedBadge);
 		}
 
-		// Apply Sidebar Filters
 		if (filters.search) {
 			const search = filters.search.toLowerCase();
 			result = result.filter(
@@ -132,7 +131,7 @@ export function HostelsPage() {
 		}
 
 		if (filters.roomTypes.length > 0) {
-			// Check if property occupancy string contains any of the selected room types
+
 			result = result.filter((p) => {
 				const occ = p.occupancy?.toLowerCase() || "";
 				return filters.roomTypes.some((rt) => {
@@ -157,12 +156,11 @@ export function HostelsPage() {
 			});
 		}
 
-		// Sort
 		result.sort((a, b) => {
 			if (sortBy === "price-low") return a.price - b.price;
 			if (sortBy === "price-high") return b.price - a.price;
 			if (sortBy === "rating") return (b.rating || 0) - (a.rating || 0);
-			return 0; // recommended (default)
+			return 0;
 		});
 
 		return result;
@@ -258,7 +256,6 @@ export function HostelsPage() {
 				</section>
 			</div>
 
-			{/* Mobile filter overlay */}
 			{filtersOpen && (
 				<div className="fixed inset-0 z-50 flex lg:hidden">
 					<button

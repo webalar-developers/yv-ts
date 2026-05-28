@@ -8,19 +8,19 @@ import { cn } from "@/lib/utils";
 import { useMap } from "./map-context";
 
 type MapControlsProps = {
-	/** Position of the controls on the map (default: "bottom-right") */
+
 	position?: "top-left" | "top-right" | "bottom-left" | "bottom-right";
-	/** Show zoom in/out buttons (default: true) */
+
 	showZoom?: boolean;
-	/** Show compass button to reset bearing (default: false) */
+
 	showCompass?: boolean;
-	/** Show locate button to find user's location (default: false) */
+
 	showLocate?: boolean;
-	/** Show fullscreen toggle button (default: false) */
+
 	showFullscreen?: boolean;
-	/** Additional CSS classes for the controls container */
+
 	className?: string;
-	/** Callback with user coordinates when located */
+
 	onLocate?: (coords: { longitude: number; latitude: number }) => void;
 };
 

@@ -152,7 +152,7 @@ function NewsCard({
 export default function NewsSectionBlogsAndNews() {
     return (
         <section className="w-full bg-white px-6 py-12 md:px-10 lg:px-14">
-            <h2 className="mb-8 font-gilda text-[34px] leading-tight text-gray-900">
+            <h2 className="mb-8 font-gilda text-[24px] leading-tight text-gray-900 sm:text-[30px] md:text-[34px]">
                 In the News
             </h2>
             <div className="grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-2 md:grid-cols-4">

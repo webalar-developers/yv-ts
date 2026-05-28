@@ -77,7 +77,6 @@ export function MapExplorerSection() {
 
 	const mapRef = useRef<MapLibreGL.Map | null>(null);
 
-	// Imperatively fly to city center whenever the city filter changes
 	useEffect(() => {
 		if (!mapRef.current) return;
 		const center = CITY_MAP_CENTER[filters.city] ?? CITY_MAP_CENTER.Pune;
@@ -89,7 +88,6 @@ export function MapExplorerSection() {
 		? mockProperties.find((p) => p.id === selectedPropertyId)
 		: null;
 
-	// Fly to the selected property's location, or back to the city center on deselect
 	useEffect(() => {
 		if (!mapRef.current) return;
 		if (selectedProperty) {
@@ -164,7 +162,7 @@ export function MapExplorerSection() {
 			<div className="mx-auto">
 				<div className="mb-8 text-center">
 					<div className="mx-auto mb-3 h-1 w-10 bg-yv-orange" />
-					<h2 className="font-gilda text-[32px] font-normal text-[#1f1f1f] md:text-[40px]">
+					<h2 className="font-gilda text-[24px] font-normal text-[#1f1f1f] sm:text-[30px] md:text-[40px]">
 						Explore Youthville Properties
 					</h2>
 				</div>
@@ -200,7 +198,7 @@ export function MapExplorerSection() {
 
 							{(selectedProperty ? [selectedProperty] : mapProperties).map(
 								(property) => {
-									// const isSelected = selectedPropertyId === property.id;
+
 									const isOperational = property.badgeVariant !== "new-opening";
 
 									return (
@@ -211,7 +209,7 @@ export function MapExplorerSection() {
 											onClick={() => setSelectedPropertyId(property.id)}
 										>
 											<MarkerContent>
-												<div className="flex w-[150px] items-center lg:w-[250px] rounded-full">
+												<div className="flex w-[100px] items-center rounded-full sm:w-[150px] lg:w-[250px]">
 													<img
 														src="/shared/png/yv_logo.png"
 														alt="YV"
@@ -326,7 +324,7 @@ export function MapExplorerSection() {
 											<div className="grid grid-cols-2 gap-3">
 												{[
 													{ Icon: ChefHat, label: "Chef Food" },
-													// { Icon: Droplets, label: "Auto Wash" },
+
 													{ Icon: ShieldCheck, label: "24/7 Security" },
 													{ Icon: Wifi, label: "100Mbps" },
 												].map(({ Icon, label }) => (

@@ -20,16 +20,16 @@ export function TestimonialsSection() {
 			<div className="w-fulll mx-auto">
 				<div className="mb-12 text-center">
 					<div className="mx-auto mb-3 h-1 w-12 bg-yv-orange" />
-					<h2 className="font-gilda text-[40px] font-normal text-gray-900 md:text-4xl">
+					<h2 className="font-gilda text-[24px] font-normal text-gray-900 sm:text-[32px] md:text-4xl">
 						Choosen, Trusted, Recommended.
 					</h2>
-					<p className="font-gilda text-[40px] font-normal text-gray-900 md:text-4xl">
+					<p className="font-gilda text-[24px] font-normal text-gray-900 sm:text-[32px] md:text-4xl">
 						Instead of Real People Real Experience
 					</p>
 				</div>
 
-				<div className="relative px-14">
-					{/* Left Chevron */}
+				<div className="relative px-8 sm:px-14">
+
 					<button
 						type="button"
 						onClick={prev}
@@ -44,7 +44,7 @@ export function TestimonialsSection() {
 							const isCenter = i === 1;
 							return (
 								<div key={t.name} className="flex flex-col items-center">
-									{/* Center: Video + overlapping card */}
+
 									{isCenter && (
 										<div className="relative aspect-[4/4] w-full overflow-hidden rounded-none">
 											<img
@@ -67,7 +67,6 @@ export function TestimonialsSection() {
 										</div>
 									)}
 
-									{/* Testimonial Card */}
 									<div
 										className={`rounded-none bg-white shadow-lg ${
 											t.name === "Niharika"
@@ -118,7 +117,6 @@ export function TestimonialsSection() {
 						})}
 					</div>
 
-					{/* Right Chevron */}
 					<button
 						type="button"
 						onClick={next}
@@ -129,7 +127,6 @@ export function TestimonialsSection() {
 					</button>
 				</div>
 
-				{/* Pagination dots */}
 				<div className="mt-8 flex justify-center gap-2">
 					{Array.from({ length: totalPages }).map((_, i) => {
 						const pageKey = `page${i}`;

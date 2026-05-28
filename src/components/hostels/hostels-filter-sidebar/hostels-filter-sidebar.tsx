@@ -77,7 +77,7 @@ export function HostelsFilterSidebar({
 
 	return (
 		<aside className="w-90 shrink-0">
-			{/* Search */}
+
 			<div className="relative mb-2">
 				<Search className="absolute top-1/2 left-3 size-4 -translate-y-1/2 text-gray-400" />
 				<input
@@ -89,7 +89,7 @@ export function HostelsFilterSidebar({
 				/>
 			</div>
 			<div className="sticky top-20 space-y-6 rounded-sm bg-white p-10">
-				{/* Heading */}
+
 				<div className="flex items-center justify-between">
 					<div>
 						<h2 className="text-lg font-semibold text-gray-900">Filters</h2>
@@ -108,7 +108,6 @@ export function HostelsFilterSidebar({
 					)}
 				</div>
 
-				{/* City */}
 				<div>
 					<div className="mb-2 flex items-center gap-1.5 py-2 text-[11px] font-normal tracking-widest text-gray-400">
 						<MapPin className="size-3.5" />
@@ -217,7 +216,6 @@ export function HostelsFilterSidebar({
 					)}
 				</div>
 
-				{/* Radius */}
 				<div>
 					<div className="mb-2 flex items-center gap-1.5 py-2 text-[11px] font-normal tracking-widest text-gray-400">
 						<img
@@ -244,7 +242,6 @@ export function HostelsFilterSidebar({
 					</div>
 				</div>
 
-				{/* Living Preference */}
 				<div>
 					<div className="mb-2 flex items-center gap-1.5 py-2 text-[11px] font-normal tracking-widest text-gray-400">
 						<img
@@ -291,7 +288,6 @@ export function HostelsFilterSidebar({
 					</button>
 				</div>
 
-				{/* Room Type */}
 				<div>
 					<div className="mb-2 flex items-center gap-1.5 py-2 text-[11px] font-normal tracking-widest text-gray-400">
 						<img
@@ -326,7 +322,6 @@ export function HostelsFilterSidebar({
 					</div>
 				</div>
 
-				{/* Special Tags */}
 				<div>
 					<div className="mb-2 flex items-center gap-1.5 py-2 text-[11px] font-normal tracking-widest text-gray-400">
 						<Tag className="size-3.5" />
@@ -361,7 +356,6 @@ export function HostelsFilterSidebar({
 					</div>
 				</div>
 
-				{/* Apply (Close on mobile) */}
 				<Button
 					variant="yv-orange"
 					onClick={onClose}

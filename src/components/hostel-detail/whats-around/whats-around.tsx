@@ -156,7 +156,7 @@ export function WhatsAround({ propertyId }: { propertyId: string }) {
 						</div>
 					</div>
 				)} */}
-{/* 
+{/*
 				{workplaces.length > 0 && (
 					<div>
 						<p className="mb-4 text-xs font-bold tracking-[0.16em] text-[#766f6a] uppercase">

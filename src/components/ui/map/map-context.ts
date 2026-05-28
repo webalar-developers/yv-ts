@@ -4,13 +4,13 @@ import type MapLibreGL from "maplibre-gl";
 import { createContext, useContext } from "react";
 
 export type MapViewport = {
-	/** Center coordinates [longitude, latitude] */
+
 	center: [number, number];
-	/** Zoom level */
+
 	zoom: number;
-	/** Bearing (rotation) in degrees */
+
 	bearing: number;
-	/** Pitch (tilt) in degrees */
+
 	pitch: number;
 };
 

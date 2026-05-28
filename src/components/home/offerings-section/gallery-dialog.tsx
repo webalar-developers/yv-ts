@@ -39,7 +39,7 @@ export function GalleryDialog({
 		<AnimatePresence>
 			{isOpen && (
 				<>
-					{/* Backdrop */}
+
 					<motion.div
 						initial={{ opacity: 0 }}
 						animate={{ opacity: 1 }}
@@ -48,7 +48,6 @@ export function GalleryDialog({
 						className="fixed inset-0 z-[100] bg-black/80 backdrop-blur-sm"
 					/>
 
-					{/* Dialog Content */}
 					<motion.div
 						initial={{ opacity: 0, scale: 0.9, y: 20 }}
 						animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -56,7 +55,7 @@ export function GalleryDialog({
 						className="fixed inset-0 z-[101] m-auto flex h-fit max-w-3xl flex-col items-center justify-center p-4"
 					>
 						<div className="relative w-full rounded-2xl bg-white p-6 shadow-2xl">
-							{/* Close Button */}
+
 							<div className="mb-6 flex items-center justify-between">
 								<h3 className="font-gilda text-2xl text-yv-dark-purple">
 									{active.title}

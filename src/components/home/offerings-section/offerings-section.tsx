@@ -8,15 +8,14 @@ export function OfferingsSection() {
 	return (
 		<section className="w-full bg-[#ed6f34] px-6 py-12 md:px-10 md:py-14">
 			<div className="w-full">
-				{/* Section Header */}
+
 				<div className="mb-10">
 					<div className="mb-3 h-1 w-12 bg-[#a3d356]" />
-					<h2 className="font-gilda text-[40px] font-normal text-white md:text-4xl">
+					<h2 className="font-gilda text-[26px] font-normal text-white sm:text-[32px] md:text-4xl">
 						Thoughtful Offerings
 					</h2>
 				</div>
 
-				{/* Offerings Grid */}
 				<div className="grid grid-cols-2 gap-4 md:grid-cols-4 md:grid-rows-2">
 					{offerings.map((offering, i) => (
 						<button

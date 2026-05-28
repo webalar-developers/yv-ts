@@ -13,7 +13,7 @@ const features = [
 export function OnePrice() {
 	return (
 		<section className="flex min-h-[600px] flex-col overflow-hidden lg:flex-row">
-			{/* Left Content Side */}
+
 			<div
 				className="flex flex-1 flex-col justify-center px-6 py-16 md:px-12 lg:px-20"
 				style={{
@@ -44,7 +44,6 @@ export function OnePrice() {
 				</div>
 			</div>
 
-			{/* Right Image Side */}
 			<div className="flex-1">
 				<img
 					src="/shared/jpg/1.jpg"

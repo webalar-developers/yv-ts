@@ -39,7 +39,6 @@ export async function handleMcpRequest(
 	} catch (error) {
 		console.error("MCP handler error:", error);
 
-		// Return a JSON-RPC error response
 		return Response.json(
 			{
 				jsonrpc: "2.0",

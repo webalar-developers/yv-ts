@@ -115,10 +115,10 @@ export function RoomsSection() {
 
 	return (
 		<section className="w-full bg-white px-6 pt-16 pb-16 font-sans md:px-10 md:pt-14 md:pb-14">
-			{/* Section Header */}
+
 			<div className="mb-12 text-center">
 				<div className="mx-auto mb-3 h-0.5 w-12 bg-yv-orange" />
-				<h2 className="font-gilda text-[40px] font-normal text-[#1a1a1a] md:text-[42px]">
+				<h2 className="font-gilda text-[26px] font-normal text-[#1a1a1a] sm:text-[32px] md:text-[40px] lg:text-[42px]">
 					Your lifestyle deserves better living
 				</h2>
 				<p className="mt-2 text-[16px] font-normal text-[#666666]">
@@ -126,11 +126,10 @@ export function RoomsSection() {
 				</p>
 			</div>
 
-			{/* Filter Row */}
 			<div className="mx-auto mb-10 flex max-w-7xl flex-col gap-5 xl:flex-row xl:items-center xl:justify-between">
 				<div className="flex min-w-0 flex-1 flex-wrap rounded border border-gray-200 bg-[#F8F6F6] xl:flex-nowrap">
 					{filters.map((filter, idx) => (
-						<div key={filter.label} className="relative min-w-[200px] flex-1">
+						<div key={filter.label} className="relative min-w-[140px] flex-1">
 							<select
 								value={selectedFilters[filter.label] ?? ""}
 								onChange={(e) =>
@@ -185,7 +184,6 @@ export function RoomsSection() {
 				</div>
 			</div>
 
-			{/* Property Cards */}
 			{filteredProperties.length === 0 ? (
 				<div className="rounded-md border border-dashed border-gray-300 bg-[#fafafa] p-10 text-center text-sm text-gray-500">
 					No rooms match the selected filters. Try a different combination.

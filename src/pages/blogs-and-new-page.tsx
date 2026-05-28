@@ -4,7 +4,6 @@ import NextReadSectionBlogsAndNews from "#/components/blogs-and-news/sections/ne
 import NewsSectionBlogsAndNews from "#/components/blogs-and-news/sections/news-section";
 import CtaSectionBlogsAndNews from "#/components/blogs-and-news/sections/cta-section";
 
-
 export function BlogsAndNewsPage() {
     return (
         <>

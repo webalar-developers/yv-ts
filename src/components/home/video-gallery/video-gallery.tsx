@@ -14,10 +14,10 @@ export function VideoGallery() {
 		<section className="bg-white py-12 md:py-20">
 			<div className="mb-12 text-center">
 				<div className="mx-auto mb-4 h-1.5 w-16 bg-yv-orange" />
-				<h2 className="font-gilda text-[40px] font-normal leading-tight text-gray-900 md:text-5xl">
+				<h2 className="font-gilda text-[26px] font-normal leading-tight text-gray-900 sm:text-[34px] md:text-[40px] lg:text-5xl">
 					Unforgettable Experience, Countless Memories
 				</h2>
-				<p className="mt-2 font-gilda text-[40px] font-normal leading-tight text-gray-900 md:text-5xl">
+				<p className="mt-2 font-gilda text-[26px] font-normal leading-tight text-gray-900 sm:text-[34px] md:text-[40px] lg:text-5xl">
 					One Click Away
 				</p>
 			</div>
@@ -99,10 +99,8 @@ function VideoCard({
 				/>
 			)}
 
-			{/* Overlay Gradient */}
 			<div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60 transition-opacity group-hover:opacity-80" />
 
-			{/* Play Button Icon */}
 			{!hovered && (
 				<div className="absolute top-1/2 left-1/2 flex size-16 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white/20 shadow-2xl backdrop-blur-md transition-all duration-500 group-hover:scale-110 group-hover:bg-yv-orange">
 					<Play
@@ -112,7 +110,6 @@ function VideoCard({
 				</div>
 			)}
 
-			{/* Text Overlay */}
 			{item.reelUrl && (
 				<div className="absolute bottom-6 left-0 w-full px-6 text-center opacity-0 transition-opacity duration-500 group-hover:opacity-100">
 					<p className="text-sm font-medium tracking-wide text-white drop-shadow-md">

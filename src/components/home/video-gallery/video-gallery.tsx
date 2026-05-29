@@ -13,7 +13,7 @@ export function VideoGallery() {
 	return (
 		<section className="bg-white py-12 md:py-20">
 			<div className="mb-12 text-center">
-				<div className="mx-auto mb-4 h-1.5 w-16 bg-yv-orange" />
+				<div className="mx-auto mb-3 h-[2px] w-10 rounded-sm bg-[#ff5a3c]" />
 				<h2 className="font-gilda text-[26px] font-normal leading-tight text-gray-900 sm:text-[34px] md:text-[40px] lg:text-5xl">
 					Unforgettable Experience, Countless Memories
 				</h2>

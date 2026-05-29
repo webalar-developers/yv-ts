@@ -117,7 +117,7 @@ export function RoomsSection() {
 		<section className="w-full bg-white px-6 pt-16 pb-16 font-sans md:px-10 md:pt-14 md:pb-14">
 
 			<div className="mb-12 text-center">
-				<div className="mx-auto mb-3 h-0.5 w-12 bg-yv-orange" />
+				<div className="mx-auto mb-3 h-0.5 w-10 rounded-sm bg-[#ff5a3c]" />
 				<h2 className="font-gilda text-[26px] font-normal text-[#1a1a1a] sm:text-[32px] md:text-[40px] lg:text-[42px]">
 					Your lifestyle deserves better living
 				</h2>

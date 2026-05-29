@@ -119,7 +119,7 @@ export function CommunitySection() {
 			<div className="mx-auto">
 				<div className="mb-10 flex flex-col items-start justify-between gap-4 md:flex-row md:items-center">
 					<div className="text-center md:text-left">
-						<div className="mx-auto mb-3 h-1 w-10 rounded-sm bg-yv-orange md:mx-0" />
+						<div className="mx-auto mb-3 h-0.5 w-10 rounded-sm bg-[#ff5a3c] md:mx-0" />
 						<h2 className="font-gilda text-[26px] font-normal text-[#1f1f1f] sm:text-[32px] md:text-4xl">
 							A Community That Feels Alive
 						</h2>

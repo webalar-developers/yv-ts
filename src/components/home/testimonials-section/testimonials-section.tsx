@@ -19,7 +19,7 @@ export function TestimonialsSection() {
 		<section className="w-full bg-white px-6 py-16 md:py-24">
 			<div className="w-fulll mx-auto">
 				<div className="mb-12 text-center">
-					<div className="mx-auto mb-3 h-1 w-12 bg-yv-orange" />
+					<div className="mx-auto mb-3 h-0.5 w-10 rounded-sm bg-[#ff5a3c]" />
 					<h2 className="font-gilda text-[24px] font-normal text-gray-900 sm:text-[32px] md:text-4xl">
 						Choosen, Trusted, Recommended.
 					</h2>

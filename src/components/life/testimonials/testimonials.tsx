@@ -79,7 +79,7 @@ export function Testimonials() {
 
 				<div className="w-full overflow-hidden lg:w-[70%]">
 					<div className="mb-8">
-						<div className="mb-3 h-1 w-10 rounded-sm bg-yv-orange" />
+						<div className="mb-3 h-0.5 w-10 rounded-sm bg-[#ff5a3c]" />
 						<h2 className="font-gilda text-[36px] font-normal text-yv-dark-purple md:text-[48px]">
 							What Parents & Students Say
 						</h2>

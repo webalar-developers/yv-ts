@@ -13,7 +13,7 @@ export function FaqSection({ faqs }: { faqs: FaqItem[] }) {
 			<div className="grid gap-16 lg:grid-cols-[1fr_1.5fr]">
 
 				<div className="flex flex-col">
-					<div className="mb-4 h-1 w-12 rounded-full bg-yv-orange" />
+					<div className="mb-3 h-0.5 w-10 rounded-sm bg-[#ff5a3c]" />
 					<h2 className="mb-8 font-gilda text-[40px] leading-tight font-normal text-gray-900 md:text-5xl">
 						Frequent
 						<br />

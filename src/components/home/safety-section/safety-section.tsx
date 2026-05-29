@@ -44,7 +44,7 @@ export function SafetySection() {
 				</div>
 
 				<div>
-					<div className="mb-3 h-1 w-10 rounded-sm bg-yv-orange" />
+					<div className="mb-3 h-0.5 w-10 rounded-sm bg-[#ff5a3c]" />
 					<h2 className="mb-8 font-gilda text-[26px] leading-tight font-normal text-[#1f1f1f] sm:text-[32px] md:text-[40px] md:leading-[1.2]">
 						Safety First. Second. And Always.
 					</h2>

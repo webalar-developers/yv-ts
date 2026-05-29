@@ -161,13 +161,13 @@ export function MapExplorerSection() {
 		>
 			<div className="mx-auto">
 				<div className="mb-8 text-center">
-					<div className="mx-auto mb-3 h-1 w-10 bg-yv-orange" />
+					<div className="mx-auto mb-3 h-[2px] w-10 rounded-sm bg-[#ff5a3c]" />
 					<h2 className="font-gilda text-[24px] font-normal text-[#1f1f1f] sm:text-[30px] md:text-[40px]">
 						Explore Youthville Properties
 					</h2>
 				</div>
 
-				<div className="grid grid-cols-1 gap-0 overflow-hidden rounded-2xl border bg-white shadow-sm lg:h-[800px] lg:grid-cols-12">
+				<div className="grid grid-cols-1 gap-0 overflow-hidden rounded-2xl border bg-white shadow-sm lg:h-[700px] lg:grid-cols-12">
 					<aside className="col-span-1 border-b bg-[#faf8f3] lg:h-full lg:border-r lg:border-b-0 lg:col-span-3">
 						<MapExplorerFilters
 							filters={filters}

@@ -375,7 +375,7 @@ export default function BlogDetailSection({ post }: { post: BlogPost }) {
                                     >
                                         Know More
                                     </button>
-                                    <div className="mb-4 h-[2px] w-16 bg-yv-orange" />
+                                    <div className="mb-3 h-0.5 w-10 rounded-sm bg-[#ff5a3c]" />
                                 </div>
                             </div>
                         </div>

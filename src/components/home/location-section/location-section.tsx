@@ -46,7 +46,7 @@ export function LocationSection() {
 			<div className="mx-auto">
 
 				<div className="mb-2 text-center">
-					<div className="mx-auto mb-3 h-1 w-10 bg-yv-orange" />
+					<div className="mx-auto mb-3 h-0.5 w-10 rounded-sm bg-[#ff5a3c]" />
 					<h2 className="font-gilda text-[24px] font-normal text-[#1f1f1f] sm:text-[32px] md:text-[40px]">
 						Close to Colleges. Close to Work. Close to Life.
 					</h2>

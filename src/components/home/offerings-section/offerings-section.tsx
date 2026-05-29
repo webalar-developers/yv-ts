@@ -10,7 +10,7 @@ export function OfferingsSection() {
 			<div className="w-full">
 
 				<div className="mb-10">
-					<div className="mb-3 h-1 w-12 bg-[#a3d356]" />
+					<div className="mb-3 h-0.5 w-12 bg-[#a3d356]" />
 					<h2 className="font-gilda text-[26px] font-normal text-white sm:text-[32px] md:text-4xl">
 						Thoughtful Offerings
 					</h2>

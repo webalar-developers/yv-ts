@@ -55,6 +55,12 @@ const BlogsAndNewsPage = lazy(() =>
 	})),
 );
 
+const BlogDetailPage = lazy(() =>
+	import("@/pages/blog-detail-page").then((module) => ({
+		default: module.BlogDetailPage,
+	})),
+);
+
 function withSuspense(element: ReactNode) {
 	return <Suspense fallback={null}>{element}</Suspense>;
 }
@@ -108,6 +114,10 @@ export const router = createBrowserRouter([
 			{
 				 path: "blogs-and-news",
 				 element: withSuspense(<BlogsAndNewsPage />),
+			},
+			{
+				path: "blogs-and-news/:slug",
+				element: withSuspense(<BlogDetailPage />),
 			},
 			{
 				path: "*",

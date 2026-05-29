@@ -1,40 +1,17 @@
+import { Link } from "react-router";
+import { getNextReadPosts } from "#/data/mock-blogs.data";
 
-const ARTICLES = [
-    {
-        id: 1,
-        image: "/blogs-and-news/next-read/shared-living.png",
-        title: "The Art of Shared Living: Making Friends in Co-living Spaces",
-        description:
-            "Moving to a new city can be daunting. In this guide, we explore how to turn neighbors into family and make the most of Youthville's vibrant communal...",
-        href: "#",
-    },
-    {
-        id: 2,
-        image: "/blogs-and-news/next-read/internships.png",
-        title: "5 Internships in Pune You Shouldn't Miss This Summer",
-        description:
-            "Pune is a hub of opportunities. We've curated a list of the hottest internships across tech, marketing, and design for the upcoming summer break to...",
-        href: "#",
-    },
-    {
-        id: 3,
-        image: "/blogs-and-news/next-read/weekend-getaways.png",
-        title: "Budget Friendly Weekend Getaways Near Pune",
-        description:
-            "Need a break from the books? Check out these five hidden gems around Pune that are accessible by bus and won't burn a hole in your monthly living...",
-        href: "#",
-    },
-];
+const articles = getNextReadPosts();
 
-function NextReadCard({ article }: { article: (typeof ARTICLES)[number] }) {
+function NextReadCard({ article }: { article: (typeof articles)[number] }) {
     return (
-        <a
-            href={article.href}
+        <Link
+            to={`/blogs-and-news/${article.slug}`}
             className="group flex flex-col overflow-hidden max-w-[432px] rounded-[44px] bg-white shadow-sm transition-shadow duration-300 hover:shadow-md"
         >
             <div className="relative h-[288px] max-w-[432px] w-full overflow-hidden">
                 <img
-                    src={article.image}
+                    src={article.heroImage}
                     alt={article.title}
                     className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                     draggable={false}
@@ -44,7 +21,7 @@ function NextReadCard({ article }: { article: (typeof ARTICLES)[number] }) {
             <div className="flex flex-1 flex-col justify-between px-6 py-6">
                 <div>
                     <h3 className="mb-3 font-gilda text-[22px] leading-[1.35] text-gray-900">
-                        {article.title}
+                        {article.title} {article.titleHighlight}
                     </h3>
                     <p className="text-[13.5px] leading-[1.65] text-gray-500 line-clamp-3 font-roboto">
                         {article.description}
@@ -55,7 +32,7 @@ function NextReadCard({ article }: { article: (typeof ARTICLES)[number] }) {
                     Read More
                 </p>
             </div>
-        </a>
+        </Link>
     );
 }
 
@@ -74,8 +51,8 @@ export default function NextReadSectionBlogsAndNews() {
             </div>
 
             <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3">
-                {ARTICLES.map((article) => (
-                    <NextReadCard key={article.id} article={article} />
+                {articles.map((article) => (
+                    <NextReadCard key={article.slug} article={article} />
                 ))}
             </div>
         </section>

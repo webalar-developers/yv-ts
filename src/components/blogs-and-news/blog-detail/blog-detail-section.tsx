@@ -1,72 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router";
 import { ArrowLeft, Mail, Phone, Sparkles } from "lucide-react";
-
-const POST = {
-    category: "LIFESTYLE",
-    date: "October 24, 2024",
-    title: "Beyond the Room:",
-    titleHighlight: "The Art of Co-Living",
-    heroImage: "/blogs-and-news/blog-details/cover.png",
-    body: [
-        {
-            heading: "Dive Deeper",
-            accent: true,
-            paragraphs: [
-                "Co-living isn't just about sharing a roof; it's about curated connectivity. At Youthville, we believe the environment dictates the energy. The architecture of our common spaces is designed to foster spontaneous interaction while preserving the sanctity of your private sanctuary.",
-                "When we designed our spaces, the focus was never just functionality — it was about creating an ecosystem where every corner adds value to your daily life. From focused work zones to social spaces and mindful retreats, every element is thoughtfully crafted to support modern living.",
-            ],
-            bullets: [
-                "Acoustically treated quiet pods for deep focus.",
-                "Open-plan communal kitchens where dinner is the dialogue.",
-                "Rooftop meditation decks for the sunrise ritual.",
-            ],
-        },
-        {
-            heading: "Designing for Connection",
-            accent: false,
-            paragraphs: [
-                "When we designed the latest wing at our Pune flagship, we didn't just think about spaces — we studied how people actually live, move, and interact throughout their day. Students and young professionals today don't follow rigid routines; their days flow between focused work, casual conversations, and moments of relaxation. Instead of forcing structure, we wanted the design to naturally support this fluid lifestyle. Every element was carefully planned to ensure that residents could transition seamlessly between productivity and comfort without feeling restricted by the space around them.",
-                "Rather than creating a conventional 'work zone,' we envisioned an ecosystem where each area serves a purpose while still feeling connected to the whole. Quiet pods allow for deep focus when needed, while open communal spaces invite interaction and collaboration. Kitchens become more than just functional areas — they turn into places where conversations begin and friendships grow. The idea was to create an environment where people don't have to choose between privacy and community, but instead experience both in harmony.",
-                "At Youthville, design is not just about how a space looks — it's about how it makes you feel and function every day. Every corner is thoughtfully crafted to encourage meaningful connections while still respecting personal boundaries. Whether it's finding inspiration in shared spaces or unwinding in peaceful corners, the environment adapts to your rhythm. This balance between individuality and community is what transforms co-living from a simple concept into a truly enriching lifestyle experience.",
-                "Our residents report a 40% increase in productivity when switching from traditional apartment living to our integrated model. It's the 'Youthville Effect' — a synergy of people and place.",
-            ],
-        },
-    ],
-    images: [
-        "/blogs-and-news/blog-details/image-one.png",
-        "/blogs-and-news/blog-details/image-two.png",
-    ],
-    author: {
-        name: "Sarah Sterling",
-        avatar: "/blogs-and-news/news/news-1.png",
-        bio: "Sarah is the Chief Experience Officer at Youthville. With a decade in urban planning and sociology, she crafts the community rituals that make our houses feel like homes.",
-    },
-};
-
-const RELATED = [
-    {
-        id: 1,
-        category: "COMMUNITY",
-        title: "Finding Your Inner Circle in a New City",
-        image: "/blogs-and-news/blog-details/related-blogs/image-one.png",
-        href: "#",
-    },
-    {
-        id: 2,
-        category: "PRODUCTIVITY",
-        title: "Mastering Time Management: A Student's Guide",
-        image: "/blogs-and-news/blog-details/related-blogs/image-two.png",
-        href: "#",
-    },
-    {
-        id: 3,
-        category: "EVENTS",
-        title: "Upcoming Winter Socials: What to Expect",
-        image: "/blogs-and-news/blog-details/related-blogs/image-three.png",
-        href: "#",
-    },
-];
+import { getRelatedPosts } from "#/data/mock-blogs.data";
+import type { BlogPost } from "#/data/mock-blogs.types";
 
 function ChatGptIcon() {
     return (
@@ -121,15 +57,8 @@ const AI_TOOLS = [
 
 const SKELETON_WIDTHS = ["w-4/5", "w-full", "w-3/5", "w-11/12","w-2/3","w-4/5"];
 
-function AiPanel() {
+function AiPanel({ takeaways }: { takeaways: string[] }) {
     const [unlocked, setUnlocked] = useState(false);
-
-    const TAKEAWAYS = [
-        "Co-living environments directly impact resident productivity and well-being.",
-        "Youthville spaces are designed to balance privacy with spontaneous social interaction.",
-        "Common areas function as catalysts for community building and collaboration.",
-        "The 'Youthville Effect' shows a measurable 40% productivity increase vs traditional apartments.",
-    ];
 
     return (
         <div className="my-8 rounded-xl border border-gray-200 bg-white px-6 py-5">
@@ -191,7 +120,7 @@ function AiPanel() {
                         </div>
                     ) : (
                         <ul className="space-y-2">
-                            {TAKEAWAYS.map((t) => (
+                            {takeaways.map((t) => (
                                 <li key={t} className="flex items-start gap-2">
                                     <span className="mt-1.5 size-1.5 shrink-0 rounded-full bg-[#E8612D]" />
                                     <span className="font-roboto text-[13px] leading-[1.6] text-gray-700">{t}</span>
@@ -262,20 +191,20 @@ function Sidebar({ onBooking }: { onBooking?: () => void }) {
     );
 }
 
-function RelatedReads() {
+function RelatedReads({ posts }: { posts: BlogPost[] }) {
     return (
         <section className="border-t bg-white border-gray-100 px-6 py-12 md:px-10 lg:px-14">
             <h2 className="mb-8 text-center font-gilda text-[30px] text-gray-900">Related Reads</h2>
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
-                {RELATED.map((item) => (
+                {posts.map((item) => (
                     <Link
-                        to={item.href}
-                        key={item.id}
-                        className="group flex flex-col overflow-hidden rounded-2xl bg-[#F8F6F6] shadow-md  hover:shadow-lg "
+                        to={`/blogs-and-news/${item.slug}`}
+                        key={item.slug}
+                        className="group flex flex-col overflow-hidden rounded-2xl bg-[#F8F6F6] shadow-md hover:shadow-lg"
                     >
                         <div className="h-[300px] overflow-hidden">
                             <img
-                                src={item.image}
+                                src={item.heroImage}
                                 alt={item.title}
                                 className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                             />
@@ -285,7 +214,7 @@ function RelatedReads() {
                                 {item.category}
                             </span>
                             <h3 className="font-gilda text-2xl leading-snug text-gray-900 transition-colors group-hover:text-[#E8612D]">
-                                {item.title}
+                                {item.title} {item.titleHighlight}
                             </h3>
                             <p className="font-roboto text-[12px] font-bold text-gray-800">
                                 Read More
@@ -319,7 +248,9 @@ function CtaBanner() {
     );
 }
 
-export default function BlogDetailSection() {
+export default function BlogDetailSection({ post }: { post: BlogPost }) {
+    const relatedPosts = getRelatedPosts(post.slug);
+
     return (
         <div className="bg-[#F8F6F6] container mx-auto">
             <div className="px-6 pt-6 md:px-10 lg:px-14">
@@ -335,33 +266,33 @@ export default function BlogDetailSection() {
             <div className="px-6 pt-6 text-center md:px-10 lg:px-14">
                 <div className="mb-3 flex items-center justify-center gap-3">
                     <span className="bg-[#E8612D] rounded-4xl px-3 py-1 font-roboto text-[10px] font-bold uppercase tracking-widest text-black">
-                        {POST.category}
+                        {post.category}
                     </span>
-                    <span className="font-roboto text-[12px] text-gray-400">{POST.date}</span>
+                    <span className="font-roboto text-[12px] text-gray-400">{post.date}</span>
                 </div>
                 <h1 className="mx-auto max-w-3xl font-gilda text-[36px] leading-[1.2] text-gray-900 sm:text-[44px] md:text-[52px]">
-                    {POST.title}
+                    {post.title}
                     <br />
-                    <span className="text-[#E8612D]">{POST.titleHighlight}</span>
+                    <span className="text-[#E8612D]">{post.titleHighlight}</span>
                 </h1>
             </div>
 
-            <div className="mt-8 overflow-hidden rounded-2xl  max-w-7xl mx-auto">
+            <div className="mt-8 overflow-hidden rounded-2xl max-w-7xl mx-auto">
                 <img
-                    src={POST.heroImage}
-                    alt={POST.title}
+                    src={post.heroImage}
+                    alt={post.title}
                     className="h-[280px] w-full object-cover sm:h-[380px] md:h-[480px]"
                 />
             </div>
 
             <div className="px-6 md:px-10 lg:px-14">
-                <AiPanel />
+                <AiPanel takeaways={post.takeaways} />
             </div>
 
             <div className="px-6 pb-4 md:px-10 lg:px-14">
                 <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1fr_320px]">
                     <article>
-                        {POST.body.map((section) => (
+                        {post.body.map((section) => (
                             <div key={section.heading} className="mb-8">
                                 <h2
                                     className={`mb-4 font-gilda text-[24px] text-gray-900 md:text-[26px] ${
@@ -398,7 +329,7 @@ export default function BlogDetailSection() {
                         ))}
 
                         <div className="mb-8 grid grid-cols-2 gap-4">
-                            {POST.images.map((src, i) => (
+                            {post.images.map((src, i) => (
                                 <div key={src} className="overflow-hidden rounded-xl">
                                     <img
                                         src={src}
@@ -412,7 +343,7 @@ export default function BlogDetailSection() {
                         <div className="mb-10 flex flex-wrap items-center gap-3">
                             <button
                                 type="button"
-                                className=" bg-[#E8612D] px-7 py-3 font-roboto text-[13px] text-white transition-opacity hover:opacity-90"
+                                className="bg-[#E8612D] px-7 py-3 font-roboto text-[13px] text-white transition-opacity hover:opacity-90"
                             >
                                 Book a Viewing
                             </button>
@@ -427,16 +358,16 @@ export default function BlogDetailSection() {
                         <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
                             <div className="flex items-start gap-4">
                                 <img
-                                    src={POST.author.avatar}
-                                    alt={POST.author.name}
+                                    src={post.author.avatar}
+                                    alt={post.author.name}
                                     className="size-14 shrink-0 rounded-full object-cover ring-2 ring-[#E8612D] ring-offset-2"
                                 />
                                 <div>
                                     <p className="mb-1 font-gilda text-[18px] text-gray-900">
-                                        {POST.author.name}
+                                        {post.author.name}
                                     </p>
                                     <p className="mb-3 font-roboto text-justify text-[13px] leading-[1.65] text-gray-500">
-                                        {POST.author.bio}
+                                        {post.author.bio}
                                     </p>
                                     <button
                                         type="button"
@@ -462,7 +393,7 @@ export default function BlogDetailSection() {
                 </div>
             </div>
 
-            <RelatedReads />
+            <RelatedReads posts={relatedPosts} />
             <CtaBanner />
         </div>
     );

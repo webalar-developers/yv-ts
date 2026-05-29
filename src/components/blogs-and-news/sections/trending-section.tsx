@@ -1,73 +1,20 @@
 import { useRef, useState, useCallback } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { Link } from "react-router";
+import { getTrendingPosts } from "#/data/mock-blogs.data";
 
-const ARTICLES = [
-    {
-        id: 1,
-        category: "FINANCE",
-        title: "Mastering the 50/30/20 Rule for Students",
-        description:
-            "Budgeting doesn't have to be boring. Learn how to manage your monthly stipend like a pro while still having fun.",
-        image: "/blogs-and-news/trending/rule-for-students.png",
-        index: "01",
-        href: "#",
-    },
-    {
-        id: 2,
-        category: "HOSTEL LIFE",
-        title: "Is Co-living Better than a Traditional Apartment?",
-        description:
-            "We break down the costs, benefits, and hidden perks of choosing Youthville over a local P.G. or flat.",
-        image: "/blogs-and-news/trending/co-living.png",
-        index: "02",
-        href: "#",
-    },
-    {
-        id: 3,
-        category: "WELLNESS",
-        title: "Morning Routines That Will Transform Your Day",
-        description:
-            "Discover how simple morning habits can supercharge your productivity and mental clarity throughout the day.",
-        image: "/blogs-and-news/trending/morning-routines.png",
-        index: "03",
-        href: "#",
-    },
-     {
-        id: 1,
-        category: "FINANCE",
-        title: "Mastering the 50/30/20 Rule for Students",
-        description:
-            "Budgeting doesn't have to be boring. Learn how to manage your monthly stipend like a pro while still having fun.",
-        image: "/blogs-and-news/trending/rule-for-students.png",
-        index: "01",
-        href: "#",
-    },
-    {
-        id: 2,
-        category: "HOSTEL LIFE",
-        title: "Is Co-living Better than a Traditional Apartment?",
-        description:
-            "We break down the costs, benefits, and hidden perks of choosing Youthville over a local P.G. or flat.",
-        image: "/blogs-and-news/trending/co-living.png",
-        index: "02",
-        href: "#",
-    },
-];
+const articles = getTrendingPosts();
 
-function ArticleCard({
-    article,
-}: {
-    article: (typeof ARTICLES)[number];
-}) {
+function ArticleCard({ article }: { article: (typeof articles)[number] }) {
     return (
-        <a
-            href={article.href}
+        <Link
+            to={`/blogs-and-news/${article.slug}`}
             className="group flex w-[min(92vw,600px)] flex-none overflow-hidden rounded-[44px] bg-[#F8F6F6] transition-shadow duration-300 hover:shadow-md"
             draggable={false}
         >
             <div className="relative h-60 w-40 shrink-0 overflow-hidden md:w-70">
                 <img
-                    src={article.image}
+                    src={article.heroImage}
                     alt={article.title}
                     className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                     draggable={false}
@@ -80,18 +27,18 @@ function ArticleCard({
                         {article.category}
                     </p>
                     <h3 className="mb-3 font-gilda text-[18px] leading-[1.35] text-gray-900">
-                        {article.title}
+                        {article.title} {article.titleHighlight}
                     </h3>
-                    <p className="text-[13px] leading-[1.6] text-gray-500 font-roboto">
+                    <p className="text-[13px] leading-[1.6] text-gray-500 font-roboto line-clamp-3">
                         {article.description}
                     </p>
                 </div>
 
                 <p className="mt-4 text-[13px] font-semibold text-[#E8612D] transition-opacity duration-200 group-hover:opacity-80 font-roboto">
-                    {article.index}&nbsp;—&nbsp;Read More
+                    {article.trendingIndex}&nbsp;—&nbsp;Read More
                 </p>
             </div>
-        </a>
+        </Link>
     );
 }
 
@@ -155,12 +102,12 @@ export default function TrendingSectionBlogsAndNews() {
                 </div>
 
                 <div className="flex shrink-0 items-center gap-4 pt-1">
-                    <a
-                        href="#"
+                    <Link
+                        to="/blogs-and-news"
                         className="text-[11px] font-bold uppercase tracking-[0.14em] text-[#E8612D] transition-opacity hover:opacity-75"
                     >
                         Read Now
-                    </a>
+                    </Link>
 
                     <div className="flex items-center gap-2">
                         <button
@@ -196,8 +143,8 @@ export default function TrendingSectionBlogsAndNews() {
                     className="flex gap-4 overflow-x-auto scroll-smooth px-6 pb-4 scrollbar-none [&::-webkit-scrollbar]:hidden md:px-10 lg:px-14"
                     style={{ cursor: "grab" }}
                 >
-                    {ARTICLES.map((article) => (
-                        <ArticleCard key={article.id} article={article} />
+                    {articles.map((article) => (
+                        <ArticleCard key={article.slug} article={article} />
                     ))}
 
                     <div className="w-4 shrink-0" />

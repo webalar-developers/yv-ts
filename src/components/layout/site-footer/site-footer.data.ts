@@ -12,7 +12,7 @@ export const archiveLinks = [
 ];
 
 export const quickLinks = [
-	{ name: "Blog & News", href: "#" },
+	{ name: "Blog & News", href: "/blogs-and-news" },
 	{ name: "Partner With Us", href: "#" },
 	{ name: "Refer & Earn", href: "#" },
 	{ name: "FAQ", href: "/faq" },

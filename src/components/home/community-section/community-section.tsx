@@ -101,12 +101,12 @@ function ImageGrid() {
 			<div className="group relative row-span-1 h-64 overflow-hidden rounded-xl md:row-span-2 md:h-auto">
 				<Card item={cardItems[0]} offset={0} />
 			</div>
-			{cardItems.slice(1, 5).map((item) => (
+			{cardItems.slice(1, 5).map((item, i) => (
 				<div
-					key={item.label}
+					key={item.label ?? i}
 					className="group relative h-48 overflow-hidden rounded-xl md:h-auto"
 				>
-					<Card item={item} offset={0} />
+					<Card item={item} offset={i >= 2 ? 10000 : 0} />
 				</div>
 			))}
 		</div>

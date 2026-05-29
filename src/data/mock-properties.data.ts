@@ -137,19 +137,19 @@ const commonLifeAtYouthville = [
 const commonRelatedProperties = [
 	{
 		id: "yv-sbr-1",
-		name: "YV SBR 1",
+		name: "Youthville SB Road 1",
 		location: "Senapati Bapat Rd, Pune",
 		image: "/shared/avif/SBR_1_1.avif",
 	},
 	{
 		id: "yv-karve-nagar",
-		name: "YV Karve Nagar",
+		name: "Youthville Karve Nagar",
 		location: "Karvenagar, Pune",
 		image: "/shared/avif/YV%20Karve%20Nagar_converted.avif",
 	},
 	{
 		id: "yv-balewadi-1",
-		name: "YV Balewadi 1",
+		name: "Youthville Balewadi 1",
 		location: "Balewadi, Pune",
 		image: "/shared/avif/AVK_8750_converted.avif",
 	},
@@ -385,7 +385,7 @@ const commonTestimonial = {
 export const mockProperties: PropertyListing[] = [
 	{
 		id: "yv-sbr-1",
-		name: "Youthville SBR-1",
+		name: "Youthville SB Road 1",
 		rating: 4.8,
 		reviewCountLabel: "1,248+ reviews",
 		location: "Senapati Bapat Rd, Pune",
@@ -405,8 +405,8 @@ export const mockProperties: PropertyListing[] = [
 		gallery: sbr1Gallery,
 		amenityStrip: studentAmenityStrip,
 		overview:
-			"Located on the iconic Senapati Bapat Road in Gokhalenagar, Youthville SBR-1 offers a premium co-living experience in one of Pune's most well-connected neighborhoods. Ideal for students and young professionals seeking convenience and community.",
-		whyChooseTitle: "Why choose Youthville SBR-1?",
+			"Located on the iconic Senapati Bapat Road in Gokhalenagar, Youthville SB Road 1 offers a premium co-living experience in one of Pune's most well-connected neighborhoods. Ideal for students and young professionals seeking convenience and community.",
+		whyChooseTitle: "Why choose Youthville SB Road 1?",
 		whyChooseQuote:
 			"A curated community that feels like home, but functions like a 5-star hotel.",
 		sidebarEyebrow: "YOUTHVILLE HOSTEL",
@@ -485,7 +485,7 @@ export const mockProperties: PropertyListing[] = [
 	},
 	{
 		id: "yv-sbr-2",
-		name: "Youthville SBR-2",
+		name: "Youthville SB Road 2",
 		rating: 4.7,
 		reviewCountLabel: "980+ reviews",
 		location: "Model Colony, Pune",
@@ -505,8 +505,8 @@ export const mockProperties: PropertyListing[] = [
 		gallery: sbr2Gallery,
 		amenityStrip: studentAmenityStrip,
 		overview:
-			"Situated off Senapati Bapat Road in the upscale Model Colony area, Youthville SBR-2 provides a polished living experience near Hotel Management College. Perfect for students who want a quiet, well-maintained environment.",
-		whyChooseTitle: "Why choose Youthville SBR-2?",
+			"Situated off Senapati Bapat Road in the upscale Model Colony area, Youthville SB Road 2 provides a polished living experience near Hotel Management College. Perfect for students who want a quiet, well-maintained environment.",
+		whyChooseTitle: "Why choose Youthville SB Road 2?",
 		whyChooseQuote:
 			"Premium living in one of Pune's most sought-after student neighborhoods.",
 		sidebarEyebrow: "YOUTHVILLE HOSTEL",
@@ -584,7 +584,7 @@ export const mockProperties: PropertyListing[] = [
 	},
 	{
 		id: "yv-sbr-3",
-		name: "Youthville SBR-3",
+		name: "Youthville SB Road 3",
 		rating: 4.6,
 		reviewCountLabel: "870+ reviews",
 		location: "Gokhalenagar, Pune",
@@ -604,8 +604,8 @@ export const mockProperties: PropertyListing[] = [
 		gallery: sbr3Gallery,
 		amenityStrip: studentAmenityStrip,
 		overview:
-			"Youthville SBR-3 is nestled in the heart of Gokhalenagar along the main road, offering easy access to educational institutions and daily essentials. A reliable choice for students seeking affordability without compromise.",
-		whyChooseTitle: "Why choose Youthville SBR-3?",
+			"Youthville SB Road 3 is nestled in the heart of Gokhalenagar along the main road, offering easy access to educational institutions and daily essentials. A reliable choice for students seeking affordability without compromise.",
+		whyChooseTitle: "Why choose Youthville SB Road 3?",
 		whyChooseQuote:
 			"Affordable, accessible, and built for the student lifestyle.",
 		sidebarEyebrow: "YOUTHVILLE HOSTEL",
@@ -764,7 +764,7 @@ export const mockProperties: PropertyListing[] = [
 	},
 	{
 		id: "yv-balewadi-1",
-		name: "YV Balewadi 1",
+		name: "Youthville Balewadi 1",
 		rating: 4.8,
 		reviewCountLabel: "1,248+ reviews",
 		ratingLabel: "Google Reviews",
@@ -785,8 +785,8 @@ export const mockProperties: PropertyListing[] = [
 		gallery: balewadi1Gallery,
 		amenityStrip: coLivingAmenityStrip,
 		overview:
-			"Located on the bustling Balewadi High Street next to Cummins, YV Balewadi 1 offers an unparalleled living experience for students and young professionals. Designed with a modern aesthetic, it provides the perfect balance between academic focus and premium lifestyle.",
-		whyChooseTitle: "Why choose YV Balewadi 1?",
+			"Located on the bustling Balewadi High Street next to Cummins, Youthville Balewadi 1 offers an unparalleled living experience for students and young professionals. Designed with a modern aesthetic, it provides the perfect balance between academic focus and premium lifestyle.",
+		whyChooseTitle: "Why choose Youthville Balewadi 1?",
 		whyChooseQuote:
 			"A curated community that feels like home, but functions like a 5-star hotel.",
 		sidebarEyebrow: "YOUTHVILLE HOSTEL",
@@ -856,7 +856,7 @@ export const mockProperties: PropertyListing[] = [
 	},
 	{
 		id: "yv-balewadi-2",
-		name: "YV Balewadi 2",
+		name: "Youthville Balewadi 2",
 		rating: 4.5,
 		reviewCountLabel: "920+ reviews",
 		location: "Balewadi, Pune",
@@ -876,8 +876,8 @@ export const mockProperties: PropertyListing[] = [
 		gallery: balewadi2Gallery,
 		amenityStrip: coLivingAmenityStrip,
 		overview:
-			"Located next to Amar Tech Park in Balewadi, YV Balewadi 2 is tuned for affordability without losing the polished Youthville experience. A strong fit for young professionals working in the nearby IT corridor.",
-		whyChooseTitle: "Why choose YV Balewadi 2?",
+			"Located next to Amar Tech Park in Balewadi, Youthville Balewadi 2 is tuned for affordability without losing the polished Youthville experience. A strong fit for young professionals working in the nearby IT corridor.",
+		whyChooseTitle: "Why choose Youthville Balewadi 2?",
 		whyChooseQuote:
 			"A practical stay that still feels curated, connected, and community-driven.",
 		sidebarEyebrow: "YOUTHVILLE HOSTEL",
@@ -944,7 +944,7 @@ export const mockProperties: PropertyListing[] = [
 	},
 	{
 		id: "yv-mahalunge-1",
-		name: "YV Mahalunge 1",
+		name: "Youthville Mahalunge",
 		rating: 4.4,
 		reviewCountLabel: "650+ reviews",
 		location: "Mahalunge, Pune",
@@ -964,8 +964,8 @@ export const mockProperties: PropertyListing[] = [
 		gallery: commonGallery,
 		amenityStrip: commonAmenityStrip,
 		overview:
-			"YV Mahalunge 1 is a brand-new Youthville property designed for IT professionals working in the Hinjewadi-Mahalunge belt. Enjoy modern amenities with easy access to major tech parks.",
-		whyChooseTitle: "Why choose YV Mahalunge 1?",
+			"Youthville Mahalunge is a brand-new Youthville property designed for IT professionals working in the Hinjewadi-Mahalunge belt. Enjoy modern amenities with easy access to major tech parks.",
+		whyChooseTitle: "Why choose Youthville Mahalunge?",
 		whyChooseQuote:
 			"Fresh, modern, and perfectly positioned for the IT corridor lifestyle.",
 		sidebarEyebrow: "YOUTHVILLE HOSTEL",
@@ -999,7 +999,7 @@ export const mockProperties: PropertyListing[] = [
 	},
 	{
 		id: "yv-mundhwa-2",
-		name: "YV Mundhwa 2",
+		name: "Youthville Mundhwa",
 		rating: 4.5,
 		reviewCountLabel: "780+ reviews",
 		location: "Mundhwa, Pune",
@@ -1020,7 +1020,7 @@ export const mockProperties: PropertyListing[] = [
 		amenityStrip: commonAmenityStrip,
 		overview:
 			"Located near Gandhi Chowk in Mundhwa, this Youthville property is well-connected to the Kharadi IT hub and offers a comfortable community living experience with all essentials included.",
-		whyChooseTitle: "Why choose YV Mundhwa 2?",
+		whyChooseTitle: "Why choose Youthville Mundhwa?",
 		whyChooseQuote:
 			"Well-connected, well-managed, and designed for the working professional.",
 		sidebarEyebrow: "YOUTHVILLE HOSTEL",
@@ -1051,7 +1051,7 @@ export const mockProperties: PropertyListing[] = [
 	},
 	{
 		id: "yv-yerwada",
-		name: "YV Yerwada",
+		name: "Youthville Yerwada",
 		rating: 4.6,
 		reviewCountLabel: "890+ reviews",
 		location: "Yerawada, Pune",
@@ -1071,8 +1071,8 @@ export const mockProperties: PropertyListing[] = [
 		gallery: commonGallery,
 		amenityStrip: commonAmenityStrip,
 		overview:
-			"YV Yerwada sits in the well-connected Yerawada area near Aga Khan Palace, offering premium co-living for students and professionals with easy access to Nagar Road's IT corridor and Koregaon Park.",
-		whyChooseTitle: "Why choose YV Yerwada?",
+			"Youthville Yerwada sits in the well-connected Yerawada area near Aga Khan Palace, offering premium co-living for students and professionals with easy access to Nagar Road's IT corridor and Koregaon Park.",
+		whyChooseTitle: "Why choose Youthville Yerwada?",
 		whyChooseQuote:
 			"Central location, premium amenities, and a vibrant community.",
 		sidebarEyebrow: "YOUTHVILLE HOSTEL",
@@ -1295,7 +1295,7 @@ export const mockProperties: PropertyListing[] = [
 	},
 	{
 		id: "yv-sancheti",
-		name: "YV Sancheti",
+		name: "Youthville Shivaji Nagar",
 		rating: 4.7,
 		reviewCountLabel: "960+ reviews",
 		location: "Shivajinagar, Pune",
@@ -1315,8 +1315,8 @@ export const mockProperties: PropertyListing[] = [
 		gallery: commonGallery,
 		amenityStrip: commonAmenityStrip,
 		overview:
-			"YV Sancheti is located in the iconic Shivajinagar area on Wellesley Road, offering prime access to Pune's educational and cultural heart. Perfect for students at nearby colleges and medical institutions.",
-		whyChooseTitle: "Why choose YV Sancheti?",
+			"Youthville Shivaji Nagar is located in the iconic Shivajinagar area on Wellesley Road, offering prime access to Pune's educational and cultural heart. Perfect for students at nearby colleges and medical institutions.",
+		whyChooseTitle: "Why choose Youthville Shivaji Nagar?",
 		whyChooseQuote:
 			"In the heart of Pune's education district — walk to college, walk to culture.",
 		sidebarEyebrow: "YOUTHVILLE HOSTEL",
@@ -1346,7 +1346,7 @@ export const mockProperties: PropertyListing[] = [
 	},
 	{
 		id: "yv-kiwale",
-		name: "YV Kiwale",
+		name: "Youthville Kiwale",
 		rating: 4.8,
 		reviewCountLabel: "1,248+ reviews",
 		location: "Kiwale, Pune",
@@ -1367,7 +1367,7 @@ export const mockProperties: PropertyListing[] = [
 		amenityStrip: studentAmenityStrip,
 		overview:
 			"Located in Kiwale near Ravet in Pimpri-Chinchwad, this Youthville address is designed for young professionals who want smooth commutes, calm interiors, and a premium serviced-hostel experience that feels curated rather than crowded.",
-		whyChooseTitle: "Why choose YV Kiwale?",
+		whyChooseTitle: "Why choose Youthville Kiwale?",
 		whyChooseQuote:
 			"A curated community that feels like home, but functions like a 5-star hotel.",
 		sidebarEyebrow: "YOUTHVILLE HOSTEL",

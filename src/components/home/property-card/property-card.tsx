@@ -4,7 +4,6 @@ import {
 	Heart,
 	MapPin,
 	Star,
-	Users,
 } from "lucide-react";
 import type { ReactNode } from "react";
 import { Link } from "react-router";
@@ -21,6 +20,7 @@ import {
 	DialogTrigger,
 } from "@/components/ui/dialog";
 import { cn } from "@/lib/utils";
+
 
 const TieIcon = ({ className }: { className?: string }) => (
 	<svg
@@ -119,12 +119,21 @@ export function PropertyCard({
 							}
 							value={property.category === "professional" ? "Professional" : "Student"}
 						/>
-						</div>
-						<div className="group relative min-w-0">
-							<div className="inline-flex max-w-full items-center gap-2 overflow-hidden rounded-full border border-gray-200 bg-linear-to-r from-[#FFF7F2] to-white px-3 py-2 text-[11px] font-semibold text-gray-700 shadow-sm transition-colors hover:border-yv-orange">
-								<Users className="size-3.5 shrink-0 text-yv-orange" />
-								<span className="truncate">{floorAccessLabel}</span>
-							</div>
+						<DetailTooltip
+							icon={
+								hasGirlsAndBoysFloors ? (
+									<div className="flex items-center gap-0.5">
+										<img src="/shared/png/boy.png" alt="Boy" className="size-3.5 object-contain" />
+										<img src="/shared/png/girl.png" alt="Girl" className="size-3.5 object-contain" />
+									</div>
+								) : property.gender.includes("Only Girls") ? (
+									<img src="/shared/png/girl.png" alt="Girl" className="size-4 object-contain" />
+								) : (
+									<img src="/shared/png/boy.png" alt="Boy" className="size-4 object-contain" />
+								)
+							}
+							value={floorAccessLabel}
+						/>
 						</div>
 					</div>
 

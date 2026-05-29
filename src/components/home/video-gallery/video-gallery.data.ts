@@ -21,9 +21,9 @@ export const videoItems: VideoItem[] = [
 		alt: "Youthville Reel 4",
 		videoUrl: "/home/mp4/vid4.mp4",
 	},
-	{
-		image: "/shared/jpg/1.jpg",
-		alt: "Youthville Reel 5",
-		videoUrl: "/home/mp4/vid5.mp4",
-	},
+	// {
+	// 	image: "/shared/jpg/1.jpg",
+	// 	alt: "Youthville Reel 5",
+	// 	videoUrl: "/home/mp4/vid5.mp4",
+	// },
 ];

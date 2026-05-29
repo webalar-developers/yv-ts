@@ -198,7 +198,7 @@ export function RoomsSection() {
 							<div
 								key={property.id}
 								data-room-slide
-								className="w-[88%] shrink-0 snap-start sm:w-[calc(50%-12px)] lg:w-[calc(25%-18px)]"
+								className="w-[88%] shrink-0 snap-start sm:w-[calc(50%-12px)] lg:w-[calc(33.33%-18px)] xl:w-[calc(25%-18px)]"
 							>
 								<PropertyCard property={toPropertyListing(property)} />
 							</div>
@@ -209,7 +209,7 @@ export function RoomsSection() {
 									<div
 										key={property.id}
 										data-room-slide
-										className="w-[88%] shrink-0 snap-start sm:w-[calc(50%-12px)] lg:w-[calc(25%-18px)]"
+										className="w-[88%] shrink-0 snap-start sm:w-[calc(50%-12px)] lg:w-[calc(33.33%-18px)] xl:w-[calc(25%-18px)]"
 									>
 										<PropertyCard property={toPropertyListing(property)} />
 									</div>

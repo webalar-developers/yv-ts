@@ -89,7 +89,7 @@ export function PropertyCard({
 				<div className="flex items-start justify-between">
 					<Link
 						to={`/hostels/${property.id}`}
-						className="pr-3 text-[20px] leading-tight font-bold text-gray-900 transition-colors hover:text-yv-orange sm:text-[21px]"
+						className="pr-3 line-clamp-1  leading-tight font-bold text-gray-900 transition-colors hover:text-yv-orange text-[16px] sm:text-[16px] lg:text-[20px]"
 					>
 						{property.name}
 					</Link>
